@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_file, send_from_directory, render_template
+from flask import Flask, request, jsonify, send_from_directory, send_file
 from PIL import Image
 import cv2
 import numpy as np
@@ -16,8 +16,8 @@ UPLOAD_FOLDER = "uploads"
 OUTPUT_FOLDER = "outputs"
 
 # สร้างโฟลเดอร์ถ้ายังไม่มี
-for folder in [UPLOAD_FOLDER, OUTPUT_FOLDER]:
-    os.makedirs(folder, exist_ok=True)
+os.makedirs(UPLOAD_FOLDER, exist_ok=True)
+os.makedirs(OUTPUT_FOLDER, exist_ok=True)
 
 # เริ่มต้น Mediapipe Face Mesh
 mp_face_mesh = mp.solutions.face_mesh
@@ -46,7 +46,6 @@ def detect_empty_face_area(image):
         logger.error(f"Error in detect_empty_face_area: {str(e)}")
         logger.error(traceback.format_exc())
         return None
-
 
 
 def extract_face(image_path):
@@ -230,10 +229,13 @@ def upload_file():
         logger.error(traceback.format_exc())
         return jsonify({"error": f"เกิดข้อผิดพลาด: {str(e)}"}), 500
 
-# เพิ่มเส้นทางเพื่อให้ Flask สามารถส่งไฟล์จากโฟลเดอร์ OUTPUTS
 @app.route("/outputs/<filename>")
 def serve_output(filename):
-    return send_from_directory(OUTPUT_FOLDER, filename)
+    try:
+        return send_from_directory(OUTPUT_FOLDER, filename)
+    except Exception as e:
+        logger.error(f"Error serving file: {str(e)}")
+        return jsonify({"error": "ไม่พบไฟล์ที่ขอ"}), 404
 
 @app.route("/", methods=["GET"])
 def home():
