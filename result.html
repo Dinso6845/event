@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Processed Image Result</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+
+        #processed-image {
+            max-width: 100%;
+            height: auto;
+            animation: moveImage 10s infinite linear;
+        }
+
+        @keyframes moveImage {
+            0% {
+                transform: translateX(0);
+            }
+            50% {
+                transform: translateX(100vw);
+            }
+            100% {
+                transform: translateX(0);
+            }
+        }
+    </style>
+</head>
+<body>
+    <img id="processed-image" src="" alt="Processed Image">
+    <script>
+        // ดึง URL ของรูปจาก localStorage
+        const processedImage = document.getElementById("processed-image");
+        processedImage.src = localStorage.getItem("processedImage");
+
+        // หากไม่มีรูปใน localStorage ให้แสดงข้อความ
+        if (!processedImage.src) {
+            processedImage.alt = "No result image available!";
+        }
+    </script>
+</body>
+</html>

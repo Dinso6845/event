@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Face to Cartoon</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Upload Your Image</h1>
+    <form id="upload-form">
+        <!-- สำหรับอัปโหลดรูปคน -->
+        <div>
+            <label for="image-input">Upload a Photo:</label>
+            <input type="file" id="image-input" accept="image/*" required>
+        </div>
+        
+        <!-- สำหรับอัปโหลดรูปการ์ตูน -->
+        <div>
+            <label for="template-input">Upload a Cartoon Template:</label>
+            <input type="file" id="template-input" accept="image/*" required>
+        </div>
+        
+        <button type="submit">Upload Both</button>
+        
+    </form>
+
+    <img id="preview" src="#" alt="Image Preview" style="display:none;">
+    <h2>Result</h2>
+    <img id="result" src="#" alt="Processed Image" style="display:none;">
+
+    <button id="go-to-result" style="display:none;">Go to Result</button>
+    
+
+    <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,13 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+    background-color: gray;
+}
+
+#preview, 
+#result {
+    margin: 20px auto;
+    max-width: 300px;
+    display: block;
+}
