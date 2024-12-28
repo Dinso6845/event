@@ -76,7 +76,7 @@ def extract_face(image_path):
         cv2.ellipse(mask, (center_x, center_y), axes, 0, 0, 360, 255, -1)
 
         # ทำให้ขอบนุ่มขึ้น
-        mask = cv2.GaussianBlur(mask, (41, 41), 6)
+        mask = cv2.GaussianBlur(mask, (61, 61), 6)
         _, mask = cv2.threshold(mask, 200, 255, cv2.THRESH_BINARY)
 
         # ตัดภาพใบหน้าด้วย mask
@@ -104,7 +104,7 @@ def remove_white_background(image):
     # แปลงภาพเป็น grayscale
     gray = cv2.cvtColor(image, cv2.COLOR_BGRA2GRAY)
     
-    _, mask = cv2.threshold(gray, 240, 255, cv2.THRESH_BINARY_INV)
+    _, mask = cv2.threshold(gray, 250, 255, cv2.THRESH_BINARY_INV)
     
     # ใช้ morphological operations เพื่อกำจัดจุดรบกวน
     kernel = np.ones((3,3), np.uint8)
@@ -117,6 +117,34 @@ def remove_white_background(image):
     
     # รวมช่องสีกลับ
     return cv2.merge([b, g, r, a])
+
+def add_3d_effect(image):
+    try:
+        # ขนาดภาพ
+        h, w, c = image.shape
+
+        # สร้างแสงตรงกลาง
+        center_x, center_y = w // 1, h // 1
+        max_radius = max(center_x, center_y)
+
+        # สร้าง mask วงกลมสำหรับเงา
+        Y, X = np.ogrid[:h, :w]
+        distance_from_center = np.sqrt((X - center_x)**2 + (Y - center_y)**2)
+        mask = (1 - np.clip(distance_from_center / max_radius, 0, 3)) ** 2
+
+        # ปรับแสงในภาพ
+        for i in range(3):  # ใช้กับแต่ละ channel (B, G, R)
+            image[:, :, i] = cv2.addWeighted(image[:, :, i], 1, (mask * 255).astype(np.uint8), 0.5, 0)
+
+        # ใช้ GaussianBlur เพื่อลด noise และทำให้ดูนุ่มนวล
+        image = cv2.GaussianBlur(image, (60, 60), 10)
+
+        return image
+
+    except Exception as e:
+        logger.error(f"Error in add_3d_effect: {str(e)}")
+        return image
+
 
 def process_image(image_path, template_path):
     try:
@@ -131,6 +159,8 @@ def process_image(image_path, template_path):
 
         # ลบขอบสีขาวออกจากภาพใบหน้า
         cropped_face = remove_white_background(cropped_face)
+        cropped_face = add_3d_effect(cropped_face)
+        
 
         template = cv2.imread(template_path, cv2.IMREAD_UNCHANGED)
         if template is None:
