@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, send_from_directory, send_file
+from flask import Flask, request, jsonify, send_file, send_from_directory, render_template
 from PIL import Image
 import cv2
 import numpy as np
@@ -16,35 +16,31 @@ UPLOAD_FOLDER = "uploads"
 OUTPUT_FOLDER = "outputs"
 
 # สร้างโฟลเดอร์ถ้ายังไม่มี
-os.makedirs(UPLOAD_FOLDER, exist_ok=True)
-os.makedirs(OUTPUT_FOLDER, exist_ok=True)
+for folder in [UPLOAD_FOLDER, OUTPUT_FOLDER]:
+    os.makedirs(folder, exist_ok=True)
 
 # เริ่มต้น Mediapipe Face Mesh
 mp_face_mesh = mp.solutions.face_mesh
 face_mesh = mp_face_mesh.FaceMesh(static_image_mode=True, max_num_faces=1, refine_landmarks=True)
 
-def detect_empty_face_area(image):
-    try:
-        if image.shape[2] < 4:
-            logger.warning("ภาพไม่มีอัลฟาแชนแนล: อาจไม่รองรับพื้นที่โปร่งใส")
-            return None
+def detect_green_screen_area(image):
+    # แปลงภาพเป็น HSV
+    hsv_image = cv2.cvtColor(image, cv2.COLOR_BGR2HSV)
 
-        alpha_channel = image[:, :, 3]
-        
-        # หาพื้นที่ที่โปร่งแสงโดยไม่รวมพื้นที่ที่เป็นสีพื้นหลังโปร่งแสง
-        mask = cv2.inRange(alpha_channel, 1, 255)  # ใช้ค่าพื้นหลังที่โปร่งแสงเป็น 0
-        transparent_area = cv2.findNonZero(mask)  # ค้นหาพื้นที่ที่ไม่โปร่งแสง
-        
-        if transparent_area is not None:
-            x, y, w, h = cv2.boundingRect(transparent_area)
-            return (x, y, w, h)
-        else:
-            logger.warning("ไม่พบพื้นที่โปร่งใสในเทมเพลต")
-            return None
+    # กำหนดช่วงสีเขียวใน HSV
+    lower_green = np.array([35, 100, 100])
+    upper_green = np.array([85, 255, 255])
 
-    except Exception as e:
-        logger.error(f"Error in detect_empty_face_area: {str(e)}")
-        logger.error(traceback.format_exc())
+    # สร้าง mask สำหรับพื้นที่สีเขียว
+    mask = cv2.inRange(hsv_image, lower_green, upper_green)
+
+    # ค้นหาพื้นที่ที่ไม่เป็นศูนย์ใน mask
+    green_area = cv2.findNonZero(mask)
+
+    if green_area is not None:
+        x, y, w, h = cv2.boundingRect(green_area)
+        return (x, y, w, h)
+    else:
         return None
 
 
@@ -89,7 +85,7 @@ def extract_face(image_path):
         # ตัดเฉพาะส่วนที่มีใบหน้า
         x = center_x - face_width // 2
         y = center_y - face_height // 2
-        cropped_face = face[y:y+face_height, x:x+face_width]
+        cropped_face = face[y:y + face_height, x:x + face_width]
         
         # สร้าง alpha channel
         mask_cropped = mask[y:y+face_height, x:x+face_width]
@@ -140,11 +136,12 @@ def process_image(image_path, template_path):
         if template is None:
             return None, "ไม่สามารถอ่านไฟล์เทมเพลตได้"
 
-        empty_face = detect_empty_face_area(template)
-        if not empty_face:
-            return None, "ไม่พบพื้นที่ว่างสำหรับใบหน้าในภาพการ์ตูน"
+        # ตรวจจับพื้นที่สีเขียวในเทมเพลต
+        green_area = detect_green_screen_area(template)
+        if not green_area:
+            return None, "ไม่พบพื้นที่สีเขียวในภาพการ์ตูน"
 
-        ex, ey, ew, eh = empty_face
+        ex, ey, ew, eh = green_area
 
         # ปรับขนาดใบหน้าให้ใหญ่ขึ้นเล็กน้อย
         scale_factor = 1.1  # เพิ่มขนาดใบหน้า 10%
@@ -153,8 +150,8 @@ def process_image(image_path, template_path):
         face_resized = cv2.resize(cropped_face, (new_width, new_height), interpolation=cv2.INTER_AREA)
 
         # คำนวณตำแหน่งใหม่ให้ใบหน้าอยู่ตรงกลาง
-        offset_x = (new_width - ew) // 2
-        offset_y = (new_height - eh) // 2
+        offset_x = (ew - face_resized.shape[1]) // 2
+        offset_y = (eh - face_resized.shape[0]) // 2
 
         # แปลงภาพใบหน้าเป็น PIL Image
         face_pil = Image.fromarray(cv2.cvtColor(face_resized, cv2.COLOR_BGRA2RGBA))
@@ -165,11 +162,13 @@ def process_image(image_path, template_path):
         # สร้างภาพใหม่ขนาดเท่ากับเทมเพลต
         result = Image.new('RGBA', template_pil.size, (0, 0, 0, 0))
 
-        # วางใบหน้าก่อน (อยู่ด้านหลัง)
-        result.paste(face_pil, (ex - offset_x, ey - offset_y), face_pil)
-
         # วางเทมเพลตทับ (อยู่ด้านหน้า)
         result.paste(template_pil, (0, 0), template_pil)
+
+        # วางใบหน้าก่อน (อยู่ด้านหลัง)
+        result.paste(face_pil, (ex + offset_x, ey + offset_y), face_pil)
+
+
 
         # ตัดพื้นหลังโปร่งใสหลังจากรวมใบหน้าและเทมเพลต
         result_cv = cv2.cvtColor(np.array(result), cv2.COLOR_RGBA2BGRA)
@@ -179,11 +178,12 @@ def process_image(image_path, template_path):
         output_path = os.path.join(OUTPUT_FOLDER, "output.png")
         cv2.imwrite(output_path, result_cleaned)
 
+        logger.debug(f"Face size: {face_resized.shape}, Position: ({ex + offset_x}, {ey + offset_y})")
+
         return output_path, None
 
     except Exception as e:
         logger.error(f"Error in process_image: {str(e)}")
-        logger.error(traceback.format_exc())
         return None, f"เกิดข้อผิดพลาด: {str(e)}"
 
 
@@ -229,13 +229,10 @@ def upload_file():
         logger.error(traceback.format_exc())
         return jsonify({"error": f"เกิดข้อผิดพลาด: {str(e)}"}), 500
 
+# เพิ่มเส้นทางเพื่อให้ Flask สามารถส่งไฟล์จากโฟลเดอร์ OUTPUTS
 @app.route("/outputs/<filename>")
 def serve_output(filename):
-    try:
-        return send_from_directory(OUTPUT_FOLDER, filename)
-    except Exception as e:
-        logger.error(f"Error serving file: {str(e)}")
-        return jsonify({"error": "ไม่พบไฟล์ที่ขอ"}), 404
+    return send_from_directory(OUTPUT_FOLDER, filename)
 
 @app.route("/", methods=["GET"])
 def home():
