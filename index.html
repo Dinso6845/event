@@ -1,37 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Face to Cartoon</title>
     <link rel="stylesheet" href="index.css">
 </head>
+
 <body>
-    <h1>Upload Your Image</h1>
-    <form id="upload-form">
-        <!-- สำหรับอัปโหลดรูปคน -->
-        <div>
-            <label for="image-input">Upload a Photo:</label>
-            <input type="file" id="image-input" accept="image/*" required>
-        </div>
-        
-        <!-- สำหรับอัปโหลดรูปการ์ตูน -->
-        <div>
-            <label for="template-input">Upload a Cartoon Template:</label>
-            <input type="file" id="template-input" accept="image/*" required>
-        </div>
-        
-        <button type="submit">Upload Both</button>
-        
-    </form>
+    <div id="background-preview">
+        <video id="video-preview" autoplay loop muted style="display:none;"></video>
+        <img id="image-preview" style="display:none;" alt="Background Preview">
+    </div>
 
-    <img id="preview" src="#" alt="Image Preview" style="display:none;">
-    <h2>Result</h2>
-    <img id="result" src="#" alt="Processed Image" style="display:none;">
+    <button id="create-wish">สร้างคำอวยพร</button>
 
-    <button id="go-to-result" style="display:none;">Go to Result</button>
-    
+    <div id="upload-popup" class="popup">
+        <div class="popup-content">
+            <span class="close">&times;</span>
+            <form id="upload-form" enctype="multipart/form-data">
+                <div>
+                    <label for="image-input">Upload a Photo:</label>
+                    <input type="file" id="image-input" accept="image/*" required>
+                </div>
+                <div class="cartoon-grid">
+                </div>
+
+                <button type="submit">Create</button>
+            </form>
+        </div>
+    </div>
+
+    <div id="result-section">
+        <img id="result" src="#" alt="Processed Image" style="display:none;">
+    </div>
+    <div>
+        <label for="template-select" style="display:none;">Select Background:</label>
+        <select id="template-select" required style="display:none;">
+        </select>
+    </div>
 
     <script src="/app.js"></script>
 </body>
+
 </html>

@@ -10,14 +10,26 @@
             justify-content: center;
             align-items: center;
             height: 100vh;
-            background-color: #f0f0f0;
             margin: 0;
+            overflow: hidden; /* ป้องกันการเลื่อน */
+        }
+
+        #background-video {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* ทำให้วิดีโอเต็มพื้นที่ */
+            z-index: -1; /* วิดีโออยู่ด้านหลัง */
         }
 
         #processed-image {
             max-width: 100%;
             height: auto;
             animation: moveImage 10s infinite linear;
+            position: relative; /* ทำให้ภาพอยู่เหนือวิดีโอ */
+            z-index: 1; /* ให้ภาพอยู่ด้านหน้า */
         }
 
         @keyframes moveImage {
@@ -34,6 +46,10 @@
     </style>
 </head>
 <body>
+    <video id="background-video" autoplay loop muted>
+        <source src="https://cdn.pixabay.com/video/2019/08/01/25696-352026473_large.mp4" type="video/mp4">
+    </video>
+
     <img id="processed-image" src="" alt="Processed Image">
     <script>
         // ดึง URL ของรูปจาก localStorage
