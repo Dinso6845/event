@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Festival Management</title>
-    <link rel="stylesheet" href="manage.css"> <!-- ลิงก์ไฟล์ CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+    <title>ประวัติการสร้างการ์ตูน</title>
+    <link rel="stylesheet" href="cartoon_history.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
-
 <body>
     <nav class="navbar">
         <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
@@ -24,22 +23,26 @@
             </ul>
         </div>
     </nav>
-
-    <section class="table-container">
-        <table id="festivalTable">
+    <h1>ประวัติการสร้างการ์ตูน</h1>
+    <button id="delete-selected">ลบที่เลือก</button>
+    <div class="div-table">
+        <table id="cartoon-list" class="cartoon-table">
             <thead>
                 <tr>
-                    <th>อันดับ</th>
-                    <th>ชื่อเทศกาล</th>
-                    <th>สถานะ</th>
+                    <th><input type="checkbox" id="select-all"></th>
+                    <th>ลำดับ</th>
+                    <th>ภาพ</th>
+                    <th>ชื่อผู้ใช้</th>
+                    <th>ข้อความ</th>
                     <th>จัดการ</th>
                 </tr>
             </thead>
             <tbody>
+                <!-- Cartoon items will be dynamically inserted here -->
             </tbody>
         </table>
-    </section>
-
-    <script src="manage.js"></script> <!-- ลิงก์ไฟล์ JS -->
+    </div>
+    
+    <script src="cartoon_history.js"></script>
 </body>
 </html>

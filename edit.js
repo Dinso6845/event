@@ -1,0 +1,448 @@
+document.addEventListener('DOMContentLoaded', () => {
+    const urlParams = new URLSearchParams(window.location.search);
+    const eventId = urlParams.get('id');
+    const dropZoneImage = document.getElementById('imageDropZone');
+    const dropZoneMusic = document.getElementById('backgroundMusicDropZone');
+    const dropZoneBackground = document.getElementById('backgroundImageDropZone');
+    const imageInput = document.getElementById('imageFile');
+    const musicInput = document.getElementById('backgroundMusic');
+    const backgroundInput = document.getElementById('backgroundImage');
+    const uploadButton = document.getElementById('update-event');
+    let backgroundToRemove = false;
+    let musicToRemove = false;
+
+    if (!eventId) {
+        displayErrorMessage("Invalid or missing event ID.");
+        return;
+    }
+
+    async function fetchEventData(eventId) {
+        try {
+            const response = await fetch(`http://127.0.0.1/Event/edit_event.php?event_id=${eventId}`);
+            const data = await response.json();
+
+            if (data.error) {
+                displayErrorMessage(data.error);
+                return;
+            }
+
+            displayEventDetails(data.event || {});
+            displayCharacters(data.characters || []);
+        } catch (error) {
+            console.error("Error fetching event data:", error);
+            displayErrorMessage("An error occurred while fetching the data.");
+        }
+    }
+
+    // ฟังก์ชันอัปเดตข้อมูล
+    async function updateEventData(eventId) {
+        try {
+            const formData = new FormData();
+
+            // เพิ่มข้อมูลพื้นฐาน
+            formData.append('event_id', eventId);
+            formData.append('status', document.getElementById('status').value);
+            formData.append('name', document.getElementById('eventName').value);
+            formData.append('button_color', document.getElementById('buttonColor').value);
+            formData.append('text_color', document.getElementById('textColor').value);
+            formData.append('message', document.getElementById('message').value);
+            formData.append('text_button', document.getElementById('textButton').value);
+
+            // เพิ่มการตรวจสอบและส่งค่าการลบไฟล์
+            if (backgroundToRemove) {
+                formData.append('remove_background', 'true');
+            }
+            if (musicToRemove) {
+                formData.append('remove_music', 'true');
+            }
+
+            // เพิ่มไฟล์ถ้ามีการเลือก
+            if (imageInput.files[0]) {
+                formData.append('image', imageInput.files[0]);
+            }
+            if (musicInput.files[0]) {
+                formData.append('music', musicInput.files[0]);
+            } else {
+                console.log("No music file selected.");
+            }
+            if (backgroundInput.files[0]) {
+                formData.append('background', backgroundInput.files[0]);
+            } else {
+                console.log("No background file selected.");
+            }
+
+            console.log("FormData before sending:", [...formData.entries()]);
+
+            const response = await fetch('http://127.0.0.1/Event/edit_event.php', {
+                method: 'POST',
+                body: formData
+            });
+            
+            const text = await response.text();
+            console.log("Raw response from PHP:", text); // ตรวจสอบค่าที่ PHP ส่งกลับมาก่อนแปลงเป็น JSON
+            
+            try {
+                const data = JSON.parse(text);
+                if (data.success) {
+                    alert('Event updated successfully.');
+                    location.reload();
+                } else {
+                    alert(`Failed to update event: ${data.error || 'Unknown error'}`);
+                }
+            } catch (jsonError) {
+                console.error("Invalid JSON response:", text);
+                alert("An error occurred while updating. Check console for details.");
+            }            
+        } catch (error) {
+            console.error('Error updating event:', error);
+            alert(`An error occurred while updating the event: ${error.message}`);
+        }
+    }
+
+    // ฟังก์ชันนี้จะถูกเรียกเมื่อกดปุ่ม "Update Event"
+    uploadButton.addEventListener('click', (event) => {
+        event.preventDefault();
+        updateEventData(eventId);
+    });
+
+    function displayErrorMessage(message) {
+        document.body.innerHTML = `<p class='error-message'>${message}</p>`;
+    }
+
+    function displayEventDetails(event) {
+        const eventNameInput = document.getElementById('eventName');
+        if (eventNameInput && event.name) {
+            eventNameInput.value = event.name;
+        }
+
+        // เพิ่มการตรวจสอบและแสดงสถานะ
+        const statusToggle = document.getElementById('statusToggle');
+        if (statusToggle && event.status) {
+            const isActive = event.status === 'active';
+            statusToggle.classList.remove('fa-toggle-on', 'fa-toggle-off');
+            statusToggle.classList.add(isActive ? 'fa-toggle-on' : 'fa-toggle-off');
+            statusToggle.dataset.status = event.status;
+            statusToggle.style.color = isActive ? 'green' : 'red';
+
+            // อัพเดทค่าใน input hidden ด้วย
+            const statusInput = document.getElementById('status');
+            if (statusInput) {
+                statusInput.value = event.status;
+            }
+        }
+
+        // เพิ่มการแสดงค่า name และ text_button
+        const elements = {
+            buttonColor: 'button_color',
+            textColor: 'text_color',
+            message: 'message',
+            textButton: 'text_button',
+            eventDetails: 'eventDetails'
+        };
+
+        // วนลูปเพื่อเซ็ตค่าให้กับแต่ละ element
+        Object.keys(elements).forEach((elementId) => {
+            const element = document.getElementById(elementId);
+            const dbField = elements[elementId];
+            if (element && event[dbField] !== undefined) {
+                element.value = event[dbField];
+            }
+        });
+
+        const previewImage = document.getElementById('backgroundImagePreview');
+        const backgroundImageDropZone = document.getElementById('backgroundImageDropZone');
+
+        if (event.background_path) {
+            previewImage.src = event.background_path;
+            previewImage.style.display = 'block';
+            backgroundImageDropZone.style.display = 'none';
+
+            const removeButton = document.getElementById('removeBackground');
+            removeButton.style.display = 'inline-block';
+        } else {
+            backgroundImageDropZone.style.display = 'block';
+        }
+
+        const previewAudio = document.getElementById('backgroundMusicPreview');
+        const musicDropZone = document.getElementById('backgroundMusicDropZone');
+
+        if (event.music && event.music.trim() !== "") {
+            previewAudio.src = event.music;
+            previewAudio.style.display = 'block';
+            musicDropZone.style.display = 'none';
+
+            const removeButton = document.getElementById('removeMusic');
+            removeButton.style.display = 'inline-block';
+        } else {
+            previewAudio.style.display = 'none'; // ซ่อน preview ถ้าไม่มีเพลง
+            musicDropZone.style.display = 'block'; // แสดงช่องอัพโหลด
+        }
+
+        if (backgroundToRemove) {
+            displayEventDetails(event); // เรียกฟังก์ชันเพื่ออัปเดต UI
+        }
+    }
+
+    function displayCharacters(characters) {
+        const characterCards = document.getElementById('characterCards');
+        const characterTemplate = document.getElementById('characterTemplate');
+
+        if (!characterCards || !characterTemplate) {
+            console.error("Character cards or template element not found.");
+            return;
+        }
+
+        characterCards.innerHTML = '';
+
+        if (!Array.isArray(characters) || characters.length === 0) {
+            characterCards.innerHTML = "<p>No characters found.</p>";
+            return;
+        }
+
+        characters.forEach(character => {
+            const card = characterTemplate.cloneNode(true);
+            card.style.display = 'block';
+
+            const img = card.querySelector('img');
+            if (img) {
+                img.src = character.image_path || '';
+                img.alt = character.image_name || 'Character Image';
+            }
+
+            const deleteBtn = card.querySelector('.delete-btn');
+            if (deleteBtn) {
+                deleteBtn.addEventListener('click', () => deleteCharacter(character.id));
+            }
+
+            characterCards.appendChild(card);
+        });
+    }
+
+    // ฟังก์ชันสำหรับการลากและวางหรือการเลือกไฟล์
+    function setupDropZone(dropZone, inputFile, previewId, fileType) {
+        dropZone.addEventListener('click', () => inputFile.click());
+
+        dropZone.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            dropZone.classList.add('drag-over');
+        });
+
+        dropZone.addEventListener('dragleave', () => {
+            dropZone.classList.remove('drag-over');
+        });
+
+        dropZone.addEventListener('drop', (e) => {
+            e.preventDefault();
+            dropZone.classList.remove('drag-over');
+            const file = e.dataTransfer.files[0];
+            handleFileSelection(file, inputFile, previewId, fileType);
+        });
+
+        inputFile.addEventListener('change', (e) => {
+            const file = e.target.files[0];
+            handleFileSelection(file, inputFile, previewId, fileType);
+        });
+    }
+
+    // ฟังก์ชันลบ background
+    window.removeBackground = function() {  // Make function globally accessible
+        const preview = document.getElementById('backgroundImagePreview');
+        const removeBtn = document.getElementById('removeBackground');
+        if (preview) preview.style.display = 'none';
+        if (removeBtn) removeBtn.style.display = 'none';
+        backgroundToRemove = true;  // เพิ่มตัวแปรเพื่อรอการยืนยัน
+        
+        // แสดงช่องอัพโหลดเมื่อมีการลบภาพพื้นหลัง
+        const backgroundImageDropZone = document.getElementById('backgroundImageDropZone');
+        backgroundImageDropZone.style.display = 'block'; // แสดงช่องอัพโหลด
+    }
+
+    // ฟังก์ชันลบ music
+    window.removeMusic = function() {  // Make function globally accessible
+        const audioPlayer = document.getElementById('backgroundMusicPreview');
+        const removeBtn = document.getElementById('removeMusic');
+        if (audioPlayer) audioPlayer.style.display = 'none';
+        if (removeBtn) removeBtn.style.display = 'none';
+        musicToRemove = true;  // เพิ่มตัวแปรเพื่อรอการยืนยัน
+
+        // แสดงช่องอัพโหลดเมื่อมีการลบเพลง
+        const musicDropZone = document.getElementById('backgroundMusicDropZone');
+        musicDropZone.style.display = 'block'; // แสดงช่องอัพโหลด
+    }
+
+    // เพิ่ม Event Listener ให้กับปุ่มลบ
+    document.getElementById('removeBackground').addEventListener('click', removeBackground);
+    document.getElementById('removeMusic').addEventListener('click', removeMusic);
+
+    // แก้ไขฟังก์ชัน handleFileSelection ให้แสดงปุ่มลบเมื่ออัปโหลดไฟล์
+    function handleFileSelection(file, inputFile, previewId, fileType) {
+        if (!file) return;
+
+        const reader = new FileReader();
+
+        if (fileType === 'image') {
+            reader.onload = () => {
+                document.getElementById(previewId).src = reader.result;
+                document.getElementById(previewId).style.display = 'block';
+            };
+        } else if (fileType === 'music') {
+            reader.onload = () => {
+                const previewAudio = document.getElementById('backgroundMusicPreview');
+                previewAudio.src = reader.result;
+                previewAudio.style.display = 'block';
+
+                document.getElementById('removeMusic').style.display = 'inline-block'; // แสดงปุ่มลบ Music
+                selectedMusic = file;
+            };
+        } else if (fileType === 'background') {
+            reader.onload = () => {
+                const previewImage = document.getElementById('backgroundImagePreview');
+                previewImage.src = reader.result;
+                previewImage.style.display = 'block';
+
+                document.getElementById('removeBackground').style.display = 'inline-block'; // แสดงปุ่มลบ Background
+                selectedBackground = file;
+            };
+        }
+
+        reader.readAsDataURL(file);
+    }
+
+    function updateStatus(status) {
+        const statusToggle = document.getElementById('statusToggle');
+        const statusInput = document.getElementById('status');
+
+        if (!statusToggle || !statusInput) {
+            console.error("Status toggle or input element not found.");
+            return;
+        }
+
+        const isActive = status === 'active';
+        statusToggle.classList.toggle('fa-toggle-on', isActive);
+        statusToggle.classList.toggle('fa-toggle-off', !isActive);
+        statusToggle.dataset.status = status;
+        statusToggle.style.color = isActive ? 'green' : 'red';
+
+        // อัพเดทค่าใน input hidden
+        statusInput.value = status;
+
+        // อัพเดทฐานข้อมูลทันที
+        const formData = new FormData();
+        formData.append('event_id', eventId);
+        formData.append('status', status);
+
+        fetch('http://127.0.0.1/Event/edit_event.php', {
+            method: 'POST',
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (!data.success) {
+                    throw new Error(data.error || 'Failed to update status');
+                }
+            })
+            .catch(error => {
+                console.error('Error updating status:', error);
+                alert('An error occurred while updating the status.');
+            });
+    }
+
+    // เริ่มต้นการตั้งค่า Dropzone สำหรับการอัปโหลดไฟล์
+    setupDropZone(dropZoneImage, imageInput, 'imagePreview', 'image');
+    setupDropZone(dropZoneMusic, musicInput, 'backgroundMusicPreview', 'music');
+    setupDropZone(dropZoneBackground, backgroundInput, 'backgroundImagePreview', 'background');
+    fetchEventData(eventId);
+
+    // สมมติว่ามีปุ่มสำหรับเปลี่ยนสถานะ
+    const statusToggle = document.getElementById('statusToggle');
+    statusToggle.addEventListener('click', () => {
+        const currentStatus = statusToggle.dataset.status === 'active' ? 'inactive' : 'active';
+        updateStatus(currentStatus); // เรียกใช้ฟังก์ชัน updateStatus
+    });
+
+    function deleteCharacter(characterId) {
+        console.log("Deleting character with ID:", characterId);
+
+        // ทำการลบตัวละครจากฐานข้อมูลหรืออัปเดต UI ที่นี่
+        // ตัวอย่างการลบจากฐานข้อมูล
+        fetch(`http://127.0.0.1/Event/delete_character.php`, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ id: characterId }),
+        })
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error('Network response was not ok');
+                }
+                return response.json();
+            })
+            .then(data => {
+                if (data.success) {
+                    alert('Character deleted successfully.');
+                    const characterCard = document.getElementById(`character-${characterId}`);
+                    if (characterCard) {
+                        characterCard.remove();
+                    }
+                } else {
+                    alert('Failed to delete character: ' + data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error deleting character:', error);
+                alert('An error occurred while deleting the character.');
+            });
+    }
+
+    // เพิ่มฟังก์ชันสำหรับการอัพโหลดรูปภาพ
+    function handleImageUpload(event) {
+        const imageFile = event.target.files[0];
+        if (!imageFile) {
+            return;
+        }
+
+        // ใช้ชื่อไฟล์เป็น image_name (ตัด extension ออก)
+        const imageName = imageFile.name.replace(/\.[^/.]+$/, "");
+        const apiUrl = `http://127.0.0.1/Event/upload_image.php?id=${eventId}`;
+
+        const formData = new FormData();
+        formData.append("image_name", imageName);
+        formData.append("image_file", imageFile);
+
+        fetch(apiUrl, {
+            method: "POST",
+            body: formData
+        })
+            .then(response => response.json())
+            .then(data => {
+                if (data.message) {
+                    alert(data.message);
+                    // รีโหลดรายการรูปภาพ
+                    fetchEventData(eventId);
+                }
+            })
+            .catch(error => {
+                console.error("Error uploading image:", error);
+                alert("เกิดข้อผิดพลาดในการอัพโหลดรูปภาพ");
+            });
+    }
+
+    // เพิ่ม event listener สำหรับการอัพโหลดรูปภาพ
+    if (imageInput) {
+        imageInput.addEventListener('change', handleImageUpload);
+    }
+
+    // เพิ่มปุ่มกลับไปยังหน้า manage
+    const backButton = document.createElement('button');
+    backButton.innerHTML = '<i class="fa fa-mail-reply"></i> กลับหน้ารายการ';
+    backButton.className = 'back-button';
+    backButton.onclick = () => {
+        window.location.href = 'manage.html';
+    };
+
+    // เพิ่มปุ่มไว้ที่ต้นหน้าหรือตำแหน่งที่ต้องการ
+    document.querySelector('.container').insertBefore(backButton, document.querySelector('.container').firstChild);
+
+
+});

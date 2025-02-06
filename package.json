@@ -10,6 +10,9 @@
   "description": "",
   "dependencies": {
     "express": "^4.21.2",
+    "gif.js": "^0.2.0",
+    "gif.js.optimized": "^1.0.1",
+    "gifuct-js": "^2.1.2",
     "multer": "^1.4.5-lts.1"
   }
 }

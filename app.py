@@ -1,20 +1,18 @@
-from flask import Flask, request, jsonify, send_file, send_from_directory
+from flask import Flask, request, jsonify, send_file, send_from_directory, render_template
 from PIL import Image
 import cv2
 import numpy as np
 import os
-import traceback
 import logging
 import mediapipe as mp
 from flask_cors import CORS
-import base64
 
 # ตั้งค่า logging
 logging.basicConfig(level=logging.DEBUG)
 logger = logging.getLogger(__name__)
 
 app = Flask(__name__)
-CORS(app)  # เปิดใช้งาน CORS สำหรับทุกเส้นทาง
+CORS(app)
 UPLOAD_FOLDER = "uploads"
 OUTPUT_FOLDER = "outputs"
 
@@ -85,25 +83,25 @@ def remove_white_background(image):
     return cv2.merge([b, g, r, a])
 
 # ฟังก์ชันประมวลผลภาพ
-def process_image(image_path, template_base64):
+def process_image(image_path, template_image_path):
     try:
         if not os.path.exists(image_path):
             return None, "ไม่พบไฟล์ภาพที่อัพโหลด"
 
-        missing_padding = len(template_base64) % 4
-        if missing_padding:
-            template_base64 += '=' * (4 - missing_padding)
-
-        template_data = base64.b64decode(template_base64)
-        template = cv2.imdecode(np.frombuffer(template_data, np.uint8), cv2.IMREAD_UNCHANGED)
+        # โหลดภาพการ์ตูน
+        template = cv2.imread(template_image_path, cv2.IMREAD_UNCHANGED)
         if template is None or template.size == 0:
             return None, "ไม่สามารถแปลง Base64 เป็นภาพได้"
 
+        # ตัดใบหน้า
         cropped_face, error = extract_face(image_path)
         if error:
             return None, error
 
+        # ลบพื้นหลังสีขาวจากใบหน้า
         cropped_face = remove_white_background(cropped_face)
+
+        # ตรวจจับพื้นที่สีเขียวในภาพการ์ตูน
         green_area = detect_green_screen_area(template)
         if not green_area:
             return None, "ไม่พบพื้นที่สีเขียวในภาพการ์ตูน"
@@ -111,49 +109,63 @@ def process_image(image_path, template_base64):
         ex, ey, ew, eh = green_area
         scale_factor = 1.1
         new_width, new_height = int(ew * scale_factor), int(eh * scale_factor)
+
+        # ปรับขนาดใบหน้าให้พอดีกับพื้นที่สีเขียว
         face_resized = cv2.resize(cropped_face, (new_width, new_height), interpolation=cv2.INTER_AREA)
         offset_x, offset_y = (ew - face_resized.shape[1]) // 2, (eh - face_resized.shape[0]) // 2
 
+        # ใช้ Pillow เพื่อผสานภาพใบหน้ากับการ์ตูน
         template_pil = Image.fromarray(cv2.cvtColor(template, cv2.COLOR_BGRA2RGBA))
         face_pil = Image.fromarray(cv2.cvtColor(face_resized, cv2.COLOR_BGRA2RGBA))
         result = Image.new('RGBA', template_pil.size, (0, 0, 0, 0))
         result.paste(template_pil, (0, 0), template_pil)
         result.paste(face_pil, (ex + offset_x, ey + offset_y), face_pil)
 
+        # บันทึกผลลัพธ์
         result_cv = cv2.cvtColor(np.array(result), cv2.COLOR_RGBA2BGRA)
         result_cleaned = remove_white_background(result_cv)
         output_path = os.path.join(OUTPUT_FOLDER, "output.png")
         cv2.imwrite(output_path, result_cleaned)
         return output_path, None
     except Exception as e:
-        logger.error(f"Base64 decode error: {str(e)}")
-        return None, f"ไม่สามารถถอดรหัส Base64 ได้: {str(e)}"
+        logger.error(f"Error: {str(e)}")
+        return None, f"ไม่สามารถประมวลผลภาพได้: {str(e)}"
 
-@app.route("/upload", methods=["POST"])
+@app.route("/uploads", methods=["POST"])
+# @cross_origin(origins=["http://127.0.0.1:5000"])
 def upload_file():
-    file = request.files.get("file")
-    cartoon_id = request.form.get("cartoonId")
-    if not file or not cartoon_id:
-        return jsonify({"error": "กรุณาเลือกรูปภาพและการ์ตูน"}), 400
 
-    file_ext = os.path.splitext(file.filename)[1].lower()
-    if file_ext not in {'.png', '.jpg', '.jpeg', '.gif', '.jpe'}:
-        return jsonify({"error": "รูปแบบไฟล์ไม่ถูกต้อง"}), 400
+    if not image_file or not template_file:
+        return jsonify({"error": "กรุณาเลือกรูปภาพและเทมเพลตภาพ"}), 400
+    image_file = request.files.get("file")  # รับไฟล์ภาพจาก FormData
+    template_file = request.files.get("templateImage")  # รับเทมเพลตภาพจาก FormData
 
-    file_path = os.path.join(UPLOAD_FOLDER, file.filename)
-    file.save(file_path)
+    print("Image File:", image_file)
+    print("Template Image:", template_file)
 
     try:
-        output_path, error = process_image(file_path, cartoon_id)
+        # บันทึกไฟล์ที่อัปโหลด
+        image_path = os.path.join(UPLOAD_FOLDER, image_file.filename)
+        template_path = os.path.join(UPLOAD_FOLDER, template_file.filename)
+
+        image_file.save(image_path)
+        template_file.save(template_path)
+
+        # ประมวลผลภาพ
+        output_path, error = process_image(image_path, template_path)
         if error:
             return jsonify({"error": error}), 400
 
         if os.path.exists(output_path):
-            return jsonify({"imageUrl": f"/outputs/{os.path.basename(output_path)}"})
+            return jsonify({"imageUrl": f"/outputs/{os.path.basename(output_path)}"}), 200
         else:
             return jsonify({"error": "ไม่สามารถสร้างไฟล์ผลลัพธ์ได้"}), 500
     finally:
-        os.remove(file_path)
+        # ลบไฟล์หลังประมวลผลเสร็จ
+        if os.path.exists(image_path):
+            os.remove(image_path)
+        if os.path.exists(template_path):
+            os.remove(template_path)
 
 @app.route("/outputs/<filename>")
 def serve_output(filename):
@@ -174,6 +186,50 @@ def serve_js():
 @app.route("/result.html")
 def result():
     return send_file("result.html")
+
+@app.route("/manage.html")
+def manage():
+    return send_file("manage.html")
+
+@app.route("/manage.css")
+def manage_css():
+    return send_file("manage.css", mimetype="text/css")
+
+@app.route('/manage.js')
+def manage_js():
+    return send_from_directory('.', 'manage.js')
+
+@app.route("/edit.html")
+def edit():
+    return send_file("edit.html")
+
+@app.route('/edit.js')
+def edit_js():
+    return send_from_directory('.', 'edit.js')
+
+@app.route("/edit.css")
+def edit_css():
+    return send_file("edit.css", mimetype="text/css")
+
+@app.route("/test.html")
+def test():
+    return send_file("test.html")
+
+@app.route('/test.js')
+def test_js():
+    return send_from_directory('.', 'test.js')
+
+@app.route("/cartoon_history.html")
+def cartoon_history():
+    return send_file("cartoon_history.html")
+
+@app.route('/cartoon_history.js')
+def cartoon_history_js():
+    return send_from_directory('.', 'cartoon_history.js')
+
+@app.route("/cartoon_history.css")
+def cartoon_history_css():
+    return send_file("cartoon_history.css", mimetype="text/css")
 
 if __name__ == "__main__":
     app.run(debug=True)

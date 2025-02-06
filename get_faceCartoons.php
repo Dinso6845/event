@@ -14,39 +14,32 @@ if (!$conn) {
     exit();
 }
 
-// Query เพื่อดึงตัวการ์ตูนที่มี event_id ตรงกับ id ของ events ที่มี status เป็น active
-$sql = "
-    SELECT characters.id, characters.event_id, characters.image_name, characters.image_path 
-    FROM characters 
-    JOIN events ON characters.event_id = events.id 
-    WHERE events.status = 'active'
-";
+$sql = "SELECT id, name, faceImagePath FROM face_images";
 $result = $conn->query($sql);
 
-$characters = [];
+$cartoons = [];
 $base_url = "http://127.0.0.1/Event/";
 
 if ($result && $result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {
         // แปลง path เป็น URL ที่ถูกต้อง
-        $path_parts = explode('Event\\', $row['image_path']);
+        $path_parts = explode('Event\\', $row['faceImagePath']);
         $relative_path = end($path_parts);
-        $row['image_path'] = $base_url . str_replace('\\', '/', $relative_path);
+        $row['faceImagePath'] = $base_url . str_replace('\\', '/', $relative_path);
 
-        $characters[] = [
+        $cartoons[] = [
             'id' => $row['id'],
-            'event_id' => $row['event_id'],
-            'image_name' => $row['image_name'],
-            'image_path' => $row['image_path']
+            'name' => $row['name'],
+            'faceImagePath' => $row['faceImagePath']
         ];
     }
 } else {
     http_response_code(404);
-    echo json_encode(["error" => "No active characters found."]);
+    echo json_encode(["error" => "No cartoons found."]);
     $conn->close();
     exit();
 }
 
-echo json_encode($characters, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
+echo json_encode($cartoons, JSON_UNESCAPED_UNICODE | JSON_PRETTY_PRINT | JSON_UNESCAPED_SLASHES);
 $conn->close();
 ?>

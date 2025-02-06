@@ -9,28 +9,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const toggleMusicBtn = document.getElementById('toggle-music-btn');
     const audioElement = document.getElementById('background-music');
     const musicIcon = document.getElementById('music-icon');
-    const goToWebsiteBtn = document.getElementById('go-to-website-btn');
-    const copyLinkBtn = document.getElementById('copy-link-btn');
-
-    window.onload = () => {
-        let fullscreenActivated = false; // ตัวแปรเช็คว่าเปิดเต็มหน้าจอแล้วหรือยัง
-    
-        document.body.addEventListener('click', () => {
-            if (!fullscreenActivated) { // ถ้ายังไม่เปิดเต็มหน้าจอ
-                const elem = document.documentElement; // ทำให้ทั้งหน้าเว็บเต็มจอ
-                if (elem.requestFullscreen) {
-                    elem.requestFullscreen();
-                } else if (elem.mozRequestFullScreen) { // สำหรับ Firefox
-                    elem.mozRequestFullScreen();
-                } else if (elem.webkitRequestFullscreen) { // สำหรับ Chrome, Safari และ Opera
-                    elem.webkitRequestFullscreen();
-                } else if (elem.msRequestFullscreen) { // สำหรับ IE/Edge
-                    elem.msRequestFullscreen();
-                }
-                fullscreenActivated = true; // ตั้งค่าตัวแปรให้เป็น true เพื่อไม่ให้ทำงานอีก
-            }
-        });
-    };
 
     // โหลดข้อมูลจากฐานข้อมูล
     loadBackgroundVideo();
@@ -43,7 +21,7 @@ document.addEventListener('DOMContentLoaded', function () {
         localStorage.setItem('cartoons', JSON.stringify(cartoons));
 
         const cartoonCount = document.getElementById('cartoon-count');
-        cartoonCount.textContent = cartoons.slice().length;
+        cartoonCount.textContent = cartoons.slice(-20).length;
 
         let totalCartoonCount = parseInt(localStorage.getItem('totalCartoonCount')) || 0;
         totalCartoonCount++;
@@ -52,7 +30,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function loadCartoonsFromLocalStorage() {
         const cartoons = JSON.parse(localStorage.getItem('cartoons')) || [];
-        const recentCartoons = cartoons.slice(-10);
+        const recentCartoons = cartoons.slice(-20);
 
         const cartoonCount = document.getElementById('cartoon-count');
         cartoonCount.textContent = recentCartoons.length;
@@ -82,114 +60,48 @@ document.addEventListener('DOMContentLoaded', function () {
             alert("กรุณาเลือกการ์ตูนหรืออัพโหลดรูป");
             return;
         }
-    
-        // เก็บข้อมูลจาก input fields
+
+        // เก็บ input elements ลงในตัวแปร
         const userMessageInput = document.getElementById('user-message');
         const cartoonMessageInput = document.getElementById('cartoon-message');
-    
+
         const userMessage = userMessageInput.value.trim();
         const cartoonMessage = cartoonMessageInput.value.trim();
-    
+
         if (!userMessage || !cartoonMessage) {
             alert("กรุณากรอกชื่อและคำอวยพรให้ครบถ้วน");
             return;
         }
-    
-        
-        const resizeImage = (img) => {
-            const maxWidth = 300;
-            const maxHeight = 300;
-            const canvas = document.createElement('canvas');
-            const ctx = canvas.getContext('2d');
-    
-            let width = img.width;
-            let height = img.height;
-    
-            if (width > height) {
-                if (width > maxWidth) {
-                    height = Math.round(height * maxWidth / width);
-                    width = maxWidth;
-                }
-            } else {
-                if (height > maxHeight) {
-                    width = Math.round(width * maxHeight / height);
-                    height = maxHeight;
-                }
-            }
-    
-            canvas.width = width;
-            canvas.height = height;
-            ctx.drawImage(img, 0, 0, width, height);
-    
-            return canvas.toDataURL('image/png');
-        };
-    
+
         // ถ้าอัพโหลดรูป
         if (imageUploadInput.files.length > 0) {
             const file = imageUploadInput.files[0];
-            const fileType = file.type;
-    
-            if (fileType === 'image/gif') {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const imageSrc = e.target.result;
-                    const cartoonImage = document.createElement('div');
-                    cartoonImage.classList.add('cartoon-moving');
-                    const img = document.createElement('img');
-                    img.src = imageSrc;
-                    img.style.width = '150px';
-                    img.style.height = 'auto';
-                    cartoonImage.appendChild(img);
-
-                    const text = document.createElement('div');
-                    text.innerHTML = `<strong>${userMessage}</strong><br>${cartoonMessage}`;
-                    text.classList.add('cartoon-text');
-                    cartoonImage.appendChild(text);
-
-                    cartoonImage.style.top = `${Math.random() * 70 + 10}%`;
-                    const randomSpeed = Math.random() * 5 + 3;
-                    cartoonImage.style.animationDuration = `${randomSpeed}s`;
-                    document.body.appendChild(cartoonImage);
-                    cartoonImage.addEventListener('animationend', () => {
-                        cartoonImage.remove();
-                    });
-                };
-                reader.readAsDataURL(file);
-            } else if (fileType.startsWith('image/')) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const img = new Image();
-                    img.onload = function () {
-                        const imageSrc = resizeImage(img);
-                        addRandomCartoon(imageSrc, cartoonMessage, userMessage);
-                        saveToLocalStorage(imageSrc, cartoonMessage, userMessage);
-                    };
-                    img.src = e.target.result;
-                };
-                reader.readAsDataURL(file);
-            } else {
-                alert("ไฟล์ที่อัพโหลดต้องเป็นรูปภาพ (.png, .jpg, .gif)");
-                return;
-            }
+            const reader = new FileReader();
+            reader.onload = function(e) {
+                const imageSrc = e.target.result;
+                addRandomCartoon(imageSrc, cartoonMessage, userMessage);
+                saveToLocalStorage(imageSrc, cartoonMessage, userMessage);
+            };
+            reader.readAsDataURL(file);
         } else {
             // ถ้าเลือกการ์ตูนจากที่มี
             addRandomCartoon(selectedCartoon.image_path, cartoonMessage, userMessage);
             saveToLocalStorage(selectedCartoon.image_path, cartoonMessage, userMessage);
         }
-    
+
         // รีเซ็ตค่าช่องข้อความและ input
         userMessageInput.value = '';
         cartoonMessageInput.value = '';
         imageUploadInput.value = '';
         modal.style.display = 'none';
-    });    
-    
+    });
+
     // โหลดการ์ตูน
     function fetchCartoons() {
         fetch('http://127.0.0.1/Event/get_cartoons.php')
             .then(response => response.json())
             .then(data => {
-                const randomCartoons = getRandomCartoons(data, 20);
+                const randomCartoons = getRandomCartoons(data, 5);
                 cartoonSelection.innerHTML = '';
                 if (randomCartoons.length === 0) {
                     cartoonSelection.innerHTML = '<p>ไม่พบการ์ตูนในระบบ</p>';
@@ -213,7 +125,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             })
             .catch(error => console.error('Error fetching cartoons:', error));
-    }    
+    }
 
     // ฟังก์ชันเพิ่มการ์ตูนที่เคลื่อนที่
     function addRandomCartoon(imageSrc, message, userMessage) {
@@ -229,10 +141,6 @@ document.addEventListener('DOMContentLoaded', function () {
         cartoonImage.appendChild(text);
 
         cartoonImage.style.top = `${Math.random() * 70 + 10}%`;
-
-        // Set a random speed for the animation
-        const randomSpeed = Math.random() * 10 + 10; // Random speed between 3s and 8s
-        cartoonImage.style.animationDuration = `${randomSpeed}s`;
 
         document.body.appendChild(cartoonImage);
         cartoonImage.addEventListener('animationend', () => {
@@ -262,27 +170,27 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ฟังก์ชันโหลดวิดีโอพื้นหลัง
     function loadBackgroundVideo() {
-        fetch('http://127.0.0.1/Event/background.php')
+        fetch('http://127.0.0.1/Event/background.php') // URL สำหรับดึงข้อมูล
             .then(response => response.json())
             .then(data => {
                 const video = document.getElementById('video-background');
                 const gifBackground = document.getElementById('gif-background');
 
-                const backgroundData = data.find(item => item.background_path && (item.background_path.endsWith('.gif') || item.background_path.endsWith('.mp4')));
+                const backgroundData = data.find(item => item.type === 'image' || item.type === 'video'); // ตรวจสอบข้อมูลทั้ง video และ image
                 if (backgroundData) {
-                    if (backgroundData.background_path.endsWith('.gif')) {
-                        // Use GIF
+                    if (backgroundData.type === 'image' && backgroundData.background_path.endsWith('.gif')) {
+                        // ใช้ GIF
                         gifBackground.src = backgroundData.background_path;
                         gifBackground.style.display = 'block';
                         video.style.display = 'none';
-                    } else if (backgroundData.background_path.endsWith('.mp4')) {
-                        // Use video
+                    } else if (backgroundData.type === 'video' && backgroundData.background_path.endsWith('.mp4')) {
+                        // ใช้วิดีโอ
                         video.src = backgroundData.background_path;
                         video.style.display = 'block';
                         gifBackground.style.display = 'none';
                     }
                 } else {
-                    console.warn('No valid background found in the data.');
+                    console.warn('No background found in the database.');
                 }
             })
             .catch(error => console.error('Error fetching background data:', error));
@@ -293,15 +201,12 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch('http://127.0.0.1/Event/background.php')
             .then(response => response.json())
             .then(data => {
-                const audioElement = document.getElementById('background-music');
-                const backgroundMusicData = data.find(item => item.music && item.music.endsWith('.mp3'));
-                if (backgroundMusicData) {
+                const backgroundMusicData = data.find(item => item.music);
+                if (backgroundMusicData && backgroundMusicData.music.endsWith('.mp3')) {
                     audioElement.src = backgroundMusicData.music;
                     audioElement.loop = true;
-                    audioElement.style.display = 'block'; // Show audio element if music is available
                 } else {
-                    console.warn('No audio background found in the data.');
-                    audioElement.style.display = 'none'; // Hide audio element if no music
+                    console.warn('No audio background found in the database.');
                 }
             })
             .catch(error => console.error('Error fetching background music:', error));
@@ -318,23 +223,5 @@ document.addEventListener('DOMContentLoaded', function () {
             musicIcon.classList.remove('fa-volume-up');
             musicIcon.classList.add('fa-volume-mute');
         }
-    });
-
-    goToWebsiteBtn.addEventListener('click', () => {
-        window.open('https://www.jjmall.co.th/', '_blank');
-    });
-
-    copyLinkBtn.addEventListener('click', () => {
-        const link = 'https://yourwebsite.com'; 
-        navigator.clipboard.writeText(link).then(() => {
-            const toast = document.getElementById('toast');
-            toast.style.display = 'block'; // Show the toast
-
-            setTimeout(() => {
-                toast.style.display = 'none'; // Hide the toast after 3 seconds
-            }, 3000);
-        }).catch(err => {
-            console.error('Failed to copy: ', err);
-        });
     });
 });

@@ -4,44 +4,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Face to Cartoon</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="icon" href="/favicon.ico" />
+    <title>JJ Mall</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 
 <body>
-    <div id="background-preview">
-        <video id="video-preview" autoplay loop muted style="display:none;"></video>
-        <img id="image-preview" style="display:none;" alt="Background Preview">
+    <video id="video-background" autoplay muted loop></video>
+    
+    <button id="toggle-music-btn">
+        <i id="music-icon" class="fas fa-play"></i>
+    </button>
+
+    <button id="go-to-website-btn">
+        <i class="fas fa-globe"></i>
+    </button>  
+
+    <button id="copy-link-btn">
+        <i class="fas fa-share-alt"></i>
+    </button>
+
+    <div id="toast">คัดลอกลิงก์ เพื่อส่งต่อให้เพื่อน</div>
+    
+
+    <audio id="background-music" preload="auto"></audio>
+
+    <img id="gif-background" alt="Background">
+    <div class="content">
+        <button id="create-greeting-btn">สร้างคำอวยพร</button>
+    </div>
+    <div id="cartoon-count-container">
+        คำอวยพรทั้งหมด: <span id="cartoon-count">0</span> ข้อความ
+        <!-- <button id="reset-storage-btn">รีเซ็ตการ์ตูน</button> -->
     </div>
 
-    <button id="create-wish">สร้างคำอวยพร</button>
+    <div id="image-container"></div>
 
-    <div id="upload-popup" class="popup">
-        <div class="popup-content">
+    <!-- Modal Structure -->
+    <div id="upload-modal" class="modal">
+        <div class="modal-content">
             <span class="close">&times;</span>
-            <form id="upload-form" enctype="multipart/form-data">
-                <div>
-                    <label for="image-input">Upload a Photo:</label>
-                    <input type="file" id="image-input" accept="image/*" required>
-                </div>
-                <div class="cartoon-grid">
-                </div>
+            <h1></h1>
 
-                <button type="submit">Create</button>
-            </form>
+            <div id="cartoon-selection"></div>
+
+            <label for="user-message">ชื่อของคุณ (Username):</label>
+            <input type="text" id="user-message" placeholder="กรอกชื่อของคุณ..." />
+
+            <label for="cartoon-message">คำอวยพร (Wish):</label>
+            <textarea id="cartoon-message" placeholder="กรอกคำอวยพร..."></textarea>
+
+            <label for="image-upload">อัปโหลดรูปภาพ:</label>
+            <input type="file" id="image-upload" accept="image/*">
+
+            <button id="submit-btn">สร้างคำอวยพร</button>
         </div>
     </div>
 
-    <div id="result-section">
-        <img id="result" src="#" alt="Processed Image" style="display:none;">
-    </div>
-    <div>
-        <label for="template-select" style="display:none;">Select Background:</label>
-        <select id="template-select" required style="display:none;">
-        </select>
-    </div>
-
-    <script src="/app.js"></script>
+    <script src="app.js"></script>
 </body>
 
 </html>
