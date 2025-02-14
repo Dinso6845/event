@@ -11,6 +11,21 @@
 </head>
 
 <body>
+    <nav class="navbar">
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars" id="menuIcon"></i>
+        </a>
+        <div id="menu" class="menu">
+            <a href="javascript:void(0);" class="closeMenu" onclick="toggleMenu()">
+                <i class="fa fa-times"></i>
+            </a>
+            <ul>
+                <li><i class="fa fa-paint-brush"></i><a href="manage.html">Events</a></li>
+                <li><i class='far fa-file-alt'></i><a href="cartoon_history.html">History</a></li>
+                <li><i class="fa fa-gears"></i><a href="#settings">Settings</a></li>
+            </ul>
+        </div>
+    </nav>
     <div class="container">
         <form id="updateEventForm" enctype="multipart/form-data">
             <div id="backgroundPreviewContainer">
@@ -23,7 +38,7 @@
                         <i class="fa fa-times"></i>
                     </button>
                 </div>
-                <!-- Background Image -->
+                
                 <div class="form-group">
                     <label for="backgroundImage">Background Image:</label>
                     <div id="backgroundImageDropZone" class="drop-zone">
@@ -42,7 +57,7 @@
                     <button class="removeMusic-btn" type="button" id="removeMusic" style="display: none;"
                         onclick="removeMusic(event)"><i class="fa fa-times"></i></button>
                 </div>
-                <!-- Background Music -->
+                
                 <div class="form-group">
                     <label for="backgroundMusic">Background Music:</label>
                     <div id="backgroundMusicDropZone" class="drop-zone">
@@ -54,45 +69,49 @@
 
             </div>
 
-            <!-- Event Name -->
+            <div class="form-group">
+                <label for="linkWeb">Link Web:</label>
+                <input type="text" id="linkWeb" name="link_web"></input>
+            </div>
+
             <div class="form-group" id="name">
                 <label for="eventName">Name:</label>
                 <input type="text" id="eventName" name="name" required>
             </div>
 
             <div class="form-group">
-                <label for="buttonColor">Button Color:</label>
+                <label for="buttonColor">สีปุ่ม:</label>
                 <input type="color" id="buttonColor" name="button_color">
             </div>
 
-            <!-- Text Color -->
             <div class="form-group">
-                <label for="textColor">Text Color:</label>
+                <label for="textColor">สีตัวอักษรปุ่ม:</label>
                 <input type="color" id="textColor" name="text_color">
             </div>
 
-            <!-- Event Message -->
             <div class="form-group">
-                <label for="message">Message:</label>
-                <textarea id="message" name="message" rows="4" required></textarea>
+                <label for="toptextColor">สีข้อความบนตัวการ์ตูน:</label>
+                <input type="color" id="toptextColor" name="toptext_color">
             </div>
 
-            <!-- Submit Button Text -->
+            <div class="form-group">
+                <label for="senderColor">สีชื่อผู้ส่ง:</label>
+                <input type="color" id="senderColor" name="sender_color">
+            </div>
+
+            
+
             <div class="form-group">
                 <label for="textButton">Submit Button Text:</label>
                 <input type="text" id="textButton" name="text_button" required>
             </div>
 
-            <!-- Status Toggle -->
             <div class="form-group">
                 <label for="status">Status:</label>
                 <i id="statusToggle" class="fa fa-toggle-off status-icon" aria-hidden="true"></i>
                 <input type="hidden" id="status" name="status" value="inactive">
             </div>
 
-
-
-            <!-- Upload Image Section -->
             <h2>Upload Image</h2>
             <div id="imageDropZone" class="drop-zone">
                 <p>Drag & Drop หรือ คลิกเพื่ออัพโหลดรูปการ์ตูน</p>
@@ -102,7 +121,6 @@
 
         </form>
 
-        <!-- Upload Message -->
         <div id="uploadMessage"></div>
     </div>
 

@@ -11,46 +11,58 @@ document.addEventListener('DOMContentLoaded', function () {
     const musicIcon = document.getElementById('music-icon');
     const goToWebsiteBtn = document.getElementById('go-to-website-btn');
     const copyLinkBtn = document.getElementById('copy-link-btn');
+    const goToFacebookBtn = document.getElementById('go-to-facebook-btn');
+    let messageLink = ''; 
+    let submitButtonText = '';
+    let createGreetingButtonText = '';
+    let createGreetingButtonColor = '';
 
     window.onload = () => {
-        let fullscreenActivated = false; // ตัวแปรเช็คว่าเปิดเต็มหน้าจอแล้วหรือยัง
+        let fullscreenActivated = false; 
     
         document.body.addEventListener('click', () => {
-            if (!fullscreenActivated) { // ถ้ายังไม่เปิดเต็มหน้าจอ
-                const elem = document.documentElement; // ทำให้ทั้งหน้าเว็บเต็มจอ
+            if (!fullscreenActivated) { 
+                const elem = document.documentElement; 
                 if (elem.requestFullscreen) {
                     elem.requestFullscreen();
-                } else if (elem.mozRequestFullScreen) { // สำหรับ Firefox
+                } else if (elem.mozRequestFullScreen) { 
                     elem.mozRequestFullScreen();
-                } else if (elem.webkitRequestFullscreen) { // สำหรับ Chrome, Safari และ Opera
+                } else if (elem.webkitRequestFullscreen) { 
                     elem.webkitRequestFullscreen();
-                } else if (elem.msRequestFullscreen) { // สำหรับ IE/Edge
+                } else if (elem.msRequestFullscreen) { 
                     elem.msRequestFullscreen();
                 }
                 fullscreenActivated = true; // ตั้งค่าตัวแปรให้เป็น true เพื่อไม่ให้ทำงานอีก
             }
         });
+
+        fetchEventNames(); 
+        fetchMessage(); 
+        fetchButtonTexts(); 
     };
 
     // โหลดข้อมูลจากฐานข้อมูล
     loadBackgroundVideo();
     loadCartoonsFromLocalStorage();
     loadBackgroundMusic();
+    fetchGreetingMessage();
+    updateCartoonCount();
 
-    function saveToLocalStorage(imageSrc, message, userMessage) {
+    function saveToLocalStorage(imageSrc, message, userMessage, eventName) {
         const cartoons = JSON.parse(localStorage.getItem('cartoons')) || [];
-        cartoons.push({ imageSrc, message, userMessage });
+        cartoons.push({ imageSrc, message, userMessage, eventName });
         localStorage.setItem('cartoons', JSON.stringify(cartoons));
 
-        const cartoonCount = document.getElementById('cartoon-count');
-        cartoonCount.textContent = cartoons.slice().length;
+    }
 
-        let totalCartoonCount = parseInt(localStorage.getItem('totalCartoonCount')) || 0;
-        totalCartoonCount++;
-        localStorage.setItem('totalCartoonCount', totalCartoonCount);
+    function updateCartoonCount() {
+        const cartoons = JSON.parse(localStorage.getItem('cartoons')) || [];
+        const cartoonCount = document.getElementById('cartoon-count');
+        cartoonCount.textContent = cartoons.length; // ตั้งค่าจำนวนการ์ตูน
     }
 
     function loadCartoonsFromLocalStorage() {
+        // console.log('Saved cartoons:', JSON.parse(localStorage.getItem('cartoons'))); 
         const cartoons = JSON.parse(localStorage.getItem('cartoons')) || [];
         const recentCartoons = cartoons.slice(-10);
 
@@ -59,7 +71,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
         recentCartoons.forEach((cartoon, index) => {
             setTimeout(() => {
-                addRandomCartoon(cartoon.imageSrc, cartoon.message, cartoon.userMessage);
+                addRandomCartoon(cartoon.imageSrc, cartoon.message, cartoon.userMessage, cartoon.eventName);
             }, index * 2000);
         });
     }
@@ -86,16 +98,21 @@ document.addEventListener('DOMContentLoaded', function () {
         // เก็บข้อมูลจาก input fields
         const userMessageInput = document.getElementById('user-message');
         const cartoonMessageInput = document.getElementById('cartoon-message');
+        const eventNameInput = document.getElementById('event-name');
     
         const userMessage = userMessageInput.value.trim();
         const cartoonMessage = cartoonMessageInput.value.trim();
+        const eventName = eventNameInput.value.trim();
     
         if (!userMessage || !cartoonMessage) {
             alert("กรุณากรอกชื่อและคำอวยพรให้ครบถ้วน");
             return;
         }
     
-        
+        if (!eventName) {
+            console.warn('Event Name is empty!'); // ถ้า eventName ว่าง
+        }
+    
         const resizeImage = (img) => {
             const maxWidth = 300;
             const maxHeight = 300;
@@ -147,7 +164,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     cartoonImage.appendChild(text);
 
                     cartoonImage.style.top = `${Math.random() * 70 + 10}%`;
-                    const randomSpeed = Math.random() * 5 + 3;
+                    const randomSpeed = Math.random() * 15 + 20;
                     cartoonImage.style.animationDuration = `${randomSpeed}s`;
                     document.body.appendChild(cartoonImage);
                     cartoonImage.addEventListener('animationend', () => {
@@ -161,8 +178,9 @@ document.addEventListener('DOMContentLoaded', function () {
                     const img = new Image();
                     img.onload = function () {
                         const imageSrc = resizeImage(img);
-                        addRandomCartoon(imageSrc, cartoonMessage, userMessage);
-                        saveToLocalStorage(imageSrc, cartoonMessage, userMessage);
+                        addRandomCartoon(imageSrc, cartoonMessage, userMessage, eventName);
+                        saveToLocalStorage(imageSrc, cartoonMessage, userMessage, eventName);
+                        updateCartoonCount();
                     };
                     img.src = e.target.result;
                 };
@@ -173,15 +191,19 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         } else {
             // ถ้าเลือกการ์ตูนจากที่มี
-            addRandomCartoon(selectedCartoon.image_path, cartoonMessage, userMessage);
-            saveToLocalStorage(selectedCartoon.image_path, cartoonMessage, userMessage);
+            addRandomCartoon(selectedCartoon.image_path, cartoonMessage, userMessage, eventName);
+            saveToLocalStorage(selectedCartoon.image_path, cartoonMessage, userMessage, eventName);
+            updateCartoonCount();
         }
     
         // รีเซ็ตค่าช่องข้อความและ input
         userMessageInput.value = '';
         cartoonMessageInput.value = '';
         imageUploadInput.value = '';
+        eventNameInput.value = '';
         modal.style.display = 'none';
+
+        fetchEventNames();
     });    
     
     // โหลดการ์ตูน
@@ -189,13 +211,13 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch('http://127.0.0.1/Event/get_cartoons.php')
             .then(response => response.json())
             .then(data => {
-                const randomCartoons = getRandomCartoons(data, 20);
-                cartoonSelection.innerHTML = '';
-                if (randomCartoons.length === 0) {
+                cartoonSelection.innerHTML = ''; // เคลียร์การ์ตูนที่มีอยู่ก่อนหน้า
+                if (data.length === 0) {
                     cartoonSelection.innerHTML = '<p>ไม่พบการ์ตูนในระบบ</p>';
                     return;
                 }
-                randomCartoons.forEach(cartoon => {
+                // แสดงการ์ตูนทั้งหมดที่ดึงมา
+                data.forEach(cartoon => {
                     const img = document.createElement('img');
                     img.src = cartoon.image_path;
                     img.alt = cartoon.name;
@@ -216,28 +238,45 @@ document.addEventListener('DOMContentLoaded', function () {
     }    
 
     // ฟังก์ชันเพิ่มการ์ตูนที่เคลื่อนที่
-    function addRandomCartoon(imageSrc, message, userMessage) {
-        const cartoonImage = document.createElement('div');
-        cartoonImage.classList.add('cartoon-moving');
-        const img = document.createElement('img');
-        img.src = imageSrc;
-        cartoonImage.appendChild(img);
+    function addRandomCartoon(imageSrc, userMessage, cartoonMessage) {
+        // Fetch data from background.php
+        fetch('http://127.0.0.1/Event/background.php')
+            .then(response => response.json())
+            .then(data => {
+                if (data.length > 0) {
+                    const eventName = data[0]?.name;
+                    const message = data[0]?.message; 
+                    const toptextColor = data[0]?.toptext_color;
+                    const senderColor = data[0]?.sender_color; 
 
-        const text = document.createElement('div');
-        text.innerHTML = `<strong>${userMessage}</strong><br>${message}`;
-        text.classList.add('cartoon-text');
-        cartoonImage.appendChild(text);
+                    const cartoonImage = document.createElement('div');
+                    cartoonImage.classList.add('cartoon-moving');
+                    const img = document.createElement('img');
+                    img.src = imageSrc;
+                    cartoonImage.appendChild(img);
 
-        cartoonImage.style.top = `${Math.random() * 70 + 10}%`;
+                    const text = document.createElement('div');
+                    text.innerHTML = `<strong class="hidden">${eventName}</strong><br>
+                    <strong style="color: ${senderColor};">${userMessage}</strong><br>
+                    <span style="color: ${toptextColor};">${cartoonMessage}</span>`;
+                    text.classList.add('cartoon-text');
+                    cartoonImage.appendChild(text);
+                    // console.log('Top Text Color:', toptextColor);
 
-        // Set a random speed for the animation
-        const randomSpeed = Math.random() * 10 + 10; // Random speed between 3s and 8s
-        cartoonImage.style.animationDuration = `${randomSpeed}s`;
+                    cartoonImage.style.top = `${Math.random() * 70 + 10}%`;
 
-        document.body.appendChild(cartoonImage);
-        cartoonImage.addEventListener('animationend', () => {
-            cartoonImage.remove();
-        });
+                    const randomSpeed = Math.random() * 10 + 15;
+                    cartoonImage.style.animationDuration = `${randomSpeed}s`;
+
+                    document.body.appendChild(cartoonImage);
+                    cartoonImage.addEventListener('animationend', () => {
+                        cartoonImage.remove();
+                    });
+                } else {
+                    console.warn('No data found in the response.');
+                }
+            })
+            .catch(error => console.error('Error fetching greeting message:', error));
     }
 
     function getRandomCartoons(cartoonArray, count) {
@@ -250,11 +289,25 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch('http://127.0.0.1/Event/background.php')
             .then(response => response.json())
             .then(data => {
-                const greetingMessage = data[0]?.h1;
-                if (greetingMessage) {
-                    document.querySelector('#upload-modal h1').textContent = greetingMessage;
+                // console.log("Data from API:", data);
+                const buttonColor = data[0]?.button_color;
+                const textColor = data[0]?.text_color;
+                const toptextColor = data[0]?.toptext_color;
+
+                if (buttonColor) {
+                    btn.style.backgroundColor = buttonColor;
                 } else {
-                    console.warn('No h1 message found in the data.');
+                    console.warn('No button color found in the data.');
+                }
+
+                if (textColor) {
+                    if (textColor) {
+                        btn.style.color = toptextColor;
+                    } else {
+                        console.warn('Message element not found.');
+                    }
+                } else {
+                    console.warn('No top text color found in the data.');
                 }
             })
             .catch(error => console.error('Error fetching greeting message:', error));
@@ -324,17 +377,82 @@ document.addEventListener('DOMContentLoaded', function () {
         window.open('https://www.jjmall.co.th/', '_blank');
     });
 
+    goToFacebookBtn.addEventListener('click', () => {
+        window.open('https://www.facebook.com/JJMall.Chatuchak', '_blank');
+    });
+
     copyLinkBtn.addEventListener('click', () => {
-        const link = 'https://yourwebsite.com'; 
+        const link = messageLink
         navigator.clipboard.writeText(link).then(() => {
             const toast = document.getElementById('toast');
-            toast.style.display = 'block'; // Show the toast
+            toast.style.display = 'block'; // แสดง toast
 
             setTimeout(() => {
-                toast.style.display = 'none'; // Hide the toast after 3 seconds
+                toast.style.display = 'none'; // ซ่อน toast หลังจาก 3 วินาที
             }, 3000);
         }).catch(err => {
             console.error('Failed to copy: ', err);
         });
     });
+
+    function fetchEventNames() {
+        fetch('http://127.0.0.1/Event/background.php') // URL ของไฟล์ PHP
+            .then(response => response.json())
+            .then(data => {
+                const eventNameInput = document.getElementById('event-name');
+                if (data.length > 0) {
+                    // ถ้ามีข้อมูล active ให้เลือกชื่อแรกมาใส่ใน input
+                    eventNameInput.value = data[0].name; // ใส่ชื่อเหตุการณ์ที่ active
+                } else {
+                    console.warn('No active events found.');
+                }
+            })
+            .catch(error => console.error('Error fetching event names:', error));
+    }
+
+    // ฟังก์ชันดึงข้อความจากฐานข้อมูล
+    function fetchMessage() {
+        fetch('http://127.0.0.1/Event/background.php')
+            .then(response => response.json())
+            .then(data => {
+                if (data.length > 0) {
+                    messageLink = data[0].message; 
+                } else {
+                    console.warn('No messages found.');
+                }
+            })
+            .catch(error => console.error('Error fetching messages:', error));
+    }
+
+    // ฟังก์ชันดึงข้อความจากฐานข้อมูล
+    function fetchButtonTexts() {
+        fetch('http://127.0.0.1/Event/background.php') 
+            .then(response => response.json())
+            .then(data => {
+                if (data.length > 0) {
+                    submitButtonText = data[0].text_button; 
+                    createGreetingButtonText = data[0].text_button;
+                    createGreetingButtonColor = data[0].text_color;
+                    updateButtonTexts(); 
+                } else {
+                    console.warn('No button texts found.');
+                }
+            })
+            .catch(error => console.error('Error fetching button texts:', error));
+    }
+
+    // ฟังก์ชันอัปเดตข้อความปุ่ม
+    function updateButtonTexts() {
+        const submitBtn = document.getElementById('submit-btn');
+        const createGreetingBtn = document.getElementById('create-greeting-btn');
+
+        if (submitBtn) {
+            submitBtn.textContent = submitButtonText; 
+        }
+
+        if (createGreetingBtn) {
+            createGreetingBtn.textContent = createGreetingButtonText;
+            createGreetingBtn.style.color = createGreetingButtonColor;
+        }
+    }
 });

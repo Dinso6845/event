@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // ดึงข้อมูล events
-    $sqlEvent = "SELECT `id`, `name`, `background_path`, `button_color`, `text_color`, `message`, `text_button`, `status`, `music`, `created_at`, `updated_at` 
+    $sqlEvent = "SELECT `id`, `name`, `background_path`, `button_color`, `text_color`, `message`, `text_button`, `status`, `music`, `created_at`, `updated_at`, `toptext_color`, `sender_color`
                  FROM `events` 
                  WHERE `id` = $event_id";
     $resultEvent = $conn->query($sqlEvent);
@@ -84,7 +84,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'button_color' => 's',
         'text_color' => 's',
         'message' => 's',
-        'text_button' => 's'
+        'text_button' => 's',
+        'toptext_color' => 's',
+        'sender_color' => 's'
     ];
 
     foreach ($fields as $field => $type) {
@@ -168,7 +170,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // ดึงข้อมูล events
-    $sqlEvent = "SELECT `id`, `name`, `background_path`, `button_color`, `text_color`, `message`, `text_button`, `status`, `music`, `created_at`, `updated_at` 
+    $sqlEvent = "SELECT `id`, `name`, `background_path`, `button_color`, `text_color`, `message`, `text_button`, `status`, `music`, `created_at`, `updated_at`, `toptext_color`, `sender_color`
                  FROM `events` 
                  WHERE `id` = $event_id";
     $resultEvent = $conn->query($sqlEvent);

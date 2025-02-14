@@ -53,8 +53,9 @@ body {
 .menu ul li a {
     color: #ffc107;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 20px;
     transition: color 0.2s ease;
+    font-weight: bold;
 }
 
 .menu ul li a:hover {
@@ -157,4 +158,46 @@ button.delete i {
 /* ปุ่มทั้งหมดเมื่อ hover */
 button:hover {
     transform: scale(1.1); /* ขยายเล็กน้อย */
+}
+
+.fa-paint-brush {
+    font-size: 24px; 
+    color: #FFD700; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; 
+    margin-right: 10px;
+}
+
+
+.fa-paint-brush:hover {
+    color: #FFD700; 
+    /* transform: scale(1.1);  */
+}
+
+.fa-file-alt {
+    font-size: 24px; 
+    color: #FFD700; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; 
+    margin-right: 20px;
+}
+
+
+.fa-file-alt:hover {
+    color: #FFD700; 
+    /* transform: scale(1.1);  */
+}
+
+.fa-gears {
+    font-size: 24px; 
+    color: #FFD700; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; 
+    margin-right: 10px;
+}
+
+
+.fa-gears:hover {
+    color: #FFD700; 
+    /* transform: scale(1.1);  */
 }

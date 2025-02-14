@@ -14,10 +14,12 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         cartoons.forEach((cartoon, index) => {
+            console.log(`Event Name for cartoon ${index + 1}:`, cartoon.eventName);
             const row = document.createElement('tr');
             row.innerHTML = `
                 <td><input type="checkbox" class="select-cartoon" data-index="${index}"></td>
                 <td>${index + 1}</td>
+                <td><strong>${cartoon.eventName || 'ไม่ระบุ'}</strong></td>
                 <td><img src="${cartoon.imageSrc}" alt="Cartoon Image" style="width: 80px;"></td>
                 <td><strong>${cartoon.userMessage}</strong></td>
                 <td>${cartoon.message}</td>

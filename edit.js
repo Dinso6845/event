@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let backgroundToRemove = false;
     let musicToRemove = false;
 
+    // ฟังก์ชันสำหรับเปิด/ปิดเมนู
+    window.toggleMenu = function () {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('show'); // เพิ่มหรือลบ class "show" เพื่อแสดง/ซ่อนเมนู
+    };
+
     if (!eventId) {
         displayErrorMessage("Invalid or missing event ID.");
         return;
@@ -45,7 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('name', document.getElementById('eventName').value);
             formData.append('button_color', document.getElementById('buttonColor').value);
             formData.append('text_color', document.getElementById('textColor').value);
-            formData.append('message', document.getElementById('message').value);
+            formData.append('toptext_color', document.getElementById('toptextColor').value);
+            formData.append('sender_color', document.getElementById('senderColor').value);
+            formData.append('message', document.getElementById('linkWeb').value);
             formData.append('text_button', document.getElementById('textButton').value);
 
             // เพิ่มการตรวจสอบและส่งค่าการลบไฟล์
@@ -135,7 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const elements = {
             buttonColor: 'button_color',
             textColor: 'text_color',
-            message: 'message',
+            toptextColor: 'toptext_color',
+            senderColor: 'sender_color',
+            linkWeb: 'message',
             textButton: 'text_button',
             eventDetails: 'eventDetails'
         };
@@ -151,16 +161,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const previewImage = document.getElementById('backgroundImagePreview');
         const backgroundImageDropZone = document.getElementById('backgroundImageDropZone');
+        const removeButton = document.getElementById('removeBackground');
 
         if (event.background_path) {
             previewImage.src = event.background_path;
             previewImage.style.display = 'block';
             backgroundImageDropZone.style.display = 'none';
-
-            const removeButton = document.getElementById('removeBackground');
             removeButton.style.display = 'inline-block';
         } else {
+            previewImage.style.display = 'none';
             backgroundImageDropZone.style.display = 'block';
+            removeButton.style.display = 'none';
         }
 
         const previewAudio = document.getElementById('backgroundMusicPreview');
@@ -433,16 +444,22 @@ document.addEventListener('DOMContentLoaded', () => {
         imageInput.addEventListener('change', handleImageUpload);
     }
 
-    // เพิ่มปุ่มกลับไปยังหน้า manage
-    const backButton = document.createElement('button');
-    backButton.innerHTML = '<i class="fa fa-mail-reply"></i> กลับหน้ารายการ';
-    backButton.className = 'back-button';
-    backButton.onclick = () => {
-        window.location.href = 'manage.html';
-    };
+    function createBackButton() {
+        const backButton = document.createElement('button');
+        backButton.innerHTML = '<i class="fa fa-mail-reply"></i>';
+        backButton.className = 'back-button';
+        backButton.onclick = () => {
+            window.location.href = 'manage.html';
+        };
 
-    // เพิ่มปุ่มไว้ที่ต้นหน้าหรือตำแหน่งที่ต้องการ
-    document.querySelector('.container').insertBefore(backButton, document.querySelector('.container').firstChild);
+        // Append the button to the navbar
+        const container = document.querySelector('.container');
+        if (container) {
+            container.appendChild(backButton);
+        }
+    }
 
+    // Call the function to create the back button
+    createBackButton();
 
 });

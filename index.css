@@ -59,7 +59,7 @@ button[type="submit"]:hover {
 /* Animation for moving cartoons */
 @keyframes moveCartoon {
     from {
-        left: 0;
+        left: -20%;
     }
     to {
         left: 100%;
@@ -239,7 +239,7 @@ button#create-greeting-btn {
     padding: 10px 20px;
     font-size: 1.5rem;
     cursor: pointer;
-    background-color: #4CAF50;
+    /* background-color: #4CAF50; */
     color: white;
     border: none;
     border-radius: 5px;
@@ -257,7 +257,7 @@ button#create-greeting-btn {
     padding: 12px 25px;
     font-size: 1.1rem;
     cursor: pointer;
-    background-color: #4CAF50;
+    background: linear-gradient(to right, #000000, #6b6b6b);
     color: white;
     border: none;
     border-radius: 25px;
@@ -301,7 +301,7 @@ input[type="text"] {
     width: 100%; /* ให้เต็มความกว้าง */
 }
 
-/* เพิ่มขนาดของช่องข้อความ 'user-message' */
+
 #user-message,
 #cartoon-message {
     padding: 15px;
@@ -322,7 +322,6 @@ input[type="text"] {
     outline: none;
 }
 
-/* ปรับขนาดช่องข้อความให้ใหญ่ขึ้นบนอุปกรณ์ขนาดเล็ก */
 @media (max-width: 600px) {
     #user-message,
     #cartoon-message {
@@ -380,7 +379,7 @@ textarea {
     transition: background-color 0.3s;
     position: fixed;
     top: 20px;
-    right: 150px;
+    right: 220px;
     z-index: 1100;
     border: 2px solid white;
 }
@@ -393,7 +392,7 @@ textarea {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #4CAF50;
+    background-color: #e6c718;
     color: white;
     border: none;
     display: flex;
@@ -410,14 +409,14 @@ textarea {
 }
 
 #go-to-website-btn:hover {
-    background-color: #45a049;
+    background-color: #cfc100;
 }
 
 #copy-link-btn {
     width: 60px;
     height: 60px;
     border-radius: 50%;
-    background-color: #4CAF50;
+    background-color: #00dfdf;
     color: white;
     border: none;
     display: flex;
@@ -434,15 +433,15 @@ textarea {
 }
 
 #copy-link-btn:hover {
-    background-color: #45a049;
+    background-color: #00bbc9;
 }
 
 #toast {
     position: fixed;
-    top: 20px; /* เปลี่ยนตำแหน่งจาก bottom เป็น top */
+    top: 20px; 
     left: 50%;
     transform: translateX(-50%);
-    background-color: #4CAF50;
+    background-color: #4c9baf;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
@@ -458,4 +457,33 @@ textarea {
     10% { opacity: 1; transform: translateX(-50%) translateY(0); }
     90% { opacity: 1; transform: translateX(-50%) translateY(0); }
     100% { opacity: 0; transform: translateX(-50%) translateY(-20px); }
+}
+
+#go-to-facebook-btn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #3b5998;
+    color: white;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 28px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: fixed;
+    top: 20px; /* ระยะจากด้านบน */
+    right: 150px; /* ระยะจากด้านขวา */
+    z-index: 1100;
+    border: 2px solid rgb(255, 255, 255);
+}
+
+#go-to-facebook-btn:hover {
+    background-color: #114e94; /* Darker blue on hover */
+}
+
+/* ในไฟล์ CSS */
+.hidden {
+    display: none; /* หรือ visibility: hidden; */
 }

@@ -195,3 +195,45 @@ button:hover {
     background-color: #e60000;
     transform: translateY(-2px);
 }
+
+.fa-paint-brush {
+    font-size: 24px; 
+    color: #FFD700; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; 
+    margin-right: 10px;
+}
+
+
+.fa-paint-brush:hover {
+    color: #FFD700; 
+    /* transform: scale(1.1);  */
+}
+
+.fa-file-alt {
+    font-size: 24px; 
+    color: #FFD700; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; 
+    margin-right: 20px;
+}
+
+
+.fa-file-alt:hover {
+    color: #FFD700; 
+    /* transform: scale(1.1);  */
+}
+
+.fa-gears {
+    font-size: 24px; 
+    color: #FFD700; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; 
+    margin-right: 10px;
+}
+
+
+.fa-gears:hover {
+    color: #FFD700; 
+    /* transform: scale(1.1);  */
+}

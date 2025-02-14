@@ -18,7 +18,7 @@ if (!$conn) {
 }
 
 // เพิ่มเงื่อนไขในการ query เพื่อดึงเฉพาะแถวที่มี status เป็น active
-$sql = "SELECT id, name, background_path, button_color, text_color, message, text_button, status, music, created_at, updated_at FROM events WHERE status = 'active'";
+$sql = "SELECT id, name, background_path, button_color, text_color, message, text_button, status, music, created_at, updated_at, sender_color, toptext_color FROM events WHERE status = 'active'";
 $result = $conn->query($sql);
 
 // กรณีไม่พบผลลัพธ์จากการ query
@@ -58,7 +58,9 @@ if ($result->num_rows > 0) {
             'text_button' => $row['text_button'],
             'status' => $row['status'],
             'created_at' => $row['created_at'],
-            'updated_at' => $row['updated_at']
+            'updated_at' => $row['updated_at'],
+            'toptext_color' => $row['toptext_color'],
+            'sender_color' => $row['sender_color']
         ];
     }
 } else {

@@ -8,18 +8,23 @@
     <link rel="icon" href="/favicon.ico" />
     <title>JJ Mall</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"> -->
 </head>
 
 <body>
     <video id="video-background" autoplay muted loop></video>
     
     <button id="toggle-music-btn">
-        <i id="music-icon" class="fas fa-play"></i>
+        <i id="music-icon" class="fa fa-volume-mute"></i>
     </button>
 
     <button id="go-to-website-btn">
         <i class="fas fa-globe"></i>
     </button>  
+
+    <button id="go-to-facebook-btn">
+        <i class="fab fa-facebook-f"></i>
+    </button> 
 
     <button id="copy-link-btn">
         <i class="fas fa-share-alt"></i>
@@ -36,7 +41,6 @@
     </div>
     <div id="cartoon-count-container">
         คำอวยพรทั้งหมด: <span id="cartoon-count">0</span> ข้อความ
-        <!-- <button id="reset-storage-btn">รีเซ็ตการ์ตูน</button> -->
     </div>
 
     <div id="image-container"></div>
@@ -57,6 +61,9 @@
 
             <label for="image-upload">อัปโหลดรูปภาพ:</label>
             <input type="file" id="image-upload" accept="image/*">
+
+            <label for="event-name" style="display: none;">Event Name:</label>
+            <input type="text" id="event-name" placeholder="กรอกชื่อเหตุการณ์..." style="display: none;" />
 
             <button id="submit-btn">สร้างคำอวยพร</button>
         </div>

@@ -11,6 +11,12 @@ document.addEventListener('DOMContentLoaded', () => {
     let backgroundToRemove = false;
     let musicToRemove = false;
 
+    // ฟังก์ชันสำหรับเปิด/ปิดเมนู
+    window.toggleMenu = function () {
+        const menu = document.getElementById('menu');
+        menu.classList.toggle('show'); // เพิ่มหรือลบ class "show" เพื่อแสดง/ซ่อนเมนู
+    };
+
     if (!eventId) {
         displayErrorMessage("Invalid or missing event ID.");
         return;
@@ -166,7 +172,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const previewAudio = document.getElementById('backgroundMusicPreview');
         const musicDropZone = document.getElementById('backgroundMusicDropZone');
 
-        if (event.music) {
+        if (event.music && event.music.trim() !== "") {
             previewAudio.src = event.music;
             previewAudio.style.display = 'block';
             musicDropZone.style.display = 'none';
@@ -174,7 +180,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const removeButton = document.getElementById('removeMusic');
             removeButton.style.display = 'inline-block';
         } else {
-            musicDropZone.style.display = 'block';
+            previewAudio.style.display = 'none'; // ซ่อน preview ถ้าไม่มีเพลง
+            musicDropZone.style.display = 'block'; // แสดงช่องอัพโหลด
         }
 
         if (backgroundToRemove) {
@@ -432,16 +439,22 @@ document.addEventListener('DOMContentLoaded', () => {
         imageInput.addEventListener('change', handleImageUpload);
     }
 
-    // เพิ่มปุ่มกลับไปยังหน้า manage
-    const backButton = document.createElement('button');
-    backButton.innerHTML = '<i class="fa fa-mail-reply"></i> กลับหน้ารายการ';
-    backButton.className = 'back-button';
-    backButton.onclick = () => {
-        window.location.href = 'manage.html';
-    };
+    function createBackButton() {
+        const backButton = document.createElement('button');
+        backButton.innerHTML = '<i class="fa fa-mail-reply"></i>';
+        backButton.className = 'back-button';
+        backButton.onclick = () => {
+            window.location.href = 'manage.html';
+        };
 
-    // เพิ่มปุ่มไว้ที่ต้นหน้าหรือตำแหน่งที่ต้องการ
-    document.querySelector('.container').insertBefore(backButton, document.querySelector('.container').firstChild);
+        // Append the button to the navbar
+        const container = document.querySelector('.container');
+        if (container) {
+            container.appendChild(backButton);
+        }
+    }
 
+    // Call the function to create the back button
+    createBackButton();
 
 });
