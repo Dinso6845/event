@@ -20,6 +20,8 @@ body {
     display: flex;
     justify-content: flex-start;
     align-items: center;
+    position: relative;
+    top: 0;
 }
 /* เมนูเลื่อนด้านซ้าย */
 .menu {
@@ -69,7 +71,6 @@ body {
     cursor: pointer;
 }
 
-/* ตารางข้อมูล */
 table {
     width: 100%;
     margin-top: 20px;
@@ -201,3 +202,131 @@ button:hover {
     color: #FFD700; 
     /* transform: scale(1.1);  */
 }
+
+.fa-sign-in {
+    font-size: 24px; 
+    color: #FFD700; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; 
+    margin-right: 20px;
+}
+
+
+.fa-sign-in:hover {
+    color: #FFD700; 
+    /* transform: scale(1.1);  */
+}
+
+.popup {
+    display: none; /* ซ่อนป๊อปอัพเริ่มต้น */
+    position: fixed; /* ใช้ fixed positioning */
+    z-index: 1000; /* ให้ป๊อปอัพอยู่ด้านบน */
+    left: 0;
+    top: 0;
+    width: 100%; /* กว้างเต็มจอ */
+    height: 100%; /* สูงเต็มจอ */
+    background-color: rgba(0, 0, 0, 0.7); /* พื้นหลังโปร่งใส */
+    backdrop-filter: blur(5px); /* เพิ่ม blur ให้พื้นหลัง */
+}
+
+.popup-content {
+    background-color: #fff;
+    margin: 10% auto; /* จัดกลาง */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 400px; /* กำหนดความกว้าง */
+    border-radius: 10px; /* มุมมน */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.close {
+    color: #ff0000; /* สีของปุ่มปิด */
+    float: right; /* จัดให้ไปทางขวา */
+    font-size: 28px; /* ขนาดตัวอักษร */
+    font-weight: bold; /* ตัวหนา */
+}
+
+.close:hover,
+.close:focus {
+    color: black; /* เปลี่ยนสีเมื่อโฟกัส */
+    text-decoration: none; /* ลบขีดเส้นใต้ */
+    cursor: pointer; /* เปลี่ยนเป็นมือเมื่อชี้ */
+}
+
+/* ปรับปรุงสไตล์ของปุ่มในป๊อปอัพ */
+.popup-content button {
+    background-color: #4CAF50; /* สีเขียว */
+    color: white; /* สีตัวอักษร */
+    border: none; /* ไม่มีกรอบ */
+    border-radius: 5px; /* มุมมน */
+    padding: 10px 20px; /* ระยะห่างภายใน */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    cursor: pointer; /* เปลี่ยนเป็นมือเมื่อชี้ */
+    transition: background-color 0.3s ease; 
+    display: block;
+    margin: 20px auto;
+}
+
+.popup-content button:hover {
+    background-color: #45a049; /* สีเขียวเข้มเมื่อ hover */
+}
+
+/* สไตล์ของช่อง input */
+.popup-content label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+    text-align: left;
+}
+
+.popup-content input {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+    background-color: #f9f9f9;
+    box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.popup-content input:focus {
+    border-color: #4CAF50;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(76, 175, 80, 0.2);
+}
+
+/* ปุ่มสร้างเทศกาล */
+.btn.create {
+    background-color: #4CAF50; /* สีเขียว */
+    color: white; /* สีตัวอักษร */
+    border: none; /* ไม่มีกรอบ */
+    border-radius: 5px; /* มุมมน */
+    padding: 10px 20px; /* ระยะห่างภายใน */
+    font-size: 16px; /* ขนาดตัวอักษร */
+    cursor: pointer; /* เปลี่ยนเป็นมือเมื่อชี้ */
+    transition: background-color 0.3s ease, transform 0.3s ease; /* การเปลี่ยนสีและขยาย */
+    float: right;
+}
+
+.btn.create:hover {
+    background-color: #45a049; /* สีเขียวเข้มเมื่อ hover */
+    transform: scale(1.05); /* ขยายเล็กน้อยเมื่อ hover */
+}
+
+.navbar .create {
+    margin-left: auto; /* ทำให้ปุ่มอยู่ด้านขวา */
+}
+
+.fa-plus-square {
+    margin-right: 8px;
+}
+

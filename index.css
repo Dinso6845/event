@@ -487,3 +487,48 @@ textarea {
 .hidden {
     display: none; /* หรือ visibility: hidden; */
 }
+
+/* ป๊อปอัพ */
+.popup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    z-index: 1000; /* ให้ป๊อปอัพอยู่ด้านบน */
+    width: 300px; /* ความกว้างของป๊อปอัพ */
+    text-align: center; /* จัดข้อความให้อยู่กลาง */
+}
+
+/* ปุ่มในป๊อปอัพ */
+.popup button {
+    background-color: #4CAF50; /* สีเขียว */
+    color: white; /* สีตัวอักษร */
+    border: none; /* ไม่มีกรอบ */
+    border-radius: 5px; /* มุมมน */
+    padding: 10px 15px; /* ระยะห่างภายใน */
+    cursor: pointer; /* เปลี่ยนเป็นมือเมื่อชี้ */
+    transition: background-color 0.3s; /* การเปลี่ยนสีเมื่อ hover */
+}
+
+.popup button:hover {
+    background-color: #45a049; /* สีเขียวเข้มเมื่อ hover */
+}
+
+/* ปิดป๊อปอัพ */
+.popup .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    color: #aaa;
+}
+
+.popup .close:hover {
+    color: #000; /* เปลี่ยนสีเมื่อ hover */
+}

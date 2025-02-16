@@ -1,0 +1,311 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* พื้นหลังแบบ Gradient + Glass Effect */
+body {
+    background: linear-gradient(135deg, #1f1c2c, #928dab);
+    display: flex;
+    height: 100vh;
+}
+
+/* กล่อง Settings */
+.settings-container {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    width: 400px;
+    text-align: center;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* หัวข้อ */
+h2 {
+    color: white;
+    font-size: 24px;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+h3 {
+    color: white;
+    margin-top: 20px;
+}
+
+/* Input ช่องเพิ่มคำต้องห้าม */
+input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: none;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+    background: rgba(255, 255, 255, 0.2);
+    color: white;
+    text-align: center;
+}
+
+input::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ปุ่มลบ */
+.delete-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    padding: 5px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: 0.3s;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+label {
+    color: white;
+}
+
+#bannedList {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; 
+    padding: 0; 
+}
+
+#bannedList li {
+    width: calc(33.33% - 10px); 
+    margin: 5px; 
+    background-color: #f9f9f9; 
+    padding: 10px; 
+    border-radius: 5px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center; 
+}
+
+.delete-btn i {
+    color: #ff0000;
+    font-size: 25px;
+}
+
+#add-btn {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(90deg, #4caf50, #45a049);  /* สีพื้นหลังแบบ Gradient */
+    border: none;
+    border-radius: 5px; /* ขอบโค้งมน */
+    color: white; /* สีตัวอักษร */
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s; /* การเปลี่ยนแปลงเมื่อ hover */
+    text-align: center;
+}
+
+#add-btn:hover {
+    background: linear-gradient(90deg, #45a049, #4caf50);  /* เปลี่ยนสีเมื่อ hover */
+    transform: scale(1.05); /* ขยายขนาดปุ่มเล็กน้อย */
+}
+
+#add-btn:active {
+    transform: scale(1); /* ลดขนาดเมื่อคลิก */
+}
+
+#add-btn:focus {
+    outline: none; /* ลบเส้นกรอบออก */
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.3); /* เพิ่มเงาเล็กน้อยเมื่อฟอร์มถูกคลิก */
+}
+
+.navbar {
+    width: 100%;
+    height: 9%;
+    background-color: #333;
+    /* color: white; */
+    padding: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    left: -250px; /* ซ่อนเมนูทางซ้าย */
+    width: 250px;
+    height: 100%;
+    background-color: #333;
+    color: white;
+    overflow: hidden;
+    transition: left 0.3s ease;
+    z-index: 1000;
+}
+
+.menu.show {
+    display: block;
+    left: 0;
+}
+
+.menu ul {
+    list-style-type: none;
+    padding: 20px;
+    margin: 40px;
+    
+}
+
+.menu ul li {
+    margin-bottom: 20px;
+}
+
+.menu ul li a {
+    color: #ffc107;
+    text-decoration: none;
+    font-size: 20px;
+    transition: color 0.2s ease;
+    font-weight: bold;
+}
+
+.menu ul li a:hover {
+    color: #ffffff; 
+}
+
+.navbar .icon {
+    font-size: 30px;
+    color: #ffc107;
+    padding: 16px;
+    cursor: pointer;
+}
+
+#closeIcon {
+    display: none;
+    color: red; /* กำหนดสีให้เป็นสีแดง */
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+}
+/* ปุ่มปิดเมนู (ไอคอนปิด) */
+.closeMenu {
+    font-size: 30px;
+    color: red;
+    position: absolute; /* ตำแหน่งจะเป็นแบบ absolute */
+    top: 10px; /* ระยะห่างจากด้านบน */
+    right: 20px; /* ระยะห่างจากด้านขวา */
+    cursor: pointer;
+}
+
+
+.fa-paint-brush {
+    font-size: 24px; 
+    color: #FFD700; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; 
+    margin-right: 10px;
+}
+
+
+.fa-paint-brush:hover {
+    color: #FFD700; 
+    /* transform: scale(1.1);  */
+}
+
+.fa-file-alt {
+    font-size: 24px; 
+    color: #FFD700; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; 
+    margin-right: 20px;
+}
+
+
+.fa-file-alt:hover {
+    color: #FFD700; 
+    /* transform: scale(1.1);  */
+}
+
+.fa-gears {
+    font-size: 24px; 
+    color: #FFD700; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; 
+    margin-right: 10px;
+}
+
+.fa-gears:hover {
+    color: #FFD700; 
+    text-align: center;
+    /* transform: scale(1.1);  */
+}
+
+.fa-sign-in {
+    font-size: 24px; 
+    color: #FFD700; 
+    transition: color 0.3s ease, transform 0.3s ease;
+    cursor: pointer; 
+    margin-right: 20px;
+}
+
+
+.fa-sign-in:hover {
+    color: #FFD700; 
+    /* transform: scale(1.1);  */
+}
+
+.container {
+    width: 70%;
+    padding-top: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    text-align: center;
+    margin: 0 auto;
+}
+
+input[type="text"] {
+    /* padding: 10px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    width: 300px;  */
+    margin-bottom: 10px;
+    margin-top: 20px;
+}
+
+button {
+    padding: 10px 15px;
+    background-color: #4CAF50; 
+    color: white; 
+    border: none; 
+    border-radius: 5px; 
+    cursor: pointer; 
+    transition: background-color 0.3s; 
+}
+
+button:hover {
+    border: 2px solid red; 
+    background-color: transparent;
+}
+
+ul {
+    list-style-type: none; 
+    padding: 0; 
+    margin-top: 20px;
+}
+
+li {
+    margin: 5px 0; 
+    padding: 10px; 
+    border-radius: 5px; 
+    display: flex; 
+    justify-content: space-between; 
+    align-items: center;
+}

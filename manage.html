@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Festival Management</title>
+    <title>Management Event</title>
     <link rel="stylesheet" href="manage.css"> <!-- ลิงก์ไฟล์ CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
 </head>
@@ -20,8 +20,12 @@
             <ul>
                 <li><i class="fa fa-paint-brush"></i><a href="manage.html">Events</a></li>
                 <li><i class='far fa-file-alt'></i><a href="cartoon_history.html">History</a></li>
-                <li><i class="fa fa-gears"></i><a href="#settings">Settings</a></li>
+                <li><i class="fa fa-gears"></i><a href="settings.html">Settings</a></li>
+                <li><i class="fa fa-sign-in"></i><a href="login.html">Logout</a></li>
             </ul>
+        </div>
+        <div class="div create">
+            <button id="create-event-btn" class="btn create" onclick="openCreateEventPopup()"><i class="fa fa-plus-square"></i>Create Event</button>
         </div>
     </nav>
 
@@ -39,6 +43,17 @@
             </tbody>
         </table>
     </section>
+
+    <!-- ป๊อปอัพสำหรับสร้างเทศกาล -->
+    <div id="createEventPopup" class="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closeCreateEventPopup()">&times;</span>
+            <h2>สร้างเทศกาลใหม่</h2>
+            <label for="eventName">ชื่อเทศกาล:</label>
+            <input type="text" id="eventName" placeholder="กรอกชื่อเทศกาล" required>
+            <button onclick="addEventToDB(event)">สร้างเทศกาล</button>
+        </div>
+    </div>
 
     <script src="manage.js"></script> <!-- ลิงก์ไฟล์ JS -->
 </body>

@@ -231,5 +231,29 @@ def cartoon_history_js():
 def cartoon_history_css():
     return send_file("cartoon_history.css", mimetype="text/css")
 
+@app.route("/settings.html")
+def settings():
+    return send_file("settings.html")
+
+@app.route('/settings.js')
+def settings_js():
+    return send_from_directory('.', 'settings.js')
+
+@app.route("/settings.css")
+def settings_css():
+    return send_file("settings.css", mimetype="text/css")
+
+@app.route("/login.html")
+def login():
+    return send_file("login.html")
+
+@app.route('/login.js')
+def login_js():
+    return send_from_directory('.', 'login.js')
+
+@app.route("/login.css")
+def login_css():
+    return send_file("login.css", mimetype="text/css")
+
 if __name__ == "__main__":
     app.run(debug=True)

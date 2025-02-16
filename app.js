@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let submitButtonText = '';
     let createGreetingButtonText = '';
     let createGreetingButtonColor = '';
+    let bannedWords = [];
 
     window.onload = () => {
         let fullscreenActivated = false; 
@@ -39,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
         fetchEventNames(); 
         fetchMessage(); 
         fetchButtonTexts(); 
+        fetchBannedWords();
     };
 
     // โหลดข้อมูลจากฐานข้อมูล
@@ -58,11 +60,10 @@ document.addEventListener('DOMContentLoaded', function () {
     function updateCartoonCount() {
         const cartoons = JSON.parse(localStorage.getItem('cartoons')) || [];
         const cartoonCount = document.getElementById('cartoon-count');
-        cartoonCount.textContent = cartoons.length; // ตั้งค่าจำนวนการ์ตูน
+        cartoonCount.textContent = cartoons.length; 
     }
 
     function loadCartoonsFromLocalStorage() {
-        // console.log('Saved cartoons:', JSON.parse(localStorage.getItem('cartoons'))); 
         const cartoons = JSON.parse(localStorage.getItem('cartoons')) || [];
         const recentCartoons = cartoons.slice(-10);
 
@@ -71,7 +72,19 @@ document.addEventListener('DOMContentLoaded', function () {
 
         recentCartoons.forEach((cartoon, index) => {
             setTimeout(() => {
-                addRandomCartoon(cartoon.imageSrc, cartoon.message, cartoon.userMessage, cartoon.eventName);
+                // ตรวจสอบ eventName ก่อนแสดงการ์ตูน
+                fetch('http://127.0.0.1/Event/background.php')
+                    .then(response => response.json())
+                    .then(data => {
+                        const activeEvents = data.filter(event => event.status === 'active' && event.name === cartoon.eventName);
+                        
+                        if (activeEvents.length > 0) {
+                            addRandomCartoon(cartoon.imageSrc, cartoon.message, cartoon.userMessage, cartoon.eventName);
+                        } else {
+                            console.warn(`Event Name "${cartoon.eventName}" does not match any active events.`);
+                        }
+                    })
+                    .catch(error => console.error('Error fetching active events:', error));
             }, index * 2000);
         });
     }
@@ -103,6 +116,14 @@ document.addEventListener('DOMContentLoaded', function () {
         const userMessage = userMessageInput.value.trim();
         const cartoonMessage = cartoonMessageInput.value.trim();
         const eventName = eventNameInput.value.trim();
+    
+        // ตรวจสอบคำต้องห้าม
+        const containsBannedWord = bannedWords.some(word => userMessage.includes(word) || cartoonMessage.includes(word));
+
+        if (containsBannedWord) {
+            showPopup();
+            return;
+        }
     
         if (!userMessage || !cartoonMessage) {
             alert("กรุณากรอกชื่อและคำอวยพรให้ครบถ้วน");
@@ -245,7 +266,6 @@ document.addEventListener('DOMContentLoaded', function () {
             .then(data => {
                 if (data.length > 0) {
                     const eventName = data[0]?.name;
-                    const message = data[0]?.message; 
                     const toptextColor = data[0]?.toptext_color;
                     const senderColor = data[0]?.sender_color; 
 
@@ -454,5 +474,21 @@ document.addEventListener('DOMContentLoaded', function () {
             createGreetingBtn.textContent = createGreetingButtonText;
             createGreetingBtn.style.color = createGreetingButtonColor;
         }
+    }
+
+    // ฟังก์ชันดึงคำต้องห้ามจาก settings.php
+    async function fetchBannedWords() {
+        try {
+            const response = await fetch('http://127.0.0.1/Event/settings.php');
+            const data = await response.json();
+            bannedWords = data; // เก็บคำต้องห้ามในอาร์เรย์
+        } catch (error) {
+            console.error('🚨 Error fetching banned words:', error);
+        }
+    }
+
+    // แสดงป๊อปอัพ
+    function showPopup() {
+        document.getElementById('myPopup').style.display = 'block';
     }
 });

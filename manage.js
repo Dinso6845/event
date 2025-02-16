@@ -7,6 +7,55 @@ document.addEventListener('DOMContentLoaded', () => {
         menu.classList.toggle('show'); // เพิ่มหรือลบ class "show" เพื่อแสดง/ซ่อนเมนู
     };
 
+    // ฟังก์ชันเปิดป๊อปอัพสร้างเทศกาล
+    window.openCreateEventPopup = function () {
+        document.getElementById('createEventPopup').style.display = 'block';
+        document.getElementById('eventName').value = ''; // ล้างค่าในช่องกรอกชื่อเทศกาล
+    };
+
+    // ฟังก์ชันปิดป๊อปอัพ
+    window.closeCreateEventPopup = function () {
+        document.getElementById('createEventPopup').style.display = 'none';
+    };
+
+    window.addEventToDB = async function (event) {
+        event.preventDefault(); // ป้องกันการรีโหลดหน้าเว็บ
+
+        const eventName = document.getElementById('eventName').value;
+        const status = 'inactive';
+
+        if (eventName) {
+            try {
+                console.log("📢 Sending data:", JSON.stringify({ name: eventName, status: status }));
+
+                const response = await fetch('http://127.0.0.1/Event/manage.php', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ name: eventName, status: status }),
+                });
+
+                const data = await response.json();
+                console.log("✅ Response:", data);
+
+                if (response.ok) {
+                    alert('บันทึกสำเร็จ!');
+                    closeCreateEventPopup();
+                    fetchFestivals();
+                } else {
+                    alert('❌ เกิดข้อผิดพลาด: ' + (data.error || 'Unknown error'));
+                }
+            } catch (error) {
+                console.error('🚨 Error:', error);
+                alert('เกิดข้อผิดพลาดในการเชื่อมต่อเซิร์ฟเวอร์');
+            }
+        } else {
+            alert('⚠️ กรุณากรอกชื่อเทศกาล');
+        }
+    };
+
+
     // ฟังก์ชันสำหรับการดึงข้อมูลจากฐานข้อมูล
     async function fetchFestivals() {
         try {
@@ -40,9 +89,14 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ฟังก์ชันเปลี่ยนหน้าไปที่หน้า edit.html พร้อมกับส่งข้อมูลใน URL
-    window.goToEditPage = function(id) {
+    window.goToEditPage = function (id) {
         window.location.href = `edit.html?id=${id}`; // ส่ง id ไปที่ edit.html ผ่าน query string
-    };    
+    };
+
+    // ฟังก์ชันเปลี่ยนหน้าไปที่หน้า create.html
+    window.goToCreatePage = function () {
+        window.location.href = 'create.html'; // เปลี่ยนไปที่หน้า create.html
+    };
 
     // ฟังก์ชันสำหรับการแก้ไขเทศกาล
     window.editFestival = async function (id) { // ใช้ window เพื่อให้เข้าถึงได้จาก HTML
@@ -99,6 +153,13 @@ document.addEventListener('DOMContentLoaded', () => {
             console.error('Error:', error);
         }
     };
+
+    document.getElementById('eventName').addEventListener('keypress', function (event) {
+        if (event.key === 'Enter') {
+            event.preventDefault(); 
+            addEventToDB(event);
+        }
+    });
 
     // เรียกฟังก์ชัน fetchFestivals เมื่อโหลดหน้า
     fetchFestivals();

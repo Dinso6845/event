@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings</title>
+    <link rel="stylesheet" href="settings.css"> 
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> 
+</head>
+<body>
+    <nav id="navbar" class="navbar">
+        <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
+            <i class="fa fa-bars" id="menuIcon"></i>
+        </a>
+        <div id="menu" class="menu">
+            <a href="javascript:void(0);" class="closeMenu" onclick="toggleMenu()">
+                <i class="fa fa-times"></i>
+            </a>
+            <ul>
+                <li><i class="fa fa-paint-brush"></i><a href="manage.html">Events</a></li>
+                <li><i class='far fa-file-alt'></i><a href="cartoon_history.html">History</a></li>
+                <li><i class="fa fa-gears"></i><a href="settings.html">Settings</a></li>
+                <li><i class="fa fa-sign-in"></i><a href="login.html">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="container" class="container">
+        <h2>ตั้งค่าคำต้องห้าม</h2>
+        <label for="bannedWord">เพิ่มคำต้องห้าม:</label>
+        <input type="text" id="bannedWord" placeholder="พิมพ์คำที่ต้องการห้าม">
+        <button id="add-btn" class-="add-btn" onclick="addBannedWord()">เพิ่ม</button>
+
+        <h3>รายการคำต้องห้าม</h3>
+        <ul id="bannedList"></ul>
+    </div>
+
+    <script src="settings.js"></script>
+</body>
+</html>

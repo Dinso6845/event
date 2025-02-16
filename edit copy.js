@@ -51,7 +51,9 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('name', document.getElementById('eventName').value);
             formData.append('button_color', document.getElementById('buttonColor').value);
             formData.append('text_color', document.getElementById('textColor').value);
-            formData.append('message', document.getElementById('message').value);
+            formData.append('toptext_color', document.getElementById('toptextColor').value);
+            formData.append('sender_color', document.getElementById('senderColor').value);
+            formData.append('message', document.getElementById('linkWeb').value);
             formData.append('text_button', document.getElementById('textButton').value);
 
             // เพิ่มการตรวจสอบและส่งค่าการลบไฟล์
@@ -141,7 +143,9 @@ document.addEventListener('DOMContentLoaded', () => {
         const elements = {
             buttonColor: 'button_color',
             textColor: 'text_color',
-            message: 'message',
+            toptextColor: 'toptext_color',
+            senderColor: 'sender_color',
+            linkWeb: 'message',
             textButton: 'text_button',
             eventDetails: 'eventDetails'
         };
@@ -157,16 +161,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const previewImage = document.getElementById('backgroundImagePreview');
         const backgroundImageDropZone = document.getElementById('backgroundImageDropZone');
+        const removeButton = document.getElementById('removeBackground');
 
         if (event.background_path) {
             previewImage.src = event.background_path;
             previewImage.style.display = 'block';
             backgroundImageDropZone.style.display = 'none';
-
-            const removeButton = document.getElementById('removeBackground');
             removeButton.style.display = 'inline-block';
         } else {
+            previewImage.style.display = 'none';
             backgroundImageDropZone.style.display = 'block';
+            removeButton.style.display = 'none';
         }
 
         const previewAudio = document.getElementById('backgroundMusicPreview');
@@ -424,17 +429,14 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 if (data.message) {
                     alert(data.message);
-                    // รีโหลดรายการรูปภาพ
                     fetchEventData(eventId);
                 }
             })
             .catch(error => {
                 console.error("Error uploading image:", error);
-                alert("เกิดข้อผิดพลาดในการอัพโหลดรูปภาพ");
             });
     }
 
-    // เพิ่ม event listener สำหรับการอัพโหลดรูปภาพ
     if (imageInput) {
         imageInput.addEventListener('change', handleImageUpload);
     }
@@ -447,14 +449,12 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'manage.html';
         };
 
-        // Append the button to the navbar
         const container = document.querySelector('.container');
         if (container) {
             container.appendChild(backButton);
         }
     }
 
-    // Call the function to create the back button
     createBackButton();
 
 });

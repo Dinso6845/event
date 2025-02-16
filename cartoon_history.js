@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     const selectAllCheckbox = document.getElementById('select-all');
     const deleteSelectedButton = document.getElementById('delete-selected');
     const content = document.querySelector('.content');
+    const searchInput = document.getElementById('search-input');
 
     function loadCartoonHistory() {
         const cartoons = JSON.parse(localStorage.getItem('cartoons')) || [];
@@ -66,6 +67,16 @@ document.addEventListener('DOMContentLoaded', function () {
 
         localStorage.setItem('cartoons', JSON.stringify(cartoons));
         loadCartoonHistory();
+    });
+
+    searchInput.addEventListener('input', function() {
+        const searchTerm = searchInput.value.toLowerCase();
+        const rows = cartoonList.querySelectorAll('tr');
+
+        rows.forEach(row => {
+            const eventName = row.querySelector('td:nth-child(3)').textContent.toLowerCase();
+            row.style.display = eventName.includes(searchTerm) ? '' : 'none';
+        });
     });
 
     loadCartoonHistory();

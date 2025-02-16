@@ -1,4 +1,7 @@
 <?php
+ini_set('display_errors', 1);
+error_reporting(E_ALL);
+
 header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
@@ -15,14 +18,11 @@ if (!$conn) {
 }
 
 // Query เพื่อดึงตัวการ์ตูนที่มี event_id ตรงกับ id ของ events ที่มี status เป็น active
-$sql = "
-    SELECT characters.id, characters.event_id, characters.image_name, characters.image_path 
+$sql = "SELECT characters.id, characters.event_id, characters.image_name, characters.image_path 
     FROM characters 
     JOIN events ON characters.event_id = events.id 
-    WHERE events.status = 'active'
-";
+    WHERE events.status = 'active'";
 $result = $conn->query($sql);
-
 $characters = [];
 $base_url = "http://127.0.0.1/Event/";
 

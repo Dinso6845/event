@@ -39,6 +39,10 @@ switch ($method) {
     case 'POST':
         // เพิ่มข้อมูลใหม่
         $input = json_decode(file_get_contents("php://input"), true);
+
+        // Debug: Log ข้อมูลที่รับเข้ามา
+        error_log("Received POST Data: " . json_encode($input));
+        
         if (isset($input['name'], $input['status'])) {
             $stmt = $conn->prepare("INSERT INTO `events` (`name`, `status`) VALUES (?, ?)");
             $stmt->bind_param("ss", $input['name'], $input['status']);

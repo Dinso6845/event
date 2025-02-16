@@ -429,17 +429,14 @@ document.addEventListener('DOMContentLoaded', () => {
             .then(data => {
                 if (data.message) {
                     alert(data.message);
-                    // รีโหลดรายการรูปภาพ
                     fetchEventData(eventId);
                 }
             })
             .catch(error => {
                 console.error("Error uploading image:", error);
-                alert("เกิดข้อผิดพลาดในการอัพโหลดรูปภาพ");
             });
     }
 
-    // เพิ่ม event listener สำหรับการอัพโหลดรูปภาพ
     if (imageInput) {
         imageInput.addEventListener('change', handleImageUpload);
     }
@@ -452,14 +449,12 @@ document.addEventListener('DOMContentLoaded', () => {
             window.location.href = 'manage.html';
         };
 
-        // Append the button to the navbar
         const container = document.querySelector('.container');
         if (container) {
             container.appendChild(backButton);
         }
     }
 
-    // Call the function to create the back button
     createBackButton();
 
 });
