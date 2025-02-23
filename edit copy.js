@@ -11,6 +11,14 @@ document.addEventListener('DOMContentLoaded', () => {
     let backgroundToRemove = false;
     let musicToRemove = false;
 
+    const protocol = window.location.protocol;
+    const hostname = window.location.hostname;
+    const port = window.location.port;
+
+    const editUrl = `${protocol}//${hostname}${port ? `:${80}` : ''}/Event/edit_event.php`;
+    const deleteUrl = `${protocol}//${hostname}${port ? `:${80}` : ''}/Event/delete_character.php`;
+    const upimageUrl = `${protocol}//${hostname}${port ? `:${80}` : ''}/Event/upload_image.php?id=${eventId}`;
+
     // ฟังก์ชันสำหรับเปิด/ปิดเมนู
     window.toggleMenu = function () {
         const menu = document.getElementById('menu');
@@ -24,7 +32,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     async function fetchEventData(eventId) {
         try {
-            const response = await fetch(`http://127.0.0.1/Event/edit_event.php?event_id=${eventId}`);
+            const response = await fetch(`${editUrl}?event_id=${eventId}`);
             const data = await response.json();
 
             if (data.error) {
@@ -55,6 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
             formData.append('sender_color', document.getElementById('senderColor').value);
             formData.append('message', document.getElementById('linkWeb').value);
             formData.append('text_button', document.getElementById('textButton').value);
+            formData.append('set_cartoon', document.getElementById('setCartoon').value);
 
             // เพิ่มการตรวจสอบและส่งค่าการลบไฟล์
             if (backgroundToRemove) {
@@ -81,14 +90,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
             console.log("FormData before sending:", [...formData.entries()]);
 
-            const response = await fetch('http://127.0.0.1/Event/edit_event.php', {
+            const response = await fetch(editUrl, {
                 method: 'POST',
                 body: formData
             });
-            
+
             const text = await response.text();
             console.log("Raw response from PHP:", text); // ตรวจสอบค่าที่ PHP ส่งกลับมาก่อนแปลงเป็น JSON
-            
+
             try {
                 const data = JSON.parse(text);
                 if (data.success) {
@@ -100,7 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
             } catch (jsonError) {
                 console.error("Invalid JSON response:", text);
                 alert("An error occurred while updating. Check console for details.");
-            }            
+            }
         } catch (error) {
             console.error('Error updating event:', error);
             alert(`An error occurred while updating the event: ${error.message}`);
@@ -139,7 +148,6 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         }
 
-        // เพิ่มการแสดงค่า name และ text_button
         const elements = {
             buttonColor: 'button_color',
             textColor: 'text_color',
@@ -147,7 +155,8 @@ document.addEventListener('DOMContentLoaded', () => {
             senderColor: 'sender_color',
             linkWeb: 'message',
             textButton: 'text_button',
-            eventDetails: 'eventDetails'
+            eventDetails: 'eventDetails',
+            setCartoon: 'set_cartoon'
         };
 
         // วนลูปเพื่อเซ็ตค่าให้กับแต่ละ element
@@ -160,16 +169,30 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         const previewImage = document.getElementById('backgroundImagePreview');
+        const previewVideo = document.getElementById('backgroundVideoPreview');
         const backgroundImageDropZone = document.getElementById('backgroundImageDropZone');
         const removeButton = document.getElementById('removeBackground');
 
         if (event.background_path) {
-            previewImage.src = event.background_path;
-            previewImage.style.display = 'block';
+            const fileExtension = event.background_path.split('.').pop().toLowerCase();
+
+            if (fileExtension === 'gif') {
+                previewImage.src = event.background_path;
+                previewImage.style.display = 'block';
+                previewVideo.style.display = 'none';
+            } else if (fileExtension === 'mp4') {
+                previewVideo.src = event.background_path;
+                previewVideo.style.display = 'block';
+                previewImage.style.display = 'none';
+                previewVideo.load();  
+                previewVideo.play();  
+            }
+
             backgroundImageDropZone.style.display = 'none';
             removeButton.style.display = 'inline-block';
         } else {
             previewImage.style.display = 'none';
+            previewVideo.style.display = 'none';
             backgroundImageDropZone.style.display = 'block';
             removeButton.style.display = 'none';
         }
@@ -256,20 +279,31 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // ฟังก์ชันลบ background
-    window.removeBackground = function() {  // Make function globally accessible
-        const preview = document.getElementById('backgroundImagePreview');
+    window.removeBackground = function () {  
+        const previewImage = document.getElementById('backgroundImagePreview');
+        const previewVideo = document.getElementById('backgroundVideoPreview');
+        const previewVideoSource = previewVideo.querySelector('source'); 
         const removeBtn = document.getElementById('removeBackground');
-        if (preview) preview.style.display = 'none';
-        if (removeBtn) removeBtn.style.display = 'none';
-        backgroundToRemove = true;  // เพิ่มตัวแปรเพื่อรอการยืนยัน
-        
-        // แสดงช่องอัพโหลดเมื่อมีการลบภาพพื้นหลัง
         const backgroundImageDropZone = document.getElementById('backgroundImageDropZone');
-        backgroundImageDropZone.style.display = 'block'; // แสดงช่องอัพโหลด
-    }
+    
+        if (previewImage.style.display === 'block') {
+            previewImage.style.display = 'none';
+        } else if (previewVideo.style.display === 'block') {
+            previewVideo.pause();  // หยุดวิดีโอ
+            previewVideoSource.src = "";  // รีเซ็ตค่า src
+            previewVideo.load();  // โหลดใหม่เพื่อเคลียร์วิดีโอ
+            previewVideo.style.display = 'none';  // ซ่อนวิดีโอ
+        }
+    
+        if (removeBtn) removeBtn.style.display = 'none';
+        backgroundToRemove = true;  
+    
+        // แสดงช่องอัปโหลดเมื่อมีการลบพื้นหลัง
+        backgroundImageDropZone.style.display = 'block'; 
+    };    
 
     // ฟังก์ชันลบ music
-    window.removeMusic = function() {  // Make function globally accessible
+    window.removeMusic = function () {  // Make function globally accessible
         const audioPlayer = document.getElementById('backgroundMusicPreview');
         const removeBtn = document.getElementById('removeMusic');
         if (audioPlayer) audioPlayer.style.display = 'none';
@@ -342,7 +376,7 @@ document.addEventListener('DOMContentLoaded', () => {
         formData.append('event_id', eventId);
         formData.append('status', status);
 
-        fetch('http://127.0.0.1/Event/edit_event.php', {
+        fetch(editUrl, {
             method: 'POST',
             body: formData
         })
@@ -372,38 +406,39 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     function deleteCharacter(characterId) {
+        if (!confirm("คุณแน่ใจหรือไม่ว่าจะลบการ์ตูน?")) {
+            return; // ยกเลิกการลบถ้าผู้ใช้กด Cancel
+        }
+    
         console.log("Deleting character with ID:", characterId);
-
-        // ทำการลบตัวละครจากฐานข้อมูลหรืออัปเดต UI ที่นี่
-        // ตัวอย่างการลบจากฐานข้อมูล
-        fetch(`http://127.0.0.1/Event/delete_character.php`, {
+        fetch(deleteUrl, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
             },
             body: JSON.stringify({ id: characterId }),
         })
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error('Network response was not ok');
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.success) {
+                alert('Character deleted successfully.');
+                const characterCard = document.getElementById(`character-${characterId}`);
+                if (characterCard) {
+                    characterCard.remove();
                 }
-                return response.json();
-            })
-            .then(data => {
-                if (data.success) {
-                    alert('Character deleted successfully.');
-                    const characterCard = document.getElementById(`character-${characterId}`);
-                    if (characterCard) {
-                        characterCard.remove();
-                    }
-                } else {
-                    alert('Failed to delete character: ' + data.error);
-                }
-            })
-            .catch(error => {
-                console.error('Error deleting character:', error);
-                alert('An error occurred while deleting the character.');
-            });
+            } else {
+                alert('Failed to delete character: ' + data.error);
+            }
+        })
+        .catch(error => {
+            console.error('Error deleting character:', error);
+            alert('An error occurred while deleting the character.');
+        });
     }
 
     // เพิ่มฟังก์ชันสำหรับการอัพโหลดรูปภาพ
@@ -415,13 +450,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // ใช้ชื่อไฟล์เป็น image_name (ตัด extension ออก)
         const imageName = imageFile.name.replace(/\.[^/.]+$/, "");
-        const apiUrl = `http://127.0.0.1/Event/upload_image.php?id=${eventId}`;
 
         const formData = new FormData();
         formData.append("image_name", imageName);
         formData.append("image_file", imageFile);
 
-        fetch(apiUrl, {
+        fetch(upimageUrl, {
             method: "POST",
             body: formData
         })

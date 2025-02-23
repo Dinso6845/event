@@ -285,7 +285,7 @@ button#create-greeting-btn {
     bottom: 100%; /* ย้ายข้อความขึ้นไปเหนือการ์ตูน */
     left: 50%; /* จัดกลางในแนวนอน */
     transform: translateX(-50%); /* ทำให้ข้อความอยู่กลาง */
-    color: rgb(0, 0, 0); /* สีของข้อความ */
+    /* color: rgb(0, 0, 0);  */
     font-size: 25px; /* ขนาดตัวอักษร */
     text-align: center; /* จัดกลางข้อความ */
     white-space: nowrap; /* ป้องกันการตัดข้อความ */
@@ -531,4 +531,60 @@ textarea {
 
 .popup .close:hover {
     color: #000; /* เปลี่ยนสีเมื่อ hover */
+}
+
+/* Responsive adjustments for mobile devices */
+@media (max-width: 600px) {
+    body, html {
+        padding: 10px; /* เพิ่มระยะห่างรอบๆ */
+    }
+
+    form {
+        gap: 10px; /* ลดระยะห่างระหว่างฟอร์ม */
+    }
+
+    button {
+        font-size: 1rem; /* ปรับขนาดตัวอักษรปุ่ม */
+    }
+
+    #submit-btn {
+        padding: 10px; /* ปรับขนาดปุ่ม Submit */
+        font-size: 1rem; /* ปรับขนาดตัวอักษร */
+    }
+
+    .modal-content {
+        width: 90%; /* ปรับความกว้างของป๊อปอัพ */
+        max-width: none; /* ยกเลิกความกว้างสูงสุด */
+    }
+
+    #cartoon-count-container {
+        font-size: 0.8rem; /* ปรับขนาดตัวอักษร */
+    }
+
+    /* ปรับขนาดปุ่มต่างๆ */
+    #toggle-music-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        right: 175px;
+    }
+    #go-to-website-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        right: 65px;
+    }
+
+    #copy-link-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+    }
+
+    #go-to-facebook-btn {
+        width: 50px;
+        height: 50px;
+        font-size: 20px;
+        right: 120px; 
+    }
 }

@@ -1,11 +1,11 @@
 body {
     font-family: 'Arial', sans-serif;
     background-color: #f0f0f0;
-    margin: 0;
-    padding: 0;
     flex-direction: column;
     align-items: center;
     min-height: 100vh;
+    width: 100vw;
+    margin: 0;
 }
 
 h1 {
@@ -70,7 +70,6 @@ button:hover {
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    width: 100%;
 }
 
 /* Menu */

@@ -1,5 +1,5 @@
 <?php
-header('Access-Control-Allow-Origin: http://127.0.0.1:5000');
+header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json');
@@ -19,7 +19,17 @@ if ($id <= 0) {
     exit;
 }
 
-$base_url = "http://127.0.0.1/Event/"; // URL ของเว็บที่คุณต้องการใช้งาน
+error_log("Received ID: " . $id);
+
+if ($result_event->num_rows > 0) {
+    error_log("Event found with ID: " . $id); // บันทึกเมื่อพบเหตุการณ์
+} else {
+    error_log("No event found with ID: " . $id); // บันทึกเมื่อไม่พบเหตุการณ์
+}
+
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$port = ($_SERVER['SERVER_PORT'] == 80 || $_SERVER['SERVER_PORT'] == 443) ? '' : ':' . $_SERVER['SERVER_PORT'];
+$base_url = "{$protocol}://{$_SERVER['HTTP_HOST']}{$port}/Event/";
 
 // เช็คว่า id ในตาราง events มีค่าเท่ากับ $id หรือไม่
 $sql_check_event = "SELECT id FROM events WHERE id = ?";
@@ -29,10 +39,7 @@ $stmt_check_event->execute();
 $result_event = $stmt_check_event->get_result();
 
 if ($result_event->num_rows > 0) {
-    // เช็คว่า event_id ในตาราง characters มีค่าเท่ากับ $id หรือไม่
-    $sql = "
-        SELECT e.id AS event_id,
-               c.id AS character_id, c.image_name, c.image_path
+    $sql = "SELECT e.id AS event_id, c.id AS character_id, c.image_name, c.image_path
         FROM events e
         INNER JOIN characters c ON e.id = c.event_id
         WHERE e.id = ?;
@@ -52,12 +59,10 @@ if ($result_event->num_rows > 0) {
     if ($result->num_rows > 0) {
         $data = [];
         while ($row = $result->fetch_assoc()) {
-            // แยก image_path และแทนที่ \\ ด้วย /
             $path_parts = explode('Event\\', $row['image_path']);
             $relative_path = end($path_parts);
             $row['image_path'] = $base_url . str_replace('\\', '/', $relative_path);
 
-            // เพิ่มข้อมูลลงใน array
             $data[] = $row;
         }
         echo json_encode($data);
@@ -65,9 +70,7 @@ if ($result_event->num_rows > 0) {
         echo json_encode(["message" => "No characters found for the event."]);
     }
 
-    // การ Insert ข้อมูลใหม่เข้าไปในตาราง characters
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-        // รับข้อมูลจากผู้ใช้
         $image_name = $_POST['image_name'];
         $image_file = $_FILES['image_file'];
 
@@ -111,7 +114,7 @@ if ($result_event->num_rows > 0) {
     // ปิดการเชื่อมต่อ
     $stmt->close();
 } else {
-    echo json_encode(["message" => "Event not found."]);
+    echo json_encode(["message" => "Event not found image."]);
 }
 
 $conn->close();

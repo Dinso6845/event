@@ -1,12 +1,16 @@
 document.addEventListener('DOMContentLoaded', async () => {
     const bannedList = document.getElementById('bannedList');
+    const protocol = window.location.protocol;
+    const hostname = window.location.hostname;
+    const port = window.location.port;
 
-    // ดึงคำต้องห้ามจากฐานข้อมูล
+    const settingUrl = `${protocol}//${hostname}${port ? `:${80}` : ''}/Event/settings.php`;
+
     async function fetchBannedWords() {
         try {
-            const response = await fetch('http://127.0.0.1/Event/settings.php');
+            const response = await fetch(settingUrl);
             const bannedWords = await response.json();
-            bannedList.innerHTML = ''; // ล้างรายการก่อนแสดงผลใหม่
+            bannedList.innerHTML = ''; 
             bannedWords.forEach(word => {
                 const li = document.createElement('li');
                 li.textContent = word;
@@ -25,7 +29,7 @@ document.addEventListener('DOMContentLoaded', async () => {
 
         if (word) {
             try {
-                const response = await fetch('http://127.0.0.1/Event/settings.php', {
+                const response = await fetch(settingUrl, {
                     method: 'POST',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ word })
@@ -34,8 +38,8 @@ document.addEventListener('DOMContentLoaded', async () => {
 
                 if (data.success) {
                     alert('✅ เพิ่มคำต้องห้ามสำเร็จ');
-                    inputField.value = ''; // ล้างช่องกรอก
-                    fetchBannedWords(); // อัปเดตรายการ
+                    inputField.value = ''; 
+                    fetchBannedWords(); 
                 } else {
                     alert('❌ เกิดข้อผิดพลาด');
                 }
@@ -60,14 +64,14 @@ document.addEventListener('DOMContentLoaded', async () => {
                 });
     
                 // ลบคำต้องห้ามจากฐานข้อมูล
-                const response = await fetch('http://127.0.0.1/Event/settings.php', {
+                const response = await fetch(settingUrl, {
                     method: 'DELETE',
                     headers: { 'Content-Type': 'application/json' },
                     body: JSON.stringify({ word })
                 });
     
-                const text = await response.text(); // อ่านค่าเป็นข้อความก่อน
-                const data = JSON.parse(text); // แปลงเป็น JSON
+                const text = await response.text(); 
+                const data = JSON.parse(text); 
     
                 if (data.success) {
                     alert('✅ ลบคำต้องห้ามสำเร็จ');
@@ -88,23 +92,19 @@ document.addEventListener('DOMContentLoaded', async () => {
         }
     });    
 
-    // ฟังก์ชันสำหรับเปิด/ปิดเมนู
     window.toggleMenu = function () {
         const menu = document.getElementById('menu');
-        menu.classList.toggle('show'); // เพิ่มหรือลบ class "show" เพื่อแสดง/ซ่อนเมนู
+        menu.classList.toggle('show'); 
     };
 
-    // ฟังก์ชันเปิดป๊อปอัพสร้างเทศกาล
     window.openCreateEventPopup = function () {
         document.getElementById('createEventPopup').style.display = 'block';
-        document.getElementById('eventName').value = ''; // ล้างค่าในช่องกรอกชื่อเทศกาล
+        document.getElementById('eventName').value = ''; 
     };
 
-    // ฟังก์ชันปิดป๊อปอัพ
     window.closeCreateEventPopup = function () {
         document.getElementById('createEventPopup').style.display = 'none';
     };
 
-    // โหลดคำต้องห้ามเมื่อเปิดหน้า
     fetchBannedWords();
 });

@@ -3,12 +3,13 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header('Content-Type: application/json');
+header("Content-Type: text/html; charset=UTF-8");
 
 ini_set('display_errors', 1);
 error_reporting(E_ALL);
 
 include('connect.php');
-$conn = dbconnect(); // ใช้ตัวแปรนี้แทน $mysqli
+$conn = dbconnect(); 
 
 // ดึงคำต้องห้าม
 if ($_SERVER["REQUEST_METHOD"] == "GET") {

@@ -1,8 +1,9 @@
 <?php
-header('Access-Control-Allow-Origin: http://127.0.0.1:5000');
+header('Access-Control-Allow-Origin: *');
 header('Access-Control-Allow-Methods: GET, POST, OPTIONS');
 header('Access-Control-Allow-Headers: Content-Type');
 header('Content-Type: application/json');
+header("Content-Type: text/html; charset=UTF-8");
 
 error_reporting(E_ALL);
 ini_set('display_errors', 0); 
@@ -10,8 +11,7 @@ ini_set('log_errors', 1);
 ini_set('error_log', 'errors.log'); 
 ob_clean();
 
-if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
-    // ถ้าเป็น OPTIONS request ให้ส่ง 200 OK
+if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') { 
     http_response_code(200);
     exit();
 }
@@ -47,7 +47,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // ดึงข้อมูล events
-    $sqlEvent = "SELECT `id`, `name`, `background_path`, `button_color`, `text_color`, `message`, `text_button`, `status`, `music`, `created_at`, `updated_at`, `toptext_color`, `sender_color`
+    $sqlEvent = "SELECT `id`, `name`, `background_path`, `button_color`, `text_color`, `message`, `text_button`, `status`, `music`, `created_at`, `updated_at`, `toptext_color`, `sender_color`, `set_cartoon`
                  FROM `events` 
                  WHERE `id` = $event_id";
     $resultEvent = $conn->query($sqlEvent);
@@ -55,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // ตรวจสอบว่า event นั้นมีอยู่จริง
     if (!$resultEvent || $resultEvent->num_rows == 0) {
         http_response_code(404);
-        echo json_encode(["error" => "Event not found."]);
+        echo json_encode(["error" => "Event not found edit 1."]);
         exit();
     }
 
@@ -86,7 +86,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         'message' => 's',
         'text_button' => 's',
         'toptext_color' => 's',
-        'sender_color' => 's'
+        'sender_color' => 's',
+        'set_cartoon' => 's'
     ];
 
     foreach ($fields as $field => $type) {
@@ -170,7 +171,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     }
 
     // ดึงข้อมูล events
-    $sqlEvent = "SELECT `id`, `name`, `background_path`, `button_color`, `text_color`, `message`, `text_button`, `status`, `music`, `created_at`, `updated_at`, `toptext_color`, `sender_color`
+    $sqlEvent = "SELECT `id`, `name`, `background_path`, `button_color`, `text_color`, `message`, `text_button`, `status`, `music`, `created_at`, `updated_at`, `toptext_color`, `sender_color`, `set_cartoon`
                  FROM `events` 
                  WHERE `id` = $event_id";
     $resultEvent = $conn->query($sqlEvent);
@@ -178,19 +179,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     // ตรวจสอบว่า event นั้นมีอยู่จริง
     if (!$resultEvent || $resultEvent->num_rows == 0) {
         http_response_code(404);
-        echo json_encode(["error" => "Event not found."]);
+        echo json_encode(["error" => "Event not found edit 2."]);
         exit();
     }
 
     $event = $resultEvent->fetch_assoc();
 
-    // แปลง path เป็น URL-friendly สำหรับ event
-    $base_url = "http://127.0.0.1/Event/"; // เปลี่ยน URL ให้เหมาะสมกับเซิร์ฟเวอร์ของคุณ
+    $protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+    $port = ($_SERVER['SERVER_PORT'] == 80 || $_SERVER['SERVER_PORT'] == 443) ? '' : ':' . $_SERVER['SERVER_PORT'];
+    $base_url = "{$protocol}://{$_SERVER['HTTP_HOST']}{$port}/Event/";
 
     // แปลง background_path ของ event
     $path_parts = explode('Event\\', $event['background_path']);
     $filename = end($path_parts);
-    $event['background_path'] = $base_url . str_replace('\\', '/', $filename); // แทนที่ \\ เป็น /
+    $event['background_path'] = $base_url . str_replace('\\', '/', $filename); 
 
     // แปลง music ของ event
     $music_parts = explode('Event\\', $event['music']);

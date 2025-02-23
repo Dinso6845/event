@@ -12,81 +12,98 @@ document.addEventListener('DOMContentLoaded', function () {
     const goToWebsiteBtn = document.getElementById('go-to-website-btn');
     const copyLinkBtn = document.getElementById('copy-link-btn');
     const goToFacebookBtn = document.getElementById('go-to-facebook-btn');
-    let messageLink = ''; 
+    let messageLink = '';
     let submitButtonText = '';
     let createGreetingButtonText = '';
     let createGreetingButtonColor = '';
     let bannedWords = [];
 
+    const protocol = window.location.protocol;
+    const hostname = window.location.hostname;
+    const port = window.location.port;
+
+    const baseUrl = `${protocol}//${hostname}${port ? `:${80}` : ''}/Event/background.php`;
+    const settingUrl = `${protocol}//${hostname}${port ? `:${80}` : ''}/Event/settings.php`;
+    const getCartoonUrl = `${protocol}//${hostname}${port ? `:${80}` : ''}/Event/get_cartoons.php`;
+    const saveCartoonUrl = `${protocol}//${hostname}${port ? `:${80}` : ''}/Event/save_cartoon.php`;
+    const loadCartoonUrl = `${protocol}//${hostname}${port ? `:${80}` : ''}/Event/load_cartoon.php`;
+
     window.onload = () => {
-        let fullscreenActivated = false; 
-    
+        let fullscreenActivated = false;
+
         document.body.addEventListener('click', () => {
-            if (!fullscreenActivated) { 
-                const elem = document.documentElement; 
+            if (!fullscreenActivated) {
+                const elem = document.documentElement;
                 if (elem.requestFullscreen) {
                     elem.requestFullscreen();
-                } else if (elem.mozRequestFullScreen) { 
+                } else if (elem.mozRequestFullScreen) {
                     elem.mozRequestFullScreen();
-                } else if (elem.webkitRequestFullscreen) { 
+                } else if (elem.webkitRequestFullscreen) {
                     elem.webkitRequestFullscreen();
-                } else if (elem.msRequestFullscreen) { 
+                } else if (elem.msRequestFullscreen) {
                     elem.msRequestFullscreen();
                 }
-                fullscreenActivated = true; // ตั้งค่าตัวแปรให้เป็น true เพื่อไม่ให้ทำงานอีก
+                fullscreenActivated = true;
             }
         });
 
-        fetchEventNames(); 
-        fetchMessage(); 
-        fetchButtonTexts(); 
+        fetchEventNames();
+        fetchMessage();
+        fetchButtonTexts();
         fetchBannedWords();
     };
 
     // โหลดข้อมูลจากฐานข้อมูล
     loadBackgroundVideo();
-    loadCartoonsFromLocalStorage();
+    loadCartoonsFromDB();
     loadBackgroundMusic();
     fetchGreetingMessage();
     updateCartoonCount();
 
-    function saveToLocalStorage(imageSrc, message, userMessage, eventName) {
-        const cartoons = JSON.parse(localStorage.getItem('cartoons')) || [];
-        cartoons.push({ imageSrc, message, userMessage, eventName });
-        localStorage.setItem('cartoons', JSON.stringify(cartoons));
-
-    }
-
     function updateCartoonCount() {
-        const cartoons = JSON.parse(localStorage.getItem('cartoons')) || [];
-        const cartoonCount = document.getElementById('cartoon-count');
-        cartoonCount.textContent = cartoons.length; 
-    }
+        fetch(loadCartoonUrl)
+            .then(response => response.json())
+            .then(data => {
+                const count = Array.isArray(data) ? data.length : 0;
+                const cartoonCount = document.getElementById('cartoon-count');
+                cartoonCount.textContent = count;
+            })
+            .catch(error => {
+                console.error('Error fetching cartoon count:', error);
+            });
+    } setInterval(updateCartoonCount, 5000);
 
-    function loadCartoonsFromLocalStorage() {
-        const cartoons = JSON.parse(localStorage.getItem('cartoons')) || [];
-        const recentCartoons = cartoons.slice(-10);
+    function loadCartoonsFromDB() {
+        fetch(loadCartoonUrl)
+            .then(response => response.json())
+            .then(cartoons => {
+                if (!cartoons || cartoons.length === 0) {
+                    console.warn("ไม่พบการ์ตูนในฐานข้อมูล");
+                    return;
+                }
 
-        const cartoonCount = document.getElementById('cartoon-count');
-        cartoonCount.textContent = recentCartoons.length;
-
-        recentCartoons.forEach((cartoon, index) => {
-            setTimeout(() => {
-                // ตรวจสอบ eventName ก่อนแสดงการ์ตูน
-                fetch('http://127.0.0.1/Event/background.php')
+                fetch(baseUrl)
                     .then(response => response.json())
                     .then(data => {
-                        const activeEvents = data.filter(event => event.status === 'active' && event.name === cartoon.eventName);
-                        
-                        if (activeEvents.length > 0) {
-                            addRandomCartoon(cartoon.imageSrc, cartoon.message, cartoon.userMessage, cartoon.eventName);
-                        } else {
-                            console.warn(`Event Name "${cartoon.eventName}" does not match any active events.`);
+                        const activeEvent = data.find(event => event.status === 'active');
+
+                        if (!activeEvent) {
+                            console.warn("No active event found.");
+                            return;
                         }
+
+                        const setCartoonLimit = parseInt(activeEvent.set_cartoon) || 10;
+                        const recentCartoons = cartoons.slice(-setCartoonLimit);
+
+                        recentCartoons.forEach((cartoon, index) => {
+                            setTimeout(() => {
+                                addRandomCartoon(cartoon.image, cartoon.user_message, cartoon.message, cartoon.event_name);
+                            }, index * 2000);
+                        });
                     })
                     .catch(error => console.error('Error fetching active events:', error));
-            }, index * 2000);
-        });
+            })
+            .catch(error => console.error('Error fetching cartoons from DB:', error));
     }
 
     // เปิด modal
@@ -107,42 +124,40 @@ document.addEventListener('DOMContentLoaded', function () {
             alert("กรุณาเลือกการ์ตูนหรืออัพโหลดรูป");
             return;
         }
-    
+
         // เก็บข้อมูลจาก input fields
         const userMessageInput = document.getElementById('user-message');
         const cartoonMessageInput = document.getElementById('cartoon-message');
         const eventNameInput = document.getElementById('event-name');
-    
+
         const userMessage = userMessageInput.value.trim();
         const cartoonMessage = cartoonMessageInput.value.trim();
         const eventName = eventNameInput.value.trim();
-    
+
         // ตรวจสอบคำต้องห้าม
         const containsBannedWord = bannedWords.some(word => userMessage.includes(word) || cartoonMessage.includes(word));
-
         if (containsBannedWord) {
             showPopup();
             return;
         }
-    
+
         if (!userMessage || !cartoonMessage) {
             alert("กรุณากรอกชื่อและคำอวยพรให้ครบถ้วน");
             return;
         }
-    
+
         if (!eventName) {
-            console.warn('Event Name is empty!'); // ถ้า eventName ว่าง
+            console.warn('Event Name is empty!'); 
         }
-    
+
         const resizeImage = (img) => {
-            const maxWidth = 300;
-            const maxHeight = 300;
+            const maxWidth = 150;
+            const maxHeight = 150;
             const canvas = document.createElement('canvas');
             const ctx = canvas.getContext('2d');
-    
+
             let width = img.width;
             let height = img.height;
-    
             if (width > height) {
                 if (width > maxWidth) {
                     height = Math.round(height * maxWidth / width);
@@ -154,69 +169,113 @@ document.addEventListener('DOMContentLoaded', function () {
                     height = maxHeight;
                 }
             }
-    
             canvas.width = width;
             canvas.height = height;
             ctx.drawImage(img, 0, 0, width, height);
-    
             return canvas.toDataURL('image/png');
         };
-    
-        // ถ้าอัพโหลดรูป
+
+        // กรณีอัพโหลดรูป
         if (imageUploadInput.files.length > 0) {
             const file = imageUploadInput.files[0];
             const fileType = file.type;
-    
-            if (fileType === 'image/gif') {
+
+            // สร้าง FormData สำหรับส่งไฟล์
+            const formData = new FormData();
+            formData.append('file', file);
+            formData.append('userMessage', userMessage);
+            formData.append('message', cartoonMessage);
+            formData.append('eventName', eventName);
+
+            if (fileType === 'image/gif' || fileType.startsWith('image/')) {
                 const reader = new FileReader();
                 reader.onload = function (e) {
                     const imageSrc = e.target.result;
+
                     const cartoonImage = document.createElement('div');
                     cartoonImage.classList.add('cartoon-moving');
+
                     const img = document.createElement('img');
                     img.src = imageSrc;
                     img.style.width = '150px';
                     img.style.height = 'auto';
                     cartoonImage.appendChild(img);
 
-                    const text = document.createElement('div');
-                    text.innerHTML = `<strong>${userMessage}</strong><br>${cartoonMessage}`;
-                    text.classList.add('cartoon-text');
-                    cartoonImage.appendChild(text);
+                    fetch(baseUrl)
+                        .then(response => response.json())
+                        .then(data => {
+                            if (data.length > 0) {
+                                const senderColor = data[0]?.sender_color;
+                                const toptextColor = data[0]?.toptext_color;
 
-                    cartoonImage.style.top = `${Math.random() * 70 + 10}%`;
-                    const randomSpeed = Math.random() * 15 + 20;
-                    cartoonImage.style.animationDuration = `${randomSpeed}s`;
-                    document.body.appendChild(cartoonImage);
-                    cartoonImage.addEventListener('animationend', () => {
-                        cartoonImage.remove();
-                    });
+                                const text = document.createElement('div');
+                                text.innerHTML = `<strong style="color: ${senderColor};">${userMessage}</strong><br>
+                                                  <span style="color: ${toptextColor};">${cartoonMessage}</span>`;
+                                text.classList.add('cartoon-text');
+                                cartoonImage.appendChild(text);
+
+                                cartoonImage.style.top = `${Math.random() * 70 + 10}%`;
+                                const randomSpeed = Math.random() * 15 + 20;
+                                cartoonImage.style.animationDuration = `${randomSpeed}s`;
+                                document.body.appendChild(cartoonImage);
+
+                                cartoonImage.addEventListener('animationend', () => {
+                                    cartoonImage.remove();
+                                });
+                            } else {
+                                console.warn('No data found in the response.');
+                            }
+                        })
+                        .catch(error => console.error('Error fetching colors:', error));
                 };
                 reader.readAsDataURL(file);
-            } else if (fileType.startsWith('image/')) {
-                const reader = new FileReader();
-                reader.onload = function (e) {
-                    const img = new Image();
-                    img.onload = function () {
-                        const imageSrc = resizeImage(img);
-                        addRandomCartoon(imageSrc, cartoonMessage, userMessage, eventName);
-                        saveToLocalStorage(imageSrc, cartoonMessage, userMessage, eventName);
-                        updateCartoonCount();
-                    };
-                    img.src = e.target.result;
-                };
-                reader.readAsDataURL(file);
+
+                fetch(saveCartoonUrl, {
+                    method: 'POST',
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(data => {
+                        if (data.message) {
+                            // console.log("Cartoon saved successfully:", data.message);
+                            updateCartoonCount();
+                        } else {
+                            console.error("Failed to save cartoon:", data.error);
+                        }
+                    })
+                    .catch(error => console.error("Error saving cartoon:", error));
             } else {
                 alert("ไฟล์ที่อัพโหลดต้องเป็นรูปภาพ (.png, .jpg, .gif)");
                 return;
             }
+        } else if (selectedCartoon && selectedCartoon.image_path) {
+            addRandomCartoon(selectedCartoon.image_path, userMessage, cartoonMessage, eventName);
+            const formData = new FormData();
+            formData.append('file', '');
+            formData.append('userMessage', userMessage);
+            formData.append('message', cartoonMessage);
+            formData.append('eventName', eventName);
+            formData.append('imagePath', selectedCartoon.image_path);
+
+            fetch(saveCartoonUrl, {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.message) {
+                        // console.log("Cartoon saved successfully:", data.message);
+                        updateCartoonCount();
+                    } else {
+                        console.error("Failed to save cartoon:", data.error);
+                    }
+                })
+                .catch(error => console.error("Error saving cartoon:", error));
         } else {
-            // ถ้าเลือกการ์ตูนจากที่มี
-            addRandomCartoon(selectedCartoon.image_path, cartoonMessage, userMessage, eventName);
-            saveToLocalStorage(selectedCartoon.image_path, cartoonMessage, userMessage, eventName);
-            updateCartoonCount();
+            alert("กรุณาเลือกการ์ตูนก่อน");
+            return;
         }
-    
+
         // รีเซ็ตค่าช่องข้อความและ input
         userMessageInput.value = '';
         cartoonMessageInput.value = '';
@@ -225,14 +284,14 @@ document.addEventListener('DOMContentLoaded', function () {
         modal.style.display = 'none';
 
         fetchEventNames();
-    });    
-    
+    });
+
     // โหลดการ์ตูน
     function fetchCartoons() {
-        fetch('http://127.0.0.1/Event/get_cartoons.php')
+        fetch(getCartoonUrl)
             .then(response => response.json())
             .then(data => {
-                cartoonSelection.innerHTML = ''; // เคลียร์การ์ตูนที่มีอยู่ก่อนหน้า
+                cartoonSelection.innerHTML = ''; 
                 if (data.length === 0) {
                     cartoonSelection.innerHTML = '<p>ไม่พบการ์ตูนในระบบ</p>';
                     return;
@@ -256,23 +315,25 @@ document.addEventListener('DOMContentLoaded', function () {
                 });
             })
             .catch(error => console.error('Error fetching cartoons:', error));
-    }    
+    }
 
     // ฟังก์ชันเพิ่มการ์ตูนที่เคลื่อนที่
     function addRandomCartoon(imageSrc, userMessage, cartoonMessage) {
-        // Fetch data from background.php
-        fetch('http://127.0.0.1/Event/background.php')
+        fetch(baseUrl)
             .then(response => response.json())
             .then(data => {
                 if (data.length > 0) {
                     const eventName = data[0]?.name;
                     const toptextColor = data[0]?.toptext_color;
-                    const senderColor = data[0]?.sender_color; 
+                    const senderColor = data[0]?.sender_color;
 
                     const cartoonImage = document.createElement('div');
                     cartoonImage.classList.add('cartoon-moving');
                     const img = document.createElement('img');
                     img.src = imageSrc;
+                    img.style.width = "150px";
+                    img.style.height = "auto";
+                    img.style.objectFit = "cover";
                     cartoonImage.appendChild(img);
 
                     const text = document.createElement('div');
@@ -281,7 +342,6 @@ document.addEventListener('DOMContentLoaded', function () {
                     <span style="color: ${toptextColor};">${cartoonMessage}</span>`;
                     text.classList.add('cartoon-text');
                     cartoonImage.appendChild(text);
-                    // console.log('Top Text Color:', toptextColor);
 
                     cartoonImage.style.top = `${Math.random() * 70 + 10}%`;
 
@@ -304,9 +364,9 @@ document.addEventListener('DOMContentLoaded', function () {
         return shuffled.slice(0, count);
     }
 
-    // ฟังก์ชันดึงข้อความจากฐานข้อมูล
+    // ฟังก์ชันดึงข้อความจากฐานข้อมูล  
     function fetchGreetingMessage() {
-        fetch('http://127.0.0.1/Event/background.php')
+        fetch(baseUrl)
             .then(response => response.json())
             .then(data => {
                 // console.log("Data from API:", data);
@@ -335,7 +395,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ฟังก์ชันโหลดวิดีโอพื้นหลัง
     function loadBackgroundVideo() {
-        fetch('http://127.0.0.1/Event/background.php')
+        fetch(baseUrl)
             .then(response => response.json())
             .then(data => {
                 const video = document.getElementById('video-background');
@@ -363,7 +423,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ฟังก์ชันโหลดเพลง
     function loadBackgroundMusic() {
-        fetch('http://127.0.0.1/Event/background.php')
+        fetch(baseUrl)
             .then(response => response.json())
             .then(data => {
                 const audioElement = document.getElementById('background-music');
@@ -371,10 +431,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 if (backgroundMusicData) {
                     audioElement.src = backgroundMusicData.music;
                     audioElement.loop = true;
-                    audioElement.style.display = 'block'; // Show audio element if music is available
+                    audioElement.style.display = 'block';
                 } else {
                     console.warn('No audio background found in the data.');
-                    audioElement.style.display = 'none'; // Hide audio element if no music
+                    audioElement.style.display = 'none';
                 }
             })
             .catch(error => console.error('Error fetching background music:', error));
@@ -416,13 +476,12 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     function fetchEventNames() {
-        fetch('http://127.0.0.1/Event/background.php') // URL ของไฟล์ PHP
+        fetch(baseUrl)
             .then(response => response.json())
             .then(data => {
                 const eventNameInput = document.getElementById('event-name');
                 if (data.length > 0) {
-                    // ถ้ามีข้อมูล active ให้เลือกชื่อแรกมาใส่ใน input
-                    eventNameInput.value = data[0].name; // ใส่ชื่อเหตุการณ์ที่ active
+                    eventNameInput.value = data[0].name;
                 } else {
                     console.warn('No active events found.');
                 }
@@ -432,11 +491,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ฟังก์ชันดึงข้อความจากฐานข้อมูล
     function fetchMessage() {
-        fetch('http://127.0.0.1/Event/background.php')
+        fetch(baseUrl)
             .then(response => response.json())
             .then(data => {
                 if (data.length > 0) {
-                    messageLink = data[0].message; 
+                    messageLink = data[0].message;
                 } else {
                     console.warn('No messages found.');
                 }
@@ -446,14 +505,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // ฟังก์ชันดึงข้อความจากฐานข้อมูล
     function fetchButtonTexts() {
-        fetch('http://127.0.0.1/Event/background.php') 
+        fetch(baseUrl)
             .then(response => response.json())
             .then(data => {
                 if (data.length > 0) {
-                    submitButtonText = data[0].text_button; 
+                    submitButtonText = data[0].text_button;
                     createGreetingButtonText = data[0].text_button;
                     createGreetingButtonColor = data[0].text_color;
-                    updateButtonTexts(); 
+                    updateButtonTexts();
                 } else {
                     console.warn('No button texts found.');
                 }
@@ -467,7 +526,7 @@ document.addEventListener('DOMContentLoaded', function () {
         const createGreetingBtn = document.getElementById('create-greeting-btn');
 
         if (submitBtn) {
-            submitBtn.textContent = submitButtonText; 
+            submitBtn.textContent = submitButtonText;
         }
 
         if (createGreetingBtn) {
@@ -479,9 +538,9 @@ document.addEventListener('DOMContentLoaded', function () {
     // ฟังก์ชันดึงคำต้องห้ามจาก settings.php
     async function fetchBannedWords() {
         try {
-            const response = await fetch('http://127.0.0.1/Event/settings.php');
+            const response = await fetch(settingUrl);
             const data = await response.json();
-            bannedWords = data; // เก็บคำต้องห้ามในอาร์เรย์
+            bannedWords = data; 
         } catch (error) {
             console.error('🚨 Error fetching banned words:', error);
         }
@@ -491,4 +550,11 @@ document.addEventListener('DOMContentLoaded', function () {
     function showPopup() {
         document.getElementById('myPopup').style.display = 'block';
     }
+
+    fetch(baseUrl)
+        .then(response => response.json())
+        .then(data => {
+            document.title = data[0].name;
+        })
+        .catch(error => console.error('Error fetching title:', error));
 });

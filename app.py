@@ -132,7 +132,6 @@ def process_image(image_path, template_image_path):
         return None, f"ไม่สามารถประมวลผลภาพได้: {str(e)}"
 
 @app.route("/uploads", methods=["POST"])
-# @cross_origin(origins=["http://127.0.0.1:5000"])
 def upload_file():
 
     if not image_file or not template_file:

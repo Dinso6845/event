@@ -6,6 +6,7 @@ header("Access-Control-Allow-Origin: *");
 header("Access-Control-Allow-Methods: GET, POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 header('Content-Type: application/json');
+header("Content-Type: text/html; charset=UTF-8");
 
 include('connect.php');
 $conn = dbconnect();
@@ -24,7 +25,9 @@ $sql = "SELECT characters.id, characters.event_id, characters.image_name, charac
     WHERE events.status = 'active'";
 $result = $conn->query($sql);
 $characters = [];
-$base_url = "http://127.0.0.1/Event/";
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$port = ($_SERVER['SERVER_PORT'] == 80 || $_SERVER['SERVER_PORT'] == 443) ? '' : ':' . $_SERVER['SERVER_PORT'];
+$base_url = "{$protocol}://{$_SERVER['HTTP_HOST']}{$port}/Event/";
 
 if ($result && $result->num_rows > 0) {
     while ($row = $result->fetch_assoc()) {

@@ -403,3 +403,742 @@
 [16-Feb-2025 03:41:16 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 196
 [16-Feb-2025 03:43:31 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 196
 [16-Feb-2025 03:55:25 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 196
+[16-Feb-2025 04:17:03 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 196
+[16-Feb-2025 04:17:30 Europe/Berlin] PHP Warning:  unlink(uploads/67af0b422b3b1_background.gif): No such file or directory in C:\xampp\htdocs\Event\edit_event.php on line 113
+[16-Feb-2025 04:17:30 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 133
+[16-Feb-2025 04:17:30 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 133
+[16-Feb-2025 04:17:30 Europe/Berlin] Error uploading music: 
+[16-Feb-2025 04:17:31 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 196
+[16-Feb-2025 04:17:36 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 196
+[16-Feb-2025 04:17:37 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 196
+[16-Feb-2025 04:17:37 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 196
+[16-Feb-2025 04:17:38 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 196
+[16-Feb-2025 04:17:38 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 196
+[16-Feb-2025 04:17:38 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 196
+[16-Feb-2025 04:17:45 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 196
+[16-Feb-2025 04:32:50 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 196
+[16-Feb-2025 05:41:33 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 08:31:14 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 08:37:43 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 10:18:28 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 10:18:32 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 10:46:35 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 10:46:36 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 10:46:36 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 10:46:36 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 10:52:43 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 10:52:52 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 11:13:18 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 11:14:38 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 11:14:53 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 11:20:18 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 11:22:50 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 11:22:52 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 11:23:12 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 11:24:55 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 11:26:09 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[16-Feb-2025 11:32:20 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[19-Feb-2025 03:09:41 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[19-Feb-2025 03:14:29 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[19-Feb-2025 03:15:03 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 03:15:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 03:15:03 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 03:15:03 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 03:15:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 03:15:03 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 03:15:05 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[19-Feb-2025 03:20:07 Europe/Berlin] PHP Warning:  unlink(uploads/67b158ca12e44_background.mp4): No such file or directory in C:\xampp\htdocs\Event\edit_event.php on line 114
+[19-Feb-2025 03:20:07 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 03:20:07 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 03:20:07 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 03:36:59 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[19-Feb-2025 03:37:18 Europe/Berlin] PHP Warning:  unlink(uploads/67b53fd785013_background.gif): No such file or directory in C:\xampp\htdocs\Event\edit_event.php on line 114
+[19-Feb-2025 03:37:18 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 03:37:18 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 03:37:18 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 03:37:19 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[19-Feb-2025 03:37:32 Europe/Berlin] PHP Warning:  unlink(uploads/67b543de12b38_background.mp4): No such file or directory in C:\xampp\htdocs\Event\edit_event.php on line 114
+[19-Feb-2025 03:37:32 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 03:37:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 03:37:32 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 03:37:33 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 197
+[19-Feb-2025 03:40:42 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:40:42 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:40:43 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:41:01 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 03:41:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 03:41:01 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 03:41:01 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 03:41:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 03:41:01 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 03:41:02 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:41:16 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 03:41:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 03:41:16 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 03:41:16 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 03:41:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 03:41:16 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 03:41:17 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:41:22 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:42:20 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:42:22 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 03:42:22 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 03:42:22 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 03:42:22 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 03:42:22 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 03:42:22 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 03:42:24 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:42:29 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 03:42:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 03:42:29 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 03:42:29 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 03:42:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 03:42:29 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 03:42:30 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:49:44 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:49:49 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:49:58 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:49:58 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:50:03 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 03:50:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 03:50:03 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 03:50:03 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 03:50:03 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 03:50:03 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 03:50:04 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:50:05 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:51:47 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:53:50 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:53:55 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:54:22 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:55:08 Europe/Berlin] PHP Warning:  unlink(uploads/67b543ecaa27e_background.gif): No such file or directory in C:\xampp\htdocs\Event\edit_event.php on line 115
+[19-Feb-2025 03:55:08 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 03:55:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 03:55:08 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 03:55:09 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 03:55:15 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:02:59 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:03:02 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:03:05 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:04:24 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:04:32 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:06:21 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:06:26 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:08:08 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:08:12 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:08:28 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:08:30 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:08:30 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:08:31 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:08:31 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:08:31 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:08:32 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:08:32 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:10:57 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:16:33 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:16:39 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 04:16:39 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 04:16:39 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 04:16:39 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:16:39 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:16:39 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 04:16:40 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:16:50 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:16:50 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:16:50 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 04:16:51 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:16:53 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:17:26 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:17:34 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:17:38 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:18:13 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:18:16 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:18:19 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 04:18:19 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 04:18:19 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 04:18:19 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:18:19 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:18:19 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 04:18:20 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:20:02 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:24:19 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:24:20 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:24:20 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:24:20 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:24:20 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:24:21 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:24:21 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:25:19 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:25:20 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:25:20 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:25:20 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:27:06 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:30:24 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:30:25 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:30:25 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:30:25 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:30:25 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:30:26 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:30:26 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:31:59 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:32:17 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:32:35 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:32:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:32:35 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 04:32:36 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:32:38 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:32:57 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 04:32:57 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 04:32:57 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 04:32:57 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:32:57 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:32:57 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 04:32:58 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 04:32:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 04:32:58 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 04:32:58 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:32:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:32:58 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 04:33:55 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:35:34 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:35:54 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:39:28 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:39:44 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 04:39:44 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 04:39:44 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 04:39:44 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:39:44 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:39:44 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 04:39:46 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:41:42 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:41:44 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:41:44 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:41:44 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:41:46 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:41:46 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:41:47 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:41:47 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:41:48 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:41:49 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:41:50 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:41:50 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:41:50 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:45:26 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:45:38 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:45:38 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:45:38 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 04:45:39 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 04:46:06 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 04:46:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 119
+[19-Feb-2025 04:46:06 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 04:46:06 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:46:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 135
+[19-Feb-2025 04:46:06 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 04:46:07 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 05:05:45 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 05:17:53 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 05:22:54 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 05:53:28 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 199
+[19-Feb-2025 05:56:16 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 199
+[19-Feb-2025 05:56:57 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 199
+[19-Feb-2025 07:09:59 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 199
+[19-Feb-2025 07:12:38 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 199
+[19-Feb-2025 07:25:34 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 199
+[19-Feb-2025 07:27:14 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 07:27:24 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 07:27:24 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 07:27:24 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 07:27:24 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 07:27:24 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 07:27:24 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 07:27:25 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 07:27:27 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 07:27:37 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 07:30:06 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 07:30:17 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 08:07:45 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 08:45:19 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 08:45:25 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 08:45:25 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 08:45:25 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 08:45:25 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 08:45:25 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 08:45:25 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 08:45:26 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 08:45:31 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 08:51:28 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 08:51:29 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 08:51:29 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 08:52:07 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 09:07:25 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 09:07:40 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 193
+[19-Feb-2025 09:07:40 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 09:13:51 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 09:14:06 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 09:14:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 09:14:06 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 09:14:06 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 09:14:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 09:14:06 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 09:14:08 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 09:14:12 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 09:14:22 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 09:14:22 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 09:14:22 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 09:15:54 Europe/Berlin] PHP Warning:  unlink(uploads/67b553e277490_background.mp4): No such file or directory in C:\xampp\htdocs\Event\edit_event.php on line 114
+[19-Feb-2025 09:15:54 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 09:15:54 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 09:15:54 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 09:20:44 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 193
+[19-Feb-2025 09:20:44 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 09:20:46 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 09:20:46 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 09:20:46 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 09:20:46 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 09:20:46 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 09:20:46 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 09:20:47 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 09:20:47 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 09:20:47 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 09:20:47 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 09:20:47 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 09:20:47 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 09:20:48 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 193
+[19-Feb-2025 09:20:48 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 09:20:53 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 09:20:53 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 09:20:53 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 09:20:53 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 09:20:53 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 09:20:53 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 09:20:54 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 09:20:54 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 09:20:54 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 09:20:54 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 09:20:54 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 09:20:54 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 09:21:53 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 193
+[19-Feb-2025 09:21:53 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 10:05:01 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:05:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:05:01 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 10:05:02 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 10:05:28 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:05:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:05:28 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 10:05:28 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:05:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:05:28 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 10:05:29 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:05:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:05:29 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 10:05:29 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:05:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:05:29 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 10:05:30 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 10:05:39 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:05:39 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:05:39 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 10:05:39 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:05:39 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:05:39 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 10:05:40 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:05:40 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:05:40 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 10:05:40 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:05:40 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:05:40 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 10:18:59 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:18:59 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:18:59 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 10:18:59 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:18:59 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:18:59 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 10:19:00 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:19:00 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:19:00 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 10:19:00 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:19:00 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:19:00 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 10:19:06 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 10:19:08 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:19:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:19:08 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 10:19:08 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:19:08 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:19:08 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 10:19:10 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:19:10 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:19:10 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 10:19:10 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:19:10 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:19:10 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 10:19:11 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 10:31:22 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 10:57:37 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 10:57:40 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 10:57:42 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:57:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[19-Feb-2025 10:57:42 Europe/Berlin] Error uploading background: 
+[19-Feb-2025 10:57:42 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:57:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[19-Feb-2025 10:57:42 Europe/Berlin] Error uploading music: 
+[19-Feb-2025 10:57:43 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 10:57:54 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 10:58:17 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 10:58:54 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 11:02:36 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 11:02:55 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[19-Feb-2025 11:17:11 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 193
+[19-Feb-2025 11:17:11 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[20-Feb-2025 03:03:19 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[20-Feb-2025 03:03:21 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[20-Feb-2025 03:22:40 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:22:40 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:22:40 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:22:40 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:22:40 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:22:40 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:22:41 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:22:41 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:22:41 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:22:41 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:22:41 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:22:41 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:22:51 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[20-Feb-2025 03:22:53 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:22:53 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:22:53 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:22:53 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:22:53 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:22:53 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:22:55 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:22:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:22:55 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:22:55 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:22:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:22:55 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:22:56 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[20-Feb-2025 03:44:31 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:31 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:31 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:31 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:31 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:31 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:32 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:32 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:32 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:32 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:32 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:32 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:32 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:32 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:32 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:32 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:32 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:32 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:33 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:33 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:33 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:33 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:33 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:33 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:33 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:33 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:33 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:33 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:33 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:33 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:34 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:34 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:34 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:34 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:34 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:34 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:34 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:34 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:34 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:34 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:34 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:34 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:35 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:35 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:35 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:35 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:35 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:35 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:35 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:35 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:36 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:36 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:36 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:36 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:36 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:36 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:36 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:36 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:36 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:36 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:36 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:36 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:36 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:36 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:36 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:36 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:36 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:36 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:37 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:37 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:37 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:37 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:37 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:37 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:40 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:40 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:40 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:40 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:40 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:40 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:44:40 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:40 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:44:40 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:44:40 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:40 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:44:40 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:48:49 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:49 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:48:49 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:49 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:48:49 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:49 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:48:49 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:49 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:48:49 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:49 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:48:49 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:49 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:48:50 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:50 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:50 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:48:50 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:50 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:50 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:51 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:51 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:51 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:51 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:51 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:51 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:51 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:51 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:51 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:51 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:52 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:52 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:52 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:52 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:52 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:52 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:48:52 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:48:52 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:49:16 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:49:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:49:16 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:49:16 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:49:16 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:49:16 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:54:10 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:54:10 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:54:10 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:54:10 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:54:10 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:54:10 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:54:11 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:54:11 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:54:11 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:54:11 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:54:11 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:54:11 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:54:20 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:54:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:54:20 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:54:20 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:54:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:54:20 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 03:54:21 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:54:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 03:54:21 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 03:54:21 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:54:21 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 03:54:21 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 04:05:28 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[20-Feb-2025 04:05:30 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 04:05:30 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 04:05:30 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 04:05:30 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 04:05:30 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 04:05:30 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 04:05:31 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 04:05:31 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 04:05:31 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 04:05:31 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 04:05:31 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 04:05:31 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 04:05:32 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[20-Feb-2025 04:05:44 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[20-Feb-2025 04:05:45 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 04:05:45 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 04:05:45 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 04:05:45 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 04:05:45 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 04:05:45 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 04:05:46 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 04:05:46 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 04:05:46 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 04:05:46 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 04:05:46 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 04:05:46 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 04:05:48 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[20-Feb-2025 04:57:32 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[20-Feb-2025 04:57:46 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[20-Feb-2025 04:57:50 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 193
+[20-Feb-2025 04:57:50 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[20-Feb-2025 08:22:33 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 08:22:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 08:22:33 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 08:22:33 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 08:22:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 08:22:33 Europe/Berlin] Error uploading music: 
+[20-Feb-2025 08:23:33 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 08:23:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[20-Feb-2025 08:23:33 Europe/Berlin] Error uploading background: 
+[20-Feb-2025 08:23:33 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 08:23:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[20-Feb-2025 08:23:33 Europe/Berlin] Error uploading music: 
+[21-Feb-2025 04:48:05 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[21-Feb-2025 04:48:05 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[21-Feb-2025 04:48:05 Europe/Berlin] Error uploading background: 
+[21-Feb-2025 04:48:05 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[21-Feb-2025 04:48:05 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[21-Feb-2025 04:48:05 Europe/Berlin] Error uploading music: 
+[21-Feb-2025 05:28:33 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[21-Feb-2025 05:28:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[21-Feb-2025 05:28:33 Europe/Berlin] Error uploading background: 
+[21-Feb-2025 05:28:33 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[21-Feb-2025 05:28:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[21-Feb-2025 05:28:33 Europe/Berlin] Error uploading music: 
+[21-Feb-2025 05:39:49 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[21-Feb-2025 05:39:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[21-Feb-2025 05:39:49 Europe/Berlin] Error uploading background: 
+[21-Feb-2025 05:39:49 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[21-Feb-2025 05:39:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[21-Feb-2025 05:39:49 Europe/Berlin] Error uploading music: 
+[21-Feb-2025 05:42:27 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[21-Feb-2025 05:42:27 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[21-Feb-2025 05:42:27 Europe/Berlin] Error uploading background: 
+[21-Feb-2025 05:42:27 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[21-Feb-2025 05:42:27 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[21-Feb-2025 05:42:27 Europe/Berlin] Error uploading music: 
+[21-Feb-2025 05:52:49 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[21-Feb-2025 05:52:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[21-Feb-2025 05:52:49 Europe/Berlin] Error uploading background: 
+[21-Feb-2025 05:52:49 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[21-Feb-2025 05:52:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[21-Feb-2025 05:52:49 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 04:11:23 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 193
+[23-Feb-2025 04:11:23 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[23-Feb-2025 04:11:52 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 04:11:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 04:11:52 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 04:11:52 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 04:11:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 04:11:52 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 04:11:54 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 193
+[23-Feb-2025 04:11:54 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[23-Feb-2025 04:12:03 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 193
+[23-Feb-2025 04:12:03 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[23-Feb-2025 04:12:20 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 04:12:20 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 04:12:20 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 04:12:23 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[23-Feb-2025 04:12:34 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 04:12:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 04:12:34 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 04:12:34 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 04:12:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 04:12:34 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 04:12:35 Europe/Berlin] PHP Deprecated:  explode(): Passing null to parameter #2 ($string) of type string is deprecated in C:\xampp\htdocs\Event\edit_event.php on line 198
+[23-Feb-2025 05:26:39 Europe/Berlin] PHP Warning:  unlink(uploads/67b5933a43ba6_background.gif): No such file or directory in C:\xampp\htdocs\Event\edit_event.php on line 114
+[23-Feb-2025 05:26:39 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 05:26:39 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 05:26:39 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 05:26:53 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 05:26:53 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 05:26:53 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 05:26:53 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 05:26:53 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 05:26:53 Europe/Berlin] Error uploading music: 

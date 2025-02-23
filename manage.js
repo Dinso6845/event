@@ -1,16 +1,22 @@
 document.addEventListener('DOMContentLoaded', () => {
-    let festivals = []; // สร้างตัวแปร festivals สำหรับเก็บข้อมูล
+    let festivals = [];
+    const protocol = window.location.protocol;
+    const hostname = window.location.hostname;
+    const port = window.location.port;
+
+    // สร้าง URL ที่จะใช้ในการเชื่อมต่อ
+    const baseUrl = `${protocol}//${hostname}${port ? `:${80}` : ''}/Event/manage.php`;
 
     // ฟังก์ชันสำหรับเปิด/ปิดเมนู
     window.toggleMenu = function () {
         const menu = document.getElementById('menu');
-        menu.classList.toggle('show'); // เพิ่มหรือลบ class "show" เพื่อแสดง/ซ่อนเมนู
+        menu.classList.toggle('show');
     };
 
     // ฟังก์ชันเปิดป๊อปอัพสร้างเทศกาล
     window.openCreateEventPopup = function () {
         document.getElementById('createEventPopup').style.display = 'block';
-        document.getElementById('eventName').value = ''; // ล้างค่าในช่องกรอกชื่อเทศกาล
+        document.getElementById('eventName').value = '';
     };
 
     // ฟังก์ชันปิดป๊อปอัพ
@@ -19,7 +25,7 @@ document.addEventListener('DOMContentLoaded', () => {
     };
 
     window.addEventToDB = async function (event) {
-        event.preventDefault(); // ป้องกันการรีโหลดหน้าเว็บ
+        event.preventDefault();
 
         const eventName = document.getElementById('eventName').value;
         const status = 'inactive';
@@ -28,7 +34,7 @@ document.addEventListener('DOMContentLoaded', () => {
             try {
                 console.log("📢 Sending data:", JSON.stringify({ name: eventName, status: status }));
 
-                const response = await fetch('http://127.0.0.1/Event/manage.php', {
+                const response = await fetch(baseUrl, {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -59,7 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ฟังก์ชันสำหรับการดึงข้อมูลจากฐานข้อมูล
     async function fetchFestivals() {
         try {
-            const response = await fetch('http://127.0.0.1/Event/manage.php'); // URL ของ API
+            const response = await fetch(baseUrl); // URL ของ API
             const data = await response.json();
             festivals = data; // เก็บข้อมูลที่ได้มาในตัวแปร festivals
             displayFestivals(); // เรียกฟังก์ชันแสดงข้อมูล
@@ -75,11 +81,16 @@ document.addEventListener('DOMContentLoaded', () => {
 
         festivals.forEach((festival, index) => {
             const row = document.createElement('tr');
+            const isActive = festival.status === 'active';
             row.innerHTML = `
             <td>${index + 1}</td> 
             <td>${festival.name}</td>
             <td>${festival.status}</td>
             <td>
+                <label class="switch">
+                    <input type="checkbox" onchange="toggleStatus(${festival.id}, '${festival.status}')" ${isActive ? 'checked' : ''}>
+                    <span class="slider"></span>
+                </label>
                 <button class="btn edit" onclick="goToEditPage(${festival.id})"><i class="fa fa-edit"></i></button>
                 <button class="btn delete" onclick="deleteFestival(${festival.id})"><i class="fa fa-trash"></i> </button>
             </td>
@@ -106,7 +117,7 @@ document.addEventListener('DOMContentLoaded', () => {
             if (newStatus) {
                 festival.status = newStatus;
                 try {
-                    const response = await fetch('http://127.0.0.1/Event/manage.php', {
+                    const response = await fetch(baseUrl, {
                         method: 'PUT',
                         headers: {
                             'Content-Type': 'application/x-www-form-urlencoded',
@@ -125,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // ฟังก์ชันสำหรับการลบเทศกาล
     window.deleteFestival = async function (id) { // ใช้ window เพื่อให้เข้าถึงได้จาก HTML
         try {
-            const response = await fetch('http://127.0.0.1/Event/manage.php', {
+            const response = await fetch(baseUrl, {
                 method: 'DELETE',
                 headers: {
                     'Content-Type': 'application/json',
@@ -154,9 +165,43 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     };
 
+    // ฟังก์ชันสำหรับเปลี่ยนสถานะ
+    window.toggleStatus = function (id, currentStatus) {
+        const newStatus = currentStatus === 'active' ? 'inactive' : 'active';
+    
+        // ตรวจสอบค่าก่อนส่ง
+        if (typeof id !== 'number' || (newStatus !== 'active' && newStatus !== 'inactive')) {
+            console.error('Invalid input values:', { id, newStatus });
+            return;
+        }
+    
+        fetch(baseUrl, {
+            method: 'PUT',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ id: id, status: newStatus }),
+        })
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
+        .then(data => {
+            if (data.message) {
+                fetchFestivals(); // อัปเดตตารางหลังจากเปลี่ยนสถานะ
+            } else {
+                console.error('Error updating status:', data.error);
+            }
+        })
+        .catch(error => console.error('Error:', error));
+    };
+    
+
     document.getElementById('eventName').addEventListener('keypress', function (event) {
         if (event.key === 'Enter') {
-            event.preventDefault(); 
+            event.preventDefault();
             addEventToDB(event);
         }
     });

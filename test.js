@@ -1,6 +1,5 @@
 const apiUrl = "http://127.0.0.1/Event/test.php?id=1";
 
-// ฟังก์ชันดึงข้อมูล characters ตาม event_id
 function fetchCharacters() {
     fetch(apiUrl)
         .then(response => response.json())
@@ -29,7 +28,6 @@ function addCharacter() {
         return;
     }
 
-    // ใช้ชื่อไฟล์เป็น image_name (ตัด extension ออก)
     const imageName = imageFile.name.replace(/\.[^/.]+$/, "");
 
     const formData = new FormData();

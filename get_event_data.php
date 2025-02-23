@@ -41,8 +41,9 @@ if (!$resultEvent || $resultEvent->num_rows == 0) {
 
 $event = $resultEvent->fetch_assoc();
 
-// แปลง path เป็น URL-friendly สำหรับ event
-$base_url = "http://127.0.0.1/Event/";
+$protocol = (!empty($_SERVER['HTTPS']) && $_SERVER['HTTPS'] !== 'off') ? 'https' : 'http';
+$port = ($_SERVER['SERVER_PORT'] == 80 || $_SERVER['SERVER_PORT'] == 443) ? '' : ':' . $_SERVER['SERVER_PORT'];
+$base_url = "{$protocol}://{$_SERVER['HTTP_HOST']}{$port}/Event/";
 
 // แปลง background_path ของ event
 $path_parts = explode('Event\\', $event['background_path']);
