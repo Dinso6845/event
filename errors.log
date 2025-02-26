@@ -1142,3 +1142,543 @@
 [23-Feb-2025 05:26:53 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
 [23-Feb-2025 05:26:53 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
 [23-Feb-2025 05:26:53 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 05:42:54 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 05:42:54 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 05:42:54 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 05:42:54 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 05:42:54 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 05:42:54 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 05:47:06 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 05:47:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 05:47:06 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 05:47:06 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 05:47:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 05:47:06 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 10:08:38 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 10:08:38 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 10:08:38 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 10:08:38 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 10:08:38 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 10:08:38 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 10:12:29 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 10:12:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 10:12:29 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 10:12:29 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 10:12:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 10:12:29 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:38:58 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:38:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:38:58 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:38:58 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:38:58 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:38:58 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:38:59 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:38:59 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:38:59 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:38:59 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:38:59 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:38:59 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:38:59 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:38:59 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:38:59 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:38:59 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:38:59 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:38:59 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:39:00 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:39:00 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:39:00 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:39:00 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:39:00 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:39:00 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:39:00 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:39:00 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:39:00 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:39:00 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:39:00 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:39:00 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:39:01 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:39:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:39:01 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:39:01 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:39:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:39:01 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:39:01 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:39:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:39:01 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:39:01 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:39:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:39:01 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:39:01 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:39:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:39:01 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:39:01 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:39:01 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:39:01 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:39:02 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:39:02 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:39:02 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:39:02 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:39:02 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:39:02 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:39:02 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:39:02 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:39:02 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:39:02 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:39:02 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:39:02 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:25 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:25 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:25 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:25 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:25 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:25 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:25 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:25 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:25 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:25 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:25 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:25 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:26 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:26 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:26 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:26 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:26 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:26 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:26 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:26 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:26 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:26 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:26 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:27 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:27 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:27 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:27 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:27 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:27 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:27 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:27 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:27 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:27 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:27 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:27 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:27 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:27 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:27 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:27 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:27 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:27 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:28 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:28 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:28 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:28 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:28 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:28 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:28 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:28 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:28 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:28 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:28 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:28 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:28 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:29 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:29 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:29 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:29 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:29 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:29 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:29 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:29 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:29 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:30 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:30 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:30 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:30 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:30 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:30 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:30 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:30 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:30 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:30 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:30 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:30 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:31 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:31 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:31 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:31 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:31 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:31 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:31 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:31 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:31 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:31 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:31 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:31 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:31 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:31 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:31 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:31 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:31 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:31 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:32 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:32 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:32 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:32 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:32 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:32 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:32 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:32 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:32 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:33 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:33 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:33 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:33 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:33 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:33 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:33 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:33 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:33 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:33 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:33 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:34 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:34 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:34 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:34 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:34 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:34 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:34 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:34 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:34 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:34 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:34 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:34 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:34 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:35 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:35 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:35 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:35 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:35 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:35 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:35 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:35 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:36 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:36 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:36 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:36 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:36 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:36 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:38 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:38 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:38 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:38 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:38 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:38 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:47 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:47 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:47 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:47 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:47 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:47 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:48 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:48 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:48 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:48 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:48 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:48 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:49 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:49 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:49 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:49 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:43:49 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:43:49 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:43:49 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:49 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:43:49 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:44:06 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:06 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:44:06 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:06 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:44:06 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:06 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:44:06 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:06 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:06 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:44:11 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:11 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:11 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:44:11 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:11 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:11 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:44:12 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:12 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:44:12 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:12 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:44:12 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:12 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:44:12 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:12 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:12 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:44:13 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:13 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:13 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:44:13 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:13 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:13 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:44:14 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:14 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:44:14 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:14 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:44:14 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:44:14 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:44:14 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:14 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:44:14 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:45:51 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:51 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:45:51 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:51 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:45:52 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:52 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:45:52 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:52 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:45:54 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:54 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:54 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:45:54 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:54 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:54 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:45:54 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:54 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:54 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:45:54 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:54 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:54 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:45:55 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:55 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:45:55 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:55 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:45:55 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:55 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:45:55 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:55 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:55 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:45:56 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:56 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:56 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:45:56 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:56 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:56 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:45:57 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:57 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:45:57 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:45:57 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:57 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:45:57 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:51:40 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:40 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:40 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:51:40 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:40 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:40 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:51:40 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:40 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:40 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:51:40 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:40 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:40 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:41 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:41 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:41 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:41 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:41 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:41 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:41 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:41 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:41 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:51:42 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:42 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:51:42 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:42 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:51:42 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:42 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:51:42 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:42 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:42 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:51:51 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:51 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:51:51 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:51 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:51 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:51:52 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:51:52 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:51:52 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:52 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:51:52 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:57:35 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:57:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:57:35 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:57:35 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:57:35 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:57:35 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:57:36 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:57:36 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:57:36 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:57:36 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:57:36 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:57:36 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:59:44 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:44 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:44 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:59:44 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:44 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:44 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:59:44 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:44 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:44 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:59:44 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:44 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:44 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:45 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:45 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:45 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:45 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:45 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:45 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:45 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:45 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:45 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:45 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:45 Europe/Berlin] Error uploading music: 
+[23-Feb-2025 11:59:46 Europe/Berlin] PHP Warning:  Undefined array key "background" in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:46 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 118
+[23-Feb-2025 11:59:46 Europe/Berlin] Error uploading background: 
+[23-Feb-2025 11:59:46 Europe/Berlin] PHP Warning:  Undefined array key "music" in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:46 Europe/Berlin] PHP Warning:  Trying to access array offset on value of type null in C:\xampp\htdocs\Event\edit_event.php on line 134
+[23-Feb-2025 11:59:46 Europe/Berlin] Error uploading music: 

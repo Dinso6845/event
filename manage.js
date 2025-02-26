@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // ฟังก์ชันสำหรับเปิด/ปิดเมนู
     window.toggleMenu = function () {
         const menu = document.getElementById('menu');
+        const content = document.querySelector('.content');
         menu.classList.toggle('show');
+        content.classList.toggle('shifted');
     };
 
     // ฟังก์ชันเปิดป๊อปอัพสร้างเทศกาล

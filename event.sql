@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Feb 16, 2025 at 03:59 AM
+-- Generation Time: Feb 26, 2025 at 03:27 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -79,19 +79,30 @@ CREATE TABLE `banned_words` (
 --
 
 INSERT INTO `banned_words` (`id`, `word`) VALUES
-(45, '1'),
-(50, '5'),
-(51, '6'),
-(53, '8'),
-(54, '9'),
-(55, '10'),
-(57, '12'),
-(58, '13'),
-(59, '14'),
-(60, '15'),
-(61, '16'),
-(62, '17'),
-(63, '18');
+(64, 'กู'),
+(65, 'มึง'),
+(66, 'เหี้ย'),
+(67, 'สัส'),
+(68, 'หี'),
+(69, 'ไอ้สัส'),
+(70, 'ชาติหมา'),
+(71, 'ควย'),
+(72, 'เย็ด'),
+(73, 'ระยำ'),
+(74, 'สันดาน'),
+(75, 'โง่'),
+(76, 'ปัญญาอ่อน'),
+(77, 'ไอ้เวร'),
+(78, 'ไอ้บ้า'),
+(79, 'fuck'),
+(80, 'shit'),
+(81, 'bitch'),
+(82, 'ass'),
+(83, 'wtf'),
+(84, 'wth'),
+(85, 'omfg'),
+(86, 'stupid'),
+(87, 'idiot');
 
 -- --------------------------------------------------------
 
@@ -111,7 +122,9 @@ CREATE TABLE `characters` (
 --
 
 INSERT INTO `characters` (`id`, `event_id`, `image_name`, `image_path`) VALUES
-(33, 2, '6799de6989a5b_1', 'uploads/67af1cee5a57c.gif');
+(38, 2, '6799de6989a5b_1', 'uploads/67b546d925c38.gif'),
+(41, 2, 'pig-418_256', 'uploads/67baa7482178c.gif'),
+(42, 2, 'elephant-422_256', 'uploads/67baa74c83edf.gif');
 
 -- --------------------------------------------------------
 
@@ -132,15 +145,18 @@ CREATE TABLE `events` (
   `created_at` timestamp NOT NULL DEFAULT current_timestamp(),
   `updated_at` timestamp NOT NULL DEFAULT current_timestamp() ON UPDATE current_timestamp(),
   `toptext_color` varchar(50) DEFAULT NULL,
-  `sender_color` varchar(50) DEFAULT NULL
+  `sender_color` varchar(50) DEFAULT NULL,
+  `set_cartoon` varchar(10) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `events`
 --
 
-INSERT INTO `events` (`id`, `name`, `background_path`, `button_color`, `text_color`, `message`, `text_button`, `status`, `music`, `created_at`, `updated_at`, `toptext_color`, `sender_color`) VALUES
-(2, 'วันเกิดใครวะ', 'uploads/67af0b422b3b1_background.gif', '#ff0000', '#001eff', NULL, 'กด กด ไป เถอะ', 'active', NULL, '2025-02-14 09:16:24', '2025-02-14 10:41:02', '#00ff88', '#fff700');
+INSERT INTO `events` (`id`, `name`, `background_path`, `button_color`, `text_color`, `message`, `text_button`, `status`, `music`, `created_at`, `updated_at`, `toptext_color`, `sender_color`, `set_cartoon`) VALUES
+(2, 'วันอวกาศ', 'uploads/67baa37fa594d_background.mp4', '#ff0000', '#001eff', 'http://127.0.0.1:5000/', 'กด กด ไป เถอะ', 'active', 'uploads/67b592de390d6_music.mp3', '2025-02-14 09:16:24', '2025-02-26 02:08:27', '#2bff00', '#00eeff', '5'),
+(6, 'วันพระ', '', '#000000', '#000000', NULL, NULL, 'inactive', NULL, '2025-02-19 08:07:35', '2025-02-23 10:52:16', '#000000', '#000000', ''),
+(9, 'วันไรคับเนี้ย', NULL, NULL, NULL, NULL, NULL, 'inactive', NULL, '2025-02-23 03:21:57', '2025-02-23 03:21:57', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
@@ -184,6 +200,39 @@ INSERT INTO `images` (`id`, `name`, `image_path`) VALUES
 (4, '2.gif', 'C:\\xampp\\htdocs\\Event\\uploads\\GIF วันเด็ก\\2.gif'),
 (5, '4.gif', 'C:\\xampp\\htdocs\\Event\\uploads\\GIF วันเด็ก\\4.gif'),
 (6, '6.gif', 'C:\\xampp\\htdocs\\Event\\uploads\\GIF วันเด็ก\\6.gif');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `savecartoon`
+--
+
+CREATE TABLE `savecartoon` (
+  `id` int(20) NOT NULL,
+  `image` varchar(255) DEFAULT NULL,
+  `user_message` varchar(255) DEFAULT NULL,
+  `message` varchar(255) DEFAULT NULL,
+  `event_name` varchar(255) DEFAULT NULL,
+  `sort_order` int(11) DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `savecartoon`
+--
+
+INSERT INTO `savecartoon` (`id`, `image`, `user_message`, `message`, `event_name`, `sort_order`) VALUES
+(8, 'http://127.0.0.1/Event/uploads/67b546d925c38.gif', '1', '1', 'วันอวกาศ', 2),
+(9, 'http://127.0.0.1/Event/uploads/67b546d925c38.gif', '3', '3', 'วันอวกาศ', 3),
+(10, 'http://127.0.0.1/Event/uploads/67b546d925c38.gif', '4', '4', 'วันอวกาศ', 4),
+(11, 'http://127.0.0.1/Event/uploads/67b546d925c38.gif', '5', '5', 'วันอวกาศ', 5),
+(12, 'http://127.0.0.1/Event/uploads/67b546d925c38.gif', '6', '6', 'วันอวกาศ', 6),
+(13, 'http://127.0.0.1/Event/uploads/67b546d925c38.gif', '7', '7', 'วันอวกาศ', 7),
+(14, 'uploads/1740120422_1740106714_image4.png', '8', '8', 'วันอวกาศ', 8),
+(15, 'uploads/1740120607_bloggif_6781d961ba2ce.gif', 'พี่ปาง', '9', 'วันอวกาศ', 9),
+(16, 'http://127.0.0.1/Event/uploads/67ba91f6976db.png', 'พี่มาแล้วน้อง', '55555', 'วันพระนะจ๊ะ', 0),
+(17, 'http://127.0.0.1/Event/uploads/67baa7482178c.gif', 'หมูน้อย', 'ขอข้าวกินหน่อยย', 'วันอวกาศ', 0),
+(18, 'http://127.0.0.1/Event/uploads/67baa74c83edf.gif', 'ช้างน้อย', 'พิซซ่ามาส่งแล้วค้าบบ', 'วันอวกาศ', 0),
+(19, 'http://127.0.0.1/Event/uploads/67baa7482178c.gif', 'รวย', 'รวยเอ้ย', 'วันอวกาศ', 0);
 
 --
 -- Indexes for dumped tables
@@ -233,6 +282,12 @@ ALTER TABLE `images`
   ADD PRIMARY KEY (`id`);
 
 --
+-- Indexes for table `savecartoon`
+--
+ALTER TABLE `savecartoon`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- AUTO_INCREMENT for dumped tables
 --
 
@@ -252,19 +307,19 @@ ALTER TABLE `background`
 -- AUTO_INCREMENT for table `banned_words`
 --
 ALTER TABLE `banned_words`
-  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=64;
+  MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=88;
 
 --
 -- AUTO_INCREMENT for table `characters`
 --
 ALTER TABLE `characters`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=43;
 
 --
 -- AUTO_INCREMENT for table `events`
 --
 ALTER TABLE `events`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `face_images`
@@ -277,6 +332,12 @@ ALTER TABLE `face_images`
 --
 ALTER TABLE `images`
   MODIFY `id` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT for table `savecartoon`
+--
+ALTER TABLE `savecartoon`
+  MODIFY `id` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=20;
 
 --
 -- Constraints for dumped tables

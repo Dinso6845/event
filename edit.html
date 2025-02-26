@@ -27,123 +27,126 @@
             </ul>
         </div>
     </nav>
-    <div class="container">
-        <form id="updateEventForm" enctype="multipart/form-data">
-            <div id="backgroundPreviewContainer">
-                <div>
-                    <img id="backgroundImagePreview"
-                        style="display: none; max-width: 100%; max-height: 300px; object-fit: cover;"
-                        alt="Background Preview">
-                        <video id="backgroundVideoPreview" 
-                        controls muted loop
-                        style="display: none; max-width: 100%; max-height: 300px; object-fit: cover;"
-                        alt="Background Preview" ">
-                            <source src="" type="video/mp4">
-                        </video>
-                    <button class="removeBackground-btn" type="button" id="removeBackground" style="display: none;"
-                        onclick="removeBackground(event)">
-                        <i class="fa fa-times"></i>
-                    </button>
-                </div>
-                
-                <div class="form-group">
-                    <label for="backgroundImage">Background Image:</label>
-                    <div id="backgroundImageDropZone" class="drop-zone">
-                        <p>Drag & Drop หรือ คลิกเพื่ออัพโหลดรูปภาพ</p>
-                        <input type="file" id="backgroundImage" name="background_path" accept="image/*" hidden>
+    <div class="content">
+        <div class="container">
+            <form id="updateEventForm" enctype="multipart/form-data">
+                <div id="backgroundPreviewContainer">
+                    <div>
+                        <img id="backgroundImagePreview"
+                            style="display: none; max-width: 100%; max-height: 300px; object-fit: cover;"
+                            alt="Background Preview">
+                            <video id="backgroundVideoPreview" 
+                            controls muted loop
+                            style="display: none; max-width: 100%; max-height: 300px; object-fit: cover;"
+                            alt="Background Preview" ">
+                                <source src="" type="video/mp4">
+                            </video>
+                        <button class="removeBackground-btn" type="button" id="removeBackground" style="display: none;"
+                            onclick="removeBackground(event)">
+                            <i class="fa fa-times"></i>
+                        </button>
                     </div>
-                    <img id="backgroundImagePreview" src="#" alt="Preview"
-                        style="display: none; max-width: 100%; height: auto;">
-                </div>
-
-            </div>
-
-            <div id="musicPreviewContainer">
-                <div>
-                    <audio id="backgroundMusicPreview" controls style="display: none;"></audio>
-                    <button class="removeMusic-btn" type="button" id="removeMusic" style="display: none;"
-                        onclick="removeMusic(event)"><i class="fa fa-times"></i></button>
-                </div>
-                
-                <div class="form-group">
-                    <label for="backgroundMusic">Background Music:</label>
-                    <div id="backgroundMusicDropZone" class="drop-zone">
-                        <p>Drag & Drop หรือ คลิกเพื่ออัพโหลดเพลง</p>
-                        <input type="file" id="backgroundMusic" name="music" accept="audio/*" hidden>
+                    
+                    <div class="form-group">
+                        <label for="backgroundImage">Background Image:</label>
+                        <div id="backgroundImageDropZone" class="drop-zone">
+                            <p>Drag & Drop หรือ คลิกเพื่ออัพโหลดรูปภาพ</p>
+                            <input type="file" id="backgroundImage" name="background_path" accept="image/*" hidden>
+                        </div>
+                        <img id="backgroundImagePreview" src="#" alt="Preview"
+                            style="display: none; max-width: 100%; height: auto;">
                     </div>
-                    <audio id="backgroundMusicPreview" controls style="display: none;"></audio>
+    
                 </div>
-
-            </div>
-
-            <div class="form-group">
-                <label for="linkWeb">Link Web:</label>
-                <input type="text" id="linkWeb" name="link_web"></input>
-            </div>
-
-            <div class="form-group" id="name">
-                <label for="eventName">Name:</label>
-                <input type="text" id="eventName" name="name" required>
-            </div>
-
-            <div class="form-group">
-                <label for="buttonColor">สีปุ่ม:</label>
-                <input type="color" id="buttonColor" name="button_color">
-            </div>
-
-            <div class="form-group">
-                <label for="textColor">สีตัวอักษรปุ่ม:</label>
-                <input type="color" id="textColor" name="text_color">
-            </div>
-
-            <div class="form-group">
-                <label for="toptextColor">สีข้อความบนตัวการ์ตูน:</label>
-                <input type="color" id="toptextColor" name="toptext_color">
-            </div>
-
-            <div class="form-group">
-                <label for="senderColor">สีชื่อผู้ส่ง:</label>
-                <input type="color" id="senderColor" name="sender_color">
-            </div>
-
-            <div class="form-group">
-                <label for="textButton">ชื่อปุ่มสร้างการ์ตูน:</label>
-                <input type="text" id="textButton" name="text_button" required>
-            </div>
-
-            <div class="form-group">
-                <label for="textButton">จำนวนการ์ตูนที่จะนำมาแแสดง:</label>
-                <input type="text" id="setCartoon" name="set-cartoon" required>
-            </div>
-
-            <div class="form-group">
-                <label for="status">Status:</label>
-                <i id="statusToggle" class="fa fa-toggle-off status-icon" aria-hidden="true"></i>
-                <input type="hidden" id="status" name="status" value="inactive">
-            </div>
-
-            <h2>Upload Image</h2>
-            <div id="imageDropZone" class="drop-zone">
-                <p>Drag & Drop หรือ คลิกเพื่ออัพโหลดรูปการ์ตูน</p>
-                <input type="file" id="imageFile" name="image" accept="image/*" hidden>
-            </div>
-            <img id="imagePreview" src="#" alt="Preview" style="display: none; max-width: 100%; height: auto;">
-
-        </form>
-
-        <div id="uploadMessage"></div>
-    </div>
-
-    <h3>Images</h3>
-    <div id="characterCards" class="character-cards">
-        <div class="character-card" id="characterTemplate" style="display: none;">
-            <div class="character-image">
-                <img src="" alt="" style="width: 150px; height: auto;">
-                <button class="delete-btn"><i class="fa fa-times"></i></button>
+    
+                <div id="musicPreviewContainer">
+                    <div>
+                        <audio id="backgroundMusicPreview" controls style="display: none;"></audio>
+                        <button class="removeMusic-btn" type="button" id="removeMusic" style="display: none;"
+                            onclick="removeMusic(event)"><i class="fa fa-times"></i></button>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="backgroundMusic">Background Music:</label>
+                        <div id="backgroundMusicDropZone" class="drop-zone">
+                            <p>Drag & Drop หรือ คลิกเพื่ออัพโหลดเพลง</p>
+                            <input type="file" id="backgroundMusic" name="music" accept="audio/*" hidden>
+                        </div>
+                        <audio id="backgroundMusicPreview" controls style="display: none;"></audio>
+                    </div>
+    
+                </div>
+    
+                <div class="form-group">
+                    <label for="linkWeb">Link Web:</label>
+                    <input type="text" id="linkWeb" name="link_web"></input>
+                </div>
+    
+                <div class="form-group" id="name">
+                    <label for="eventName">Name:</label>
+                    <input type="text" id="eventName" name="name" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="buttonColor">สีปุ่ม:</label>
+                    <input type="color" id="buttonColor" name="button_color">
+                </div>
+    
+                <div class="form-group">
+                    <label for="textColor">สีตัวอักษรปุ่ม:</label>
+                    <input type="color" id="textColor" name="text_color">
+                </div>
+    
+                <div class="form-group">
+                    <label for="toptextColor">สีข้อความบนตัวการ์ตูน:</label>
+                    <input type="color" id="toptextColor" name="toptext_color">
+                </div>
+    
+                <div class="form-group">
+                    <label for="senderColor">สีชื่อผู้ส่ง:</label>
+                    <input type="color" id="senderColor" name="sender_color">
+                </div>
+    
+                <div class="form-group">
+                    <label for="textButton">ชื่อปุ่มสร้างการ์ตูน:</label>
+                    <input type="text" id="textButton" name="text_button" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="textButton">จำนวนการ์ตูนที่จะนำมาแแสดง:</label>
+                    <input type="text" id="setCartoon" name="set-cartoon" required>
+                </div>
+    
+                <div class="form-group">
+                    <label for="status">Status:</label>
+                    <i id="statusToggle" class="fa fa-toggle-off status-icon" aria-hidden="true"></i>
+                    <input type="hidden" id="status" name="status" value="inactive">
+                </div>
+    
+                <h2>Upload Image</h2>
+                <div id="imageDropZone" class="drop-zone">
+                    <p>Drag & Drop หรือ คลิกเพื่ออัพโหลดรูปการ์ตูน</p>
+                    <input type="file" id="imageFile" name="image" accept="image/*" hidden>
+                </div>
+                <img id="imagePreview" src="#" alt="Preview" style="display: none; max-width: 100%; height: auto;">
+    
+            </form>
+    
+            <div id="uploadMessage"></div>
+        </div>
+    
+        <h3>Images</h3>
+        <div id="characterCards" class="character-cards">
+            <div class="character-card" id="characterTemplate" style="display: none;">
+                <div class="character-image">
+                    <img src="" alt="" style="width: 150px; height: auto;">
+                    <button class="delete-btn"><i class="fa fa-times"></i></button>
+                </div>
             </div>
         </div>
+        <div><button id="update-event" class="update-event" type="submit">Update Event</button></div>
     </div>
-    <div><button id="update-event" class="update-event" type="submit">Update Event</button></div>
+    
     <script src="edit.js"></script>
 </body>
 

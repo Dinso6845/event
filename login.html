@@ -118,6 +118,7 @@
 <body>
     <div class="login-container">
         <h1>Login</h1>
+        <div id="error-message" style="color: rgb(255, 113, 113); display: none; margin-bottom: 10px; font-size: 20px;"></div>
         <form id="loginForm" action="../Event/login.php" method="POST">
             <div class="input-container">
                 <i class="input-icon fas fa-user"></i>
@@ -158,13 +159,13 @@
                 password: document.getElementById('password').value
             };
 
-            const protocol = window.location.protocol; 
+            const protocol = window.location.protocol;
             const hostname = window.location.hostname;
-            const port = window.location.port; 
+            const port = window.location.port;
 
-            const url = `${protocol}//${hostname}${port ? `:${80}` : ''}/Event/login.php`; 
+            const url = `${protocol}//${hostname}${port ? `:${80}` : ''}/Event/login.php`;
 
-            console.log('Requesting to:', url); 
+            console.log('Requesting to:', url);
 
             fetch(url, {
                 method: 'POST',
@@ -173,20 +174,28 @@
                 },
                 body: JSON.stringify(formData)
             })
-                .then(response => response.text()) 
+                .then(response => response.text())
                 .then(text => {
                     console.log("Raw Response:", text);
-                    return JSON.parse(text); 
+                    return JSON.parse(text);
                 })
                 .then(data => {
+                    const errorMessageDiv = document.getElementById('error-message');
+                    errorMessageDiv.style.display = 'none';
+
                     if (data.status === 'success') {
                         window.location.href = 'manage.html';
                     } else {
                         alert(data.message);
+                        errorMessageDiv.textContent = data.message;
+                        errorMessageDiv.style.display = 'block';
                     }
                 })
                 .catch(error => {
                     console.error('Error:', error);
+                    const errorMessageDiv = document.getElementById('error-message');
+                    errorMessageDiv.textContent = 'Invalid username or password.'; 
+                    errorMessageDiv.style.display = 'block';
                 });
         });
 

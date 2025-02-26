@@ -26,7 +26,9 @@ document.addEventListener('DOMContentLoaded', () => {
     // ฟังก์ชันสำหรับเปิด/ปิดเมนู
     window.toggleMenu = function () {
         const menu = document.getElementById('menu');
+        const content = document.querySelector('.content');
         menu.classList.toggle('show');
+        content.classList.toggle('shifted');
     };
 
     if (!eventId) {
@@ -341,7 +343,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 previewAudio.src = reader.result;
                 previewAudio.style.display = 'block';
 
-                document.getElementById('removeMusic').style.display = 'inline-block'; // แสดงปุ่มลบ Music
+                document.getElementById('removeMusic').style.display = 'inline-block'; 
                 selectedMusic = file;
             };
         } else if (fileType === 'background') {
@@ -350,7 +352,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 previewImage.src = reader.result;
                 previewImage.style.display = 'block';
 
-                document.getElementById('removeBackground').style.display = 'inline-block'; // แสดงปุ่มลบ Background
+                document.getElementById('removeBackground').style.display = 'inline-block';
                 selectedBackground = file;
             };
         }
@@ -403,11 +405,10 @@ document.addEventListener('DOMContentLoaded', () => {
     setupDropZone(dropZoneBackground, backgroundInput, 'backgroundImagePreview', 'background');
     fetchEventData(eventId);
 
-    // สมมติว่ามีปุ่มสำหรับเปลี่ยนสถานะ
     const statusToggle = document.getElementById('statusToggle');
     statusToggle.addEventListener('click', () => {
         const currentStatus = statusToggle.dataset.status === 'active' ? 'inactive' : 'active';
-        updateStatus(currentStatus); // เรียกใช้ฟังก์ชัน updateStatus
+        updateStatus(currentStatus); 
     });
 
     function deleteCharacter(characterId) {

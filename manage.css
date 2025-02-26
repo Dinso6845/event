@@ -12,6 +12,16 @@ body {
     color: #333;
 }
 
+#background-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -1;
+    object-fit: cover; 
+}
+
 /* Navbar */
 .navbar {
     background-color: #333;
@@ -61,7 +71,11 @@ body {
 }
 
 .menu ul li a:hover {
-    color: #ffffff; /* สีเมื่อ hover */
+    color: #ffffff;
+}
+
+.fa-bars:hover {
+    box-shadow: 0 0 10px #ffc107;
 }
 
 .navbar .icon {
@@ -77,7 +91,7 @@ body {
     padding: 15px;
     border-radius: 10px; 
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
-    background: rgba(255, 255, 255, 0.8);
+    background: rgba(150, 150, 150, 0.8);
 }
 
 table {
@@ -86,6 +100,7 @@ table {
     font-family: 'Poppins', sans-serif;
     font-size: 18px;
     text-align: left;
+    color: white;
 }
 
 table th, table td {
@@ -228,25 +243,25 @@ button:hover {
 }
 
 .popup {
-    display: none; /* ซ่อนป๊อปอัพเริ่มต้น */
-    position: fixed; /* ใช้ fixed positioning */
-    z-index: 1000; /* ให้ป๊อปอัพอยู่ด้านบน */
+    display: none; 
+    position: fixed; 
+    z-index: 1000; 
     left: 0;
     top: 0;
-    width: 100%; /* กว้างเต็มจอ */
-    height: 100%; /* สูงเต็มจอ */
-    background-color: rgba(0, 0, 0, 0.7); /* พื้นหลังโปร่งใส */
-    backdrop-filter: blur(5px); /* เพิ่ม blur ให้พื้นหลัง */
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); 
+    backdrop-filter: blur(5px);
 }
 
 .popup-content {
-    background-color: #fff;
-    margin: 10% auto; /* จัดกลาง */
+    color: white;
+    margin: 10% auto;
     padding: 20px;
     border: 1px solid #888;
-    width: 400px; /* กำหนดความกว้าง */
-    border-radius: 10px; /* มุมมน */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3); 
+    width: 400px; 
+    border-radius: 10px; 
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.8);
 }
 
 @keyframes fadeIn {
@@ -255,17 +270,17 @@ button:hover {
 }
 
 .close {
-    color: #ff0000; /* สีของปุ่มปิด */
-    float: right; /* จัดให้ไปทางขวา */
-    font-size: 28px; /* ขนาดตัวอักษร */
-    font-weight: bold; /* ตัวหนา */
+    color: #ff0000; 
+    float: right; 
+    font-size: 28px; 
+    font-weight: bold; 
 }
 
 .close:hover,
 .close:focus {
-    color: black; /* เปลี่ยนสีเมื่อโฟกัส */
-    text-decoration: none; /* ลบขีดเส้นใต้ */
-    cursor: pointer; /* เปลี่ยนเป็นมือเมื่อชี้ */
+    color: rgb(145, 0, 0); 
+    text-decoration: none; 
+    cursor: pointer; 
 }
 
 /* ปรับปรุงสไตล์ของปุ่มในป๊อปอัพ */
@@ -291,20 +306,21 @@ button:hover {
     display: block;
     font-size: 16px;
     font-weight: bold;
-    color: #333;
+    color: #ffffff;
     margin-bottom: 5px;
     text-align: left;
+    margin-top: 15px;
 }
 
 .popup-content input {
     width: 100%;
     padding: 12px;
     font-size: 16px;
-    border: 2px solid #ddd;
+    border: 2px solid #00b300;
     border-radius: 8px;
     outline: none;
     transition: all 0.3s ease-in-out;
-    background-color: #f9f9f9;
+    background-color: #cecece;
     box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
@@ -316,20 +332,21 @@ button:hover {
 
 /* ปุ่มสร้างเทศกาล */
 .btn.create {
-    background-color: #4CAF50; /* สีเขียว */
-    color: white; /* สีตัวอักษร */
-    border: none; /* ไม่มีกรอบ */
-    border-radius: 5px; /* มุมมน */
-    padding: 10px 20px; /* ระยะห่างภายใน */
-    font-size: 16px; /* ขนาดตัวอักษร */
+    background-color: #4CAF50; 
+    color: white;
+    border: none; 
+    border-radius: 5px; 
+    padding: 10px 20px; 
+    font-size: 16px; 
     cursor: pointer; /* เปลี่ยนเป็นมือเมื่อชี้ */
     transition: background-color 0.3s ease, transform 0.3s ease; /* การเปลี่ยนสีและขยาย */
     float: right;
 }
 
 .btn.create:hover {
-    background-color: #45a049; /* สีเขียวเข้มเมื่อ hover */
-    transform: scale(1.05); /* ขยายเล็กน้อยเมื่อ hover */
+    background-color: #45a049;
+    transform: scale(1.05);
+    box-shadow: 0 0 10px rgba(111, 255, 171, 0.5);
 }
 
 .navbar .create {
@@ -339,6 +356,7 @@ button:hover {
 .fa-plus-square {
     margin-right: 8px;
 }
+
 /* สไตล์สำหรับไอคอนสถานะ */
 .status-icon {
     cursor: pointer;
@@ -370,10 +388,11 @@ button:hover {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #e74c3c; /* สีแดงเมื่อ inactive */
+    background-color: #e74c3c; 
     transition: background-color 0.3s, box-shadow 0.3s;
     border-radius: 25px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
 }
 
 /* ลูกสวิตช์ */
@@ -393,7 +412,7 @@ button:hover {
 /* เมื่อ active */
 input:checked + .slider {
     background-color: #2ecc71; 
-    box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+    box-shadow: 0 0 10px rgba(111, 255, 171, 0.5);
 }
 
 input:checked + .slider:before {
@@ -419,4 +438,14 @@ input:checked + .slider:before {
 .status-icon.inactive {
     color: #e74c3c;
     transform: scale(1);
+}
+
+.content {
+    width: 100%;
+    transition: margin-left 0.3s ease,  width 0.3s ease;
+}
+
+.content.shifted {
+    width: calc(100% - 250px);
+    margin-left: 250px;
 }

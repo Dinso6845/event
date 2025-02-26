@@ -110,6 +110,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     window.toggleMenu = function () {
         const menu = document.getElementById('menu');
+        const content = document.querySelector('.content');
         menu.classList.toggle('show');
         content.classList.toggle('shifted');
     };

@@ -46,10 +46,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     $_SESSION['admin_user'] = $row['am_user'];
                     echo json_encode(['status' => 'success', 'message' => 'Login successful']);
                 } else {
-                    echo json_encode(['status' => 'error', 'message' => 'Invalid username or password']);
+                    // echo json_encode(['status' => 'error', 'message' => 'Invalid username or password']);
                 }
             } else {
-                echo json_encode(['status' => 'error', 'message' => 'Invalid username or password']);
+                // echo json_encode(['status' => 'error', 'message' => 'Invalid username or password']);
             }
 
             $stmt->close();

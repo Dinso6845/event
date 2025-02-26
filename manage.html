@@ -9,6 +9,9 @@
 </head>
 
 <body>
+    <video id="background-video" autoplay muted loop>
+        <source src="https://cdn.pixabay.com/video/2017/06/05/9584-220312371_large.mp4" type="video/mp4">
+    </video>
     <nav class="navbar">
         <a href="javascript:void(0);" class="icon" onclick="toggleMenu()">
             <i class="fa fa-bars" id="menuIcon"></i>
@@ -29,23 +32,24 @@
         </div>
     </nav>
 
-    <section class="table-container">
-        <table id="festivalTable">
-            <thead>
-                <tr>
-                    <th>อันดับ</th>
-                    <th>ชื่อเทศกาล</th>
-                    <th>สถานะ</th>
-                    <!-- <th>เปลี่ยนสถานะ</th> -->
-                    <th>จัดการ</th>
-                </tr>
-            </thead>
-            <tbody>
-            </tbody>
-        </table>
-    </section>
+    <div class="content">
+        <section class="table-container">
+            <table id="festivalTable">
+                <thead>
+                    <tr>
+                        <th>อันดับ</th>
+                        <th>ชื่อเทศกาล</th>
+                        <th>สถานะ</th>
+                        <th>จัดการ</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
+    </div>
+    
 
-    <!-- ป๊อปอัพสำหรับสร้างเทศกาล -->
     <div id="createEventPopup" class="popup">
         <div class="popup-content">
             <span class="close" onclick="closeCreateEventPopup()">&times;</span>

@@ -1,25 +1,26 @@
 body {
     font-family: 'Arial', sans-serif;
-    margin: 20px;
-    background-color: #1a1a1a; /* พื้นหลังเป็นสีดำ */
-    color: #f1f1f1; /* ตัวหนังสือเป็นสีขาวอ่อน */
+    margin: 0;
+    background-color: #1a1a1a; 
+    color: #f1f1f1;
+    width: 100%;
 }
 
 /* หัวข้อ */
 h1 {
-    color: #FFD700; /* สีเหลือง */
+    color: #FFD700; 
     text-align: center;
 }
 
 /* หัวข้อย่อย */
 h2 {
-    color: #FFD700; /* สีเหลือง */
+    color: #FFD700; 
     margin-top: 30px;
     font-size: 1.5rem;
 }
 
 h3 {
-    color: #FFD700; /* สีเหลือง */
+    color: #FFD700; 
     margin-top: 10px;
     font-size: 1.5rem;
     margin-left: 60px;
@@ -130,34 +131,34 @@ input[type="file"] {
 
 .status-icon {
     cursor: pointer;
-    font-size: 30px;
-    margin-left: 10px;
+    font-size: 40px;
+    margin-left: 20px;
     vertical-align: middle;
     transition: color 0.3s ease;
 }
 
 button.Upload-image {
-    background-color: #FFD700; /* สีเขียว */
-    color: rgb(0, 0, 0); /* ตัวหนังสือสีขาว */
-    font-size: 1rem; /* ขนาดฟอนต์ */
-    padding: 10px 20px; /* ช่องว่างด้านใน */
-    border: none; /* ไม่มีกรอบ */
-    border-radius: 8px; /* มุมโค้ง */
-    cursor: pointer; /* แสดงตัวชี้เมื่อ hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* เงา */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* แอนิเมชัน */
+    background-color: #FFD700;
+    color: rgb(0, 0, 0); 
+    font-size: 1rem; 
+    padding: 10px 20px; 
+    border: none; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease, transform 0.2s ease; 
 }
 
 button.update-event {
-    background-color: #FFD700; /* สีเหลือง */
-    color: #121212; /* ตัวหนังสือสีดำ */
-    font-size: 1rem; /* ขนาดฟอนต์ */
-    padding: 10px 20px; /* ช่องว่างด้านใน */
-    border: none; /* ไม่มีกรอบ */
-    border-radius: 8px; /* มุมโค้ง */
-    cursor: pointer; /* แสดงตัวชี้เมื่อ hover */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* เงา */
-    transition: background-color 0.3s ease, transform 0.2s ease; /* แอนิเมชัน */
+    background-color: #FFD700; 
+    color: #121212; 
+    font-size: 1rem;
+    padding: 10px 20px; 
+    border: none;
+    border-radius: 8px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); 
+    transition: background-color 0.3s ease, transform 0.2s ease;
     margin-left: 60px;
 }
 
@@ -296,6 +297,10 @@ button.update-event {
     color: #ffffff; /* สีเมื่อ hover */
 }
 
+.fa-bars:hover {
+    box-shadow: 0 0 10px #ffc107;
+}
+
 .navbar .icon {
     font-size: 30px;
     color: #ffc107;
@@ -375,4 +380,14 @@ button.update-event {
 .fa-sign-in:hover {
     color: #FFD700; 
     /* transform: scale(1.1);  */
+}
+
+.content {
+    width: 100%;
+    transition: margin-left 0.3s ease,  width 0.3s ease;
+}
+
+.content.shifted {
+    width: calc(100% - 250px);
+    margin-left: 250px;
 }

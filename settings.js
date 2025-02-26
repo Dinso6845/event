@@ -94,7 +94,9 @@ document.addEventListener('DOMContentLoaded', async () => {
 
     window.toggleMenu = function () {
         const menu = document.getElementById('menu');
-        menu.classList.toggle('show'); 
+        const content = document.querySelector('.content');
+        menu.classList.toggle('show');
+        content.classList.toggle('shifted');
     };
 
     window.openCreateEventPopup = function () {

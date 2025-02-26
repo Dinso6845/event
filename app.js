@@ -369,10 +369,9 @@ document.addEventListener('DOMContentLoaded', function () {
         fetch(baseUrl)
             .then(response => response.json())
             .then(data => {
-                // console.log("Data from API:", data);
                 const buttonColor = data[0]?.button_color;
                 const textColor = data[0]?.text_color;
-                const toptextColor = data[0]?.toptext_color;
+                // const toptextColor = data[0]?.toptext_color;
 
                 if (buttonColor) {
                     btn.style.backgroundColor = buttonColor;
@@ -382,7 +381,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
                 if (textColor) {
                     if (textColor) {
-                        btn.style.color = toptextColor;
+                        btn.style.color = textColor;
                     } else {
                         console.warn('Message element not found.');
                     }
